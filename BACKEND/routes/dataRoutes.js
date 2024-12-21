@@ -6,6 +6,7 @@ const { getPruebas, agregarPrueba, modificarPrueba, eliminarPrueba } = require('
 const { getAviones, addAvion, updateAvion, deleteAvion } = require('../controllers/avionesController');
 const { getUsuarios, addUsuario, loginUsuario } = require('../controllers/userController');
 const { getMateriales, addMaterial, updateMaterial, deleteMaterial } = require('../controllers/materialesController');
+const { getRoles, crearRol } = require('../controllers/rolesController');
 
 //rutas de pruebas
 
@@ -60,6 +61,12 @@ router.get('/singup-page', (req, res) => {
 router.get('/register', getUsuarios);
 
 router.post('/register', addUsuario);
+
+//rutas de roles
+
+router.get('/roles', getRoles);
+
+router.post('/roles', crearRol);
 
 //ruta para la página de inicio
 router.get('/home', (req, res) => {
