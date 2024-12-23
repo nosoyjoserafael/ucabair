@@ -93,4 +93,20 @@ const loginUsuario = (req, res) => {
   }
 };
 
-module.exports = { getData, postData, getUsuarios, addUsuario, loginUsuario };
+const updateRolUsuario = (req, res) => {
+  try {
+    const { id, rol } = req.body;
+    const usuarios = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const usuario = usuarios.find(u => u.id === id);
+    if (!usuario) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+    usuario.role = rol;
+    fs.writeFileSync(filePath, JSON.stringify(usuarios, null, 2), 'utf8');
+    res.json(usuario);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al modificar el rol del usuario' });
+  }
+};
+
+module.exports = { getData, postData, getUsuarios, addUsuario, loginUsuario, updateRolUsuario };

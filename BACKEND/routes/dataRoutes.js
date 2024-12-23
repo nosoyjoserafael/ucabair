@@ -4,7 +4,7 @@ const path = require('path');
 const { getData, postData } = require('../controllers/userController');
 const { getPruebas, agregarPrueba, modificarPrueba, eliminarPrueba } = require('../controllers/pruebasController');
 const { getAviones, addAvion, updateAvion, deleteAvion } = require('../controllers/avionesController');
-const { getUsuarios, addUsuario, loginUsuario } = require('../controllers/userController');
+const { getUsuarios, addUsuario, loginUsuario, updateRolUsuario } = require('../controllers/userController');
 const { getMateriales, addMaterial, updateMaterial, deleteMaterial } = require('../controllers/materialesController');
 const { getRoles, crearRol } = require('../controllers/rolesController');
 
@@ -61,6 +61,8 @@ router.get('/singup-page', (req, res) => {
 router.get('/register', getUsuarios);
 
 router.post('/register', addUsuario);
+
+router.put('/update-rol/:id', updateRolUsuario);
 
 //rutas de roles
 
