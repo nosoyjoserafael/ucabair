@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#tabla-aviones {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#tabla-aviones thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#tabla-aviones th, #tabla-aviones td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#tabla-aviones th {
+    font-weight: bold;
+}
+
+#tabla-aviones tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tabla-aviones tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-comprar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.btn-comprar:hover {
+    background-color: #0056b3;
+}

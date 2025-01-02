@@ -7,6 +7,7 @@ const { getAviones, addAvion, updateAvion, deleteAvion } = require('../controlle
 const { getUsuarios, addUsuario, loginUsuario, updateRolUsuario } = require('../controllers/userController');
 const { getMateriales, addMaterial, updateMaterial, deleteMaterial } = require('../controllers/materialesController');
 const { getRoles, crearRol } = require('../controllers/rolesController');
+const { addOrdenDeCompra } = require('../controllers/compraController');
 
 //rutas de pruebas
 
@@ -31,6 +32,12 @@ router.post('/aviones', addAvion);
 router.put('/aviones/:codigo', updateAvion);
 
 router.delete('/aviones/:codigo', deleteAvion);
+
+router.get('/compra-avion', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../FRONTEND/public/views', 'compra-avion.html'));
+})
+
+router.post('/compra-avion', addOrdenDeCompra);
 
 //rutas de materiales
 

@@ -87,7 +87,7 @@ const loginUsuario = (req, res) => {
       }
 
       const token = jwt.sign({ id: usuario.id, username: usuario.username, role: usuario.role }, secretKey, { expiresIn: '1h' });
-      return res.status(200).json({ success: true, token, redirectUrl: '/aviones-page' });
+      return res.status(200).json({ success: true, token, redirectUrl: '/compra-avion' });
   } catch (error) {
       res.status(500).json({ error: 'Error al iniciar sesión' });
   }
