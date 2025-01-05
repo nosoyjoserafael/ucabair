@@ -13,6 +13,7 @@ try {
     }
     
     res.status(200).json({ message: 'Usuario validado correctamente' });
+
 } catch (err) {
     next(err);
 }
