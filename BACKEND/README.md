@@ -1,1 +1,0 @@
-Ejecutar en la consola el comando "npm i" o "npm install" para instalar todas las dependencias necesarias
