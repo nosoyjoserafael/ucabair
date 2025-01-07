@@ -1,44 +1,73 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('usuario-form').addEventListener('submit', (event) => {
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-singup');
+
+    form.addEventListener('submit', function(event) {
         event.preventDefault();
+
         const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        const role = 'cliente';
+        const name = document.getElementById('name').value;
+        const dob = document.getElementById('dob').value;
+        const cedula = Number(document.getElementById('cedula').value);
+        const residencia = Number(document.getElementById('residencia').value); //numeros
+        const direccion = document.getElementById('direccion').value; //string
+        const tipoPersona = Number(document.querySelector('input[name="tipo_persona"]:checked').value);
 
-        fetch('/register')
-            .then(response => response.json())
-            .then(usuarios => {
-                const usuarioExistente = usuarios.find(u => u.username === username || u.email === email);
-                if (usuarioExistente) {
-                    alert('El nombre de usuario o correo ya existe');
-                } else {
-                    registrarUsuario({ username, email, password, role });
-                }
-            })
-            .catch(error => console.error('Error al verificar el usuario:', error));
-    });
+        let estadoCivil = '';
+        let apellido = '';
+        let razonSocial = '';
+        let data;
 
-    function registrarUsuario(usuario) {
-        fetch('/register', {
+        if (tipoPersona === 1) { // Natural
+            estadoCivil = document.getElementById('estado_civil').value;
+            apellido = document.getElementById('apellido').value;
+            data = {
+                tipo: tipoPersona, 
+                usuario: username, 
+                contra: password, 
+                nombre: name, 
+                fecha_nac: dob, 
+                cedula: cedula, 
+                fk_lugar: residencia, 
+                direccion: direccion, 
+                estado_civir: estadoCivil, 
+                apellido: apellido  
+            };
+        } else if (tipoPersona === 2) { // Juridica
+            razonSocial = document.getElementById('razon_social').value;            
+            data = {
+                tipo: tipoPersona, 
+                usuario: username, 
+                contra: password, 
+                nombre: name, 
+                fecha_nac: dob, 
+                cedula: cedula, 
+                fk_lugar: residencia, 
+                direccion: direccion, 
+                razon_social: razonSocial        
+            };
+        }
+
+
+        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/adduser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(usuario)
+            body: JSON.stringify(data)
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                localStorage.setItem('token', data.token);
-                const payload = JSON.parse(atob(data.token.split('.')[1]));
-                document.getElementById('usuario-form').reset();
-                alert(`Se ha registrado con éxito\nBienvenido, ${payload.username}`);
-                window.location.href = data.redirectUrl;         
-            } else {
-                alert('Nombre de usuario o contraseña incorrectos');
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
             }
+            return response.json();
         })
-        .catch(error => console.error('Error al registrar el usuario:', error));
-    }
+        .then(data => {
+            alert(`${data.message}`);
+            window.location.href = '/compra-avion';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });        
 });

@@ -4,30 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        fetch('/login', {
+        const url = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/usuario';
+
+        const data = {
+            username: username,
+            clave: password
+        };
+
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify(data)
         })
         .then(response => {
             if (!response.ok) {
-                // Si la respuesta no es 2xx, lanza un error
-                return response.json().then(err => { throw new Error(err.message); });
+                throw new Error('Network response was not ok ' + response.statusText);
             }
-            return response.json(); // Si es 2xx, convierte a JSON
+            return response.json();
         })
         .then(data => {
-            if (data.success) {
-                localStorage.setItem('token', data.token);
-                const payload = JSON.parse(atob(data.token.split('.')[1]));
-                alert(`Inicio de sesión exitoso. \nBienvenido, ${payload.username}`);  
-                window.location.href = data.redirectUrl;         
-            } else {
-                alert('Nombre de usuario o contraseña incorrectos');
-            }
+            localStorage.setItem('token', data.token) ;        
+            const payload = JSON.parse(atob(data.token.split('.')[1]));
+            alert(`Inicio de sesión exitoso. \nBienvenido ${payload.username}`);  
+            window.location.href = '/compra-avion';
         })
-        .catch(error => alert('Error: ' + error.message));
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     });
 });

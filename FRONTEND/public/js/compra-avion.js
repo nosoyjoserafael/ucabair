@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     async function fetchAviones() {
         try {
-            const response = await fetch('/aviones');
+            const response = await fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/modelo');
             if (!response.ok) {
                 throw new Error('Error al obtener los aviones');
             }
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         aviones.forEach(avion => {
             const fila = document.createElement('tr');
             fila.innerHTML = `
-                <td>${avion.codigo}</td>
-                <td>${avion.descripcion}</td>
-                <td><button class="btn-comprar" onclick="comprarAvion(${avion.codigo})">Comprar</button></td>
+                <td>${avion.mod_cod}</td>
+                <td>${avion.mod_nombre}</td>
+                <td><button class="btn-comprar" onclick="comprarAvion(${avion.mod_cod})">Comprar</button></td>
             `;
             tableBody.appendChild(fila);
         });

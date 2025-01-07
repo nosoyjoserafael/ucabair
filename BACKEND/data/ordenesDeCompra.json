@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "usuarioId": 2,
+    "fecha": "2025-01-07",
+    "estado": "pendiente"
+  },
+  {
+    "usuarioId": 2,
+    "fecha": "2025-01-07",
+    "estado": "pendiente"
+  }
+]

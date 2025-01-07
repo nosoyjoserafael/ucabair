@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { console } = require('inspector');
 
 const filePath = path.join(__dirname, '../data/usuarios.json');
 const secretKey = '12345';
@@ -10,7 +11,7 @@ const secretKey = '12345';
 const getData = async (req, res, next) => {
   try {
     console.log('Ejecutando consulta a la base de datos...');
-    const result = await pool.query('SELECT * FROM public.tabla_prueba');
+    const result = await pool.query('SELECT * FROM public.usuario');
     console.log('Consulta exitosa:', result.rows);
     res.json(result.rows);
   } catch (err) {
@@ -71,23 +72,27 @@ const addUsuario = (req, res) => {
   }
 };
 
-const loginUsuario = (req, res) => {
+const loginUsuario = async (req, res) => {
   try {
       const { username, password } = req.body;
-      const usuarios = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-      const usuario = usuarios.find(u => u.username === username);
+      const result = await pool.query('SELECT * FROM public.usuario WHERE user_nombre = $1', [username]);
+      const cleanedPassword = password.replace(/['"]/g, '');
+      const usuario = result.rows[0];
 
       if (!usuario) {
           return res.status(400).json({ success: false, message: 'Nombre de usuario incorrecto o no existe' });
       }
+      
 
-      const passwordIsValid = bcrypt.compareSync(password, usuario.password);
-      if (!passwordIsValid) {
-          return res.status(400).json({ success: false, message: 'Contraseña incorrecta' });
+      if(usuario.user_seguro !== cleanedPassword){
+        return res.status(400).json({ success: false, message: 'Contraseña incorrecta' });
       }
 
-      const token = jwt.sign({ id: usuario.id, username: usuario.username, role: usuario.role }, secretKey, { expiresIn: '1h' });
+      const resultRole = await pool.query('SELECT * FROM public.rol WHERE rol_cod = $1', [usuario.fk_rol]);
+
+      const token = jwt.sign({ id: usuario.user_cod, username: usuario.user_nombre, role: resultRole }, secretKey, { expiresIn: '1h' });
       return res.status(200).json({ success: true, token, redirectUrl: '/compra-avion' });
+
   } catch (error) {
       res.status(500).json({ error: 'Error al iniciar sesión' });
   }
