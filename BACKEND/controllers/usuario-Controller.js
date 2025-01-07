@@ -22,7 +22,6 @@ const createData = async (req, res, next) => {
     role = rol.rows[0];
     
     const token = jwt.sign({ id: usuario.user_cod, username: usuario.user_nombre, role: role }, secretKey, { expiresIn: '1h' });
-    //console.log(token);
 
     return res.status(200).json({ token });
     //res.status(200).json({ message: 'Usuario validado correctamente', result: true });
