@@ -1,0 +1,22 @@
+CREATE SEQUENCE ar_cod_seq START WITH 1 INCREMENT BY 1;
+
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '1', 1);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '2', 1);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '3', 2);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '4', 2);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '5', 3);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '6', 3);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '7', 4);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '8', 4);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '9', 5);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '10', 5);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '11', 6);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '12', 6);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '13', 7);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '14', 7);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '15', 8);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '16', 8);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '17', 9);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '18', 9);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '19', 10);
+insert into public."area" ("ar_cod", "ar_nombre", fk_zona) values (nextval('ar_cod_seq'), '20', 10);
