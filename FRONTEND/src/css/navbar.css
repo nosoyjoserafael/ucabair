@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  padding: auto;
+  margin: auto;
 }
 
 body {
@@ -19,8 +19,8 @@ a {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .navbar,
@@ -41,7 +41,7 @@ a {
 .navbar {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
-  padding: 1rem 1.15rem;
+  padding: auto;
   border-bottom: 1px solid #eceef3;
   /*
   |-----------------------------------
@@ -105,7 +105,7 @@ a {
   display: block;
 }
 .navbar .navbar-header .navbar-toggler span:not(:last-child) {
-  margin-bottom: 0.2rem;
+  margin-bottom: auto;
 }
 .navbar .navbar-header > a {
   font-weight: 500;
@@ -130,8 +130,8 @@ a {
   margin-left: auto;
   flex-direction: row;
   display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
+  padding-left: auto;
+  margin-bottom: auto;
   list-style: none;
 }
 @media (max-width: 768px) {
@@ -139,14 +139,14 @@ a {
     width: 100%;
     display: block;
     border-top: 1px solid #EEE;
-    margin-top: 1rem;
+    margin-top: auto;
   }
 }
 .navbar .navbar-menu .navbar-nav > li > a {
   color: #3c4250;
   text-decoration: none;
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: auto;
 }
 .navbar .navbar-menu .navbar-nav > li > a:hover {
   color: rgb(236, 150, 255);
@@ -165,8 +165,8 @@ a {
   top: 150%;
   left: 0;
   background-color: #fff;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: auto;
+  padding-bottom: auto;
   min-width: 160px;
   width: auto;
   white-space: nowrap;
@@ -183,7 +183,7 @@ a {
 }
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
   color: #3c4250;
-  padding: 0.25rem 1rem;
+  padding: auto;
   display: block;
 }
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
@@ -192,8 +192,8 @@ a {
 .navbar .navbar-menu .navbar-nav .dropdown > .separator {
   height: 1px;
   width: 100%;
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: auto;
+  margin-bottom: auto;
   background-color: #eceef3;
 }
 .navbar .navbar-dropdown {

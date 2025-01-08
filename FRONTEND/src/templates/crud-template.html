@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Template</title>
+    <link rel="stylesheet" href="../css/crud-template.css">
+</head>
+<body>
+    <iframe src="../components/navbar.html" frameborder="0" style="width: 100%; height: auto;"></iframe> 
+    <header>
+        <h1>Gestión de <span id="entity-name">Entidad</span></h1>
+    </header>
+    <main>       
+        <section>
+            <h2>Lista de <span id="entity-name-list">Entidades</span></h2>
+            <button id="btn-agregar">Agregar</button>
+            <table id="entity-table">
+                <thead>
+                    <tr>
+                        <!-- Add table headers here -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be generated dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="overlay hidden" id="generic-overlay">
+        <div class="overlay-content">
+            <h2 id="overlay-title">Modificar <span id="entity-name-overlay">Entidad</span></h2>
+            <form id="overlay-form">
+                <!-- Overlay form fields will be generated dynamically -->
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../utils/crud-template.js"></script>
+</body>
+</html>
