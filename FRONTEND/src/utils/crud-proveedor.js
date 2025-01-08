@@ -1,242 +1,144 @@
-document.addEventListener('DOMContentLoaded', async function() {
-    const tableBody = document.querySelector('#tabla-aviones tbody');
-    const overlay = document.getElementById('overlay');
-    const overlayAdd = document.getElementById('overlay-add');
-    const proveedores = await obtenerProveedores().then(proveedores => proveedores); // Obtener los proveedores
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const entityName = 'proveedor'; // Reemplaza con el nombre de la entidad
+    const entityEndpoint = '/entidad'; // Reemplazar con la URL del endpoint de la entidad
 
-    //displayProveedores(proveedores)
-    configurarAddOverlay();
+    document.getElementById('entity-name').textContent = entityName;
+    document.getElementById('entity-name-list').textContent = entityName;
+    document.getElementById('entity-name-overlay').textContent = entityName;
 
-    async function obtenerProveedores() {
-        try {
-            const response = await fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/proveedor'); //cambiar por la ruta correcta
-            if (!response.ok) {
-                throw new Error('Error al obtener los aviones');
-            }
-            return await response.json();    
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
+    const entityTableBody = document.querySelector('#entity-table tbody');
+    const overlay = document.getElementById('generic-overlay');
+    const overlayForm = document.getElementById('overlay-form');
+    const submitButton = overlayForm.querySelector('button[type="submit"]');
+    const overlayTitle = document.getElementById('overlay-title');
+    const addEntityButton = document.getElementById('add-entity-btn');
+    const overlayFormAction = document.getElementById('overlay-form-action');
 
-    function configurarAddOverlay() {
-        const btnAdd = document.getElementById('btn-add');
-        btnAdd.addEventListener('click', () => {
-            overlayAdd.classList.remove('hidden');
-            overlayAdd.classList.add('visible');
-            const tableBody = document.querySelector('#tabla-add tbody');
-            tableBody.innerHTML = ''; // Clear existing rows
-            const modNombre = document.getElementById('mod-nombre');
-            
-            const fila = document.createElement('tr'); //hay que modificar esto
-            fila.innerHTML = `
-                <td>
-                    <input type="text" placeholder="Nombre" name="Nombre"/>
-                </td>
-                <td>
-                    <select>
-                        <option value="Aleacion_de_Aluminio">Aleacion de Aluminio</option>
-                        <option value="Aleacion_de_Titanio">Aleacion de Titanio</option>
-                        <option value="Acero_Inoxidable">Acero Inoxidable</option>
-                        <option value="Compuesto_de_fibra_de_carbono">"Compuesto de fibra de carbono</option>
-                        <option value="Plastico">Plastico</option>
-                        <option value="Textil">Textil</option>
-                        <option value="Cuero">Cuero</option>
-                        <option value="Aleacion">Aleacion de Magnesio</option>
-                        <option value="Cobre">Cobre</option>
-                        <option value="Aluminio">Aluminio</option>
-                        <option value="Titanio_Grado_5">Titanio Grado 5</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="number" placeholder="Cantidad del material" min="1" name="cantidad"/>
-                </td>`;
-            tableBody.appendChild(fila);
+    displayEntities();
 
-           const saveButton = document.getElementById('btn-save');
-           saveButton.addEventListener('click', async () => {
-               const nombre = tableBody.querySelector('input[name="Nombre"]').value;
-               const selectedOption = tableBody.querySelector('select').value;
-               const cantidad = tableBody.querySelector('input[name="cantidad"]').value;
-               const datos = {Nombre: nombre};
-               datos[selectedOption] = cantidad;
-               console.log(datos);
-               await agregarProveedor(datos);
-               alert('Proveedor agregado exitosamente!');
-            });
-        })
-    };
-                
-
-    function displayProveedores(proveedores) {
-        tableBody.innerHTML = '';
-        proveedores.forEach(proveedor => {
-            const fila = document.createElement('tr');
-            fila.innerHTML = `
-                <td>${proveedor.prove_cod}</td>
-                <td>${proveedor.prove_nombre}</td>
-                <td>${proveedor.prove_ci}</td>
-                <td>
-                    <button class="btn btn-modificar" onclikc="verPropiedadesProveedor(${proveedor.prove_cod}">Modificar</button>
-                    <button class="btn btn-eliminar" onclikc="eliminarModelo(${proveedor.prove_nombre}">Eliminar</button>
-                </td>
-            `;
-
-            const btnEliminar = fila.querySelector('.btn-eliminar');
-            btnEliminar.addEventListener('click', () => {
-                eliminarProveedor(proveedor.prove_nombre);            
-            });
-
-            const btnModificar = fila.querySelector('.btn-modificar');
-            btnModificar.addEventListener('click', () => {                
-                overlay.classList.remove('hidden');
-                overlay.classList.add('visible');            
-                const tableBody = document.querySelector('#tabla-modificar tbody');
-                tableBody.innerHTML = ''; // Clear existing rows                                          
-                const fila = document.createElement('tr');
-                fila.innerHTML = `
-                <td>
-                    <input type="text" placeholder="Nombre" name="Nombre" value="${proveedor.prove_nombre}"/>
-                </td>
-                <td>
-                    <select>
-                        <option value="Aleacion de Aluminio">Aleacion de Aluminio</option>
-                        <option value="Aleacion de Titanio">Aleacion de Titanio</option>
-                        <option value="Acero Inoxidable">Acero Inoxidable</option>
-                        <option value="Compuesto de fibra de carbono">"Compuesto de fibra de carbono</option>
-                        <option value="Plastico">Plastico</option>
-                        <option value="Textil">Textil</option>
-                        <option value="Cuero">Cuero</option>
-                        <option value="Aleacion">Aleacion de Magnesio</option>
-                        <option value="Cobre">Cobre</option>
-                        <option value="Aluminio">Aluminio</option>
-                        <option value="Titanio Grado 5">Titanio Grado 5</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="number" placeholder="Cantidad del material" min="1" name="cantidad"/>
-                </td>
-                <td>
-                    <input type="number" placeholder="Costo del material" min="1" name="costo"/>
-                </td>
-                <button class="btn">Guardar</button>
-                `;
-                const btnGuardar = fila.querySelector('.btn');
-                btnGuardar.addEventListener('click', async () => {
-                    const nombre = tableBody.querySelector('input[name="Nombre"]').value;
-                    const selectedOption = tableBody.querySelector('select').value;
-                    const cantidad = tableBody.querySelector('input[name="cantidad"]').value;
-                    const costo = tableBody.querySelector('input[name="costo"]').value;
-                    const datos = {proveedor: nombre, material: selectedOption, cantidad: cantidad, costo: costo};
-                    await modificarProveedor(datos);                          
-                });
-                tableBody.appendChild(fila);
-            });
-        tableBody.appendChild(fila);    
-        });
-    }
-
-    async function eliminarProveedor(nombre) {
-        try {
-            const response = await fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/proveedor',
-                {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json'
-                        },
-                    body: JSON.stringify({Nombre: nombre})
-                }
-            );
-            if (!response.ok) {
-                throw new Error('Error al obtener las caracteristica del modelo');
-            }
-            alert(`Modelo ${mod_nombre} eliminado exitosamente!`);  
-            window.location.reload();          
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-
-    async function modificarProveedor(datos) {
-        try {
-            const response = await fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/proveedor',
-                {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                        },
-                    body: JSON.stringify(datos)
-                }
-            );
-            if (!response.ok) {
-                throw new Error('Error al obtener el proveedor');
-            }
-            alert(`Proveedor ${datos.proveedor} modificado exitosamente!`);
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-
-    async function agregarProveedor(datos){
-        try {
-            const response = await fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/proveedor',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(datos)
-                }
-            );
-            if (!response.ok) {
-                throw new Error('Error al obtener las caracteristica del modelo');
-            }            
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
+    addEntityButton.addEventListener('click', () => addEntity());
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
             overlay.classList.remove('visible');
-            overlay.classList.add('hidden');
         }
     });
 
-    overlayAdd.addEventListener('click', function(event) {
-        if (event.target === overlayAdd) {
-            overlayAdd.classList.remove('visible');
-            overlayAdd.classList.add('hidden');
-        }
-    });
-
-    window.comprarAvion = async function(avionId) {
-        const token = localStorage.getItem('token'); // Obtener el token del localStorage
-        if (!token) {
-            alert('Usuario no autenticado');
-            return;
-        }
-
-        try {
-            const response = await fetch('/compra-avion', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ avionId, token })
+    function displayEntities() {
+       // fetch(entityEndpoint)
+         //   .then(response => response.json())
+           // .then(data => {
+                entityTableBody.innerHTML = '';
+                const data = [
+                    { id: 1, name: 'Entidad 1' },
+                    { id: 2, name: 'Entidad 2' },
+                    { id: 3, name: 'Entidad 3' }
+                ]
+                data.forEach(entity => {
+                    const row = document.createElement('tr');
+                    
+                    //Se reemplazan las columnas por los atributos de la entidad
+                    row.innerHTML = `
+                    <td>${entity.id}</td>
+                    <td>${entity.name}</td>                
+                    <td>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </td>
+                    `;
+                    const editButton = row.querySelector('.edit-btn');
+                    const deleteButton = row.querySelector('.delete-btn');
+                    editButton.addEventListener('click', () => modifyEntity(entity.id));
+                    deleteButton.addEventListener('click', () => deleteEntity(entity.id));
+                    entityTableBody.appendChild(row);
+               // });
+            //});
             });
+    }
 
-            if (!response.ok) {
-                throw new Error('Error al comprar el avión');
-            }
+    function addInputsToFormData() {        
+        //Aqui se agregan los inputs del formulario al 
+        // overLayForm segun sea necesario        
 
-            const result = await response.json();
-            alert(`Avión con ID ${avionId} comprado exitosamente!`);
-        } catch (error) {
+        //Ejemplo
+        const inp1 = document.createElement('input');
+        inp1.type = 'text';
+        inp1.name = 'inp1';
+        inp1.value = 'valor1';        
+
+        //...Y asi sucesivamente
+
+        //El insertBefore es para agregar siempre 
+        // el input antes del boton de submit
+        overlayForm.insertBefore(inp1, submitButton);        
+    }
+
+
+    function addEntity() { 
+        overlay.classList.add('visible');
+        overlayTitle.textContent = `Agregar ${entityName}`;
+        overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
+        overlayForm.appendChild(submitButton)
+        overlayFormAction.textContent = `Guardar`;
+        addInputsToFormData();
+        overlayForm.reset();
+
+        /*fetch(entityEndpoint, {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+        name: entityName,
+        })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            displayEntities();
+            })
+        .catch((error) => {
             console.error('Error:', error);
-            alert('Error al comprar el avión');
         }
+        );*/
+    }
 
-    };
-    
+    function modifyEntity(entityId) {
+        overlay.classList.add('visible');
+        overlayTitle.textContent = `Editar ${entityName}`;
+        overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
+        overlayForm.appendChild(submitButton)
+        overlayFormAction.textContent = `Guardar`;
+        addInputsToFormData();
+        overlayForm.reset();
+
+        /*fetch(`${entityEndpoint}/${entityId}`, {
+            method: 'PUT'
+        })
+            .then(response => response.json())
+            .then(data => {
+                overlayForm.id.value = data.id;
+                overlayForm.name.value = data.name;
+            });
+        */
+    }
+
+    function deleteEntity(entityId) {
+        overlay.classList.add('visible');
+        overlayTitle.textContent = `¿Está seguro de que desea\neliminar este ${entityName}?`;
+        overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
+        overlayForm.appendChild(submitButton)
+        overlayFormAction.textContent = `Si`;
+
+        /*fetch(`${entityEndpoint}/${entityId}`, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+            .then(data => {
+                displayEntities();
+            });
+        */
+    }
+
 });

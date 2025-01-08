@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const entityName = 'modelos'; // Reemplaza con el nombre de la entidad
+    const entityName = 'empleados'; // Reemplaza con el nombre de la entidad
     const entityEndpoint = '/entidad'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
