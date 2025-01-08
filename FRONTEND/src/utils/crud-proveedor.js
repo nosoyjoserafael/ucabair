@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const overlayAdd = document.getElementById('overlay-add');
     const proveedores = await obtenerProveedores().then(proveedores => proveedores); // Obtener los proveedores
 
-    displayProveedores(proveedores)
+    //displayProveedores(proveedores)
     configurarAddOverlay();
 
     async function obtenerProveedores() {
@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', async function() {
             overlayAdd.classList.remove('hidden');
             overlayAdd.classList.add('visible');
             const tableBody = document.querySelector('#tabla-add tbody');
+            tableBody.innerHTML = ''; // Clear existing rows
             const modNombre = document.getElementById('mod-nombre');
             
-            const fila = document.createElement('tr');
+            const fila = document.createElement('tr'); //hay que modificar esto
             fila.innerHTML = `
                 <td>
                     <input type="text" placeholder="Nombre" name="Nombre"/>
