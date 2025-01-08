@@ -20,16 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
         //Aqui se agregan los urls al 
         // overLay segun sea necesario        
         overlayMatrix.innerHTML = '';
-        const urls = ['../pages/crud-proveedor.html', '../pages/crud-empleado.html','../pages/crud-modelo.html'];
-        urls.forEach(url => {
+        const cruds = {
+            Proveedores: '../pages/crud-proveedor.html', 
+            Empleados: '../pages/crud-empleado.html', 
+            Modelo: '../pages/crud-modelo.html'
+        };
+        
+        const urlsKeys = Object.keys(cruds);
+        const urls = Object.values(cruds);
+
+        // Recorrer los dos arreglos simultáneamente
+        for (let i = 0; i < urlsKeys.length; i++) {
+            const key = urlsKeys[i];
+            const url = urls[i];
             const spanUrl = document.createElement('span');
             const urlElement = document.createElement('a');    
-            urlElement.textContent = 'Proveedores';
+            urlElement.textContent = key;
             urlElement.href = url;        
             spanUrl.appendChild(urlElement); 
             spanUrl.addEventListener('click', () => {window.location.href = url;});       
             overlayMatrix.appendChild(spanUrl);
-        });
+        }
     }
 
     function adjustIframeSize(expand) {
