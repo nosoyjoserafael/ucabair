@@ -1,0 +1,14 @@
+{
+    "shortid": "erkLzi",
+    "name": "Orders",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1736231349842
+    },
+    "modificationDate": {
+        "$$date": 1736231349842
+    },
+    "_id": "NGbvtNo00ViZ9Ot8",
+    "$entitySet": "folders"
+}

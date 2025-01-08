@@ -1,0 +1,20 @@
+{
+    "name": "reporte16",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "data": {
+        "shortid": "ku72NkH1l"
+    },
+    "shortid": "MdSbkcWflH",
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1736049426205
+    },
+    "modificationDate": {
+        "$$date": 1736095740484
+    },
+    "_id": "sMGdYkLzwiEY1i6t",
+    "$entitySet": "templates"
+}

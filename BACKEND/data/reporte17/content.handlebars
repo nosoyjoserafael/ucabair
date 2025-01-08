@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte17</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      width: 150px;
+    }
+    .date {
+      text-align: right;
+    }
+    .report-title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.5em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+    .rif-column {
+      width: 25%;
+    }
+    .codigo-column {
+      width: 15%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
+    <div class="date">Fecha: {{formatDate}}</div>
+  </header>
+  <div class="report-title">Pagos realizados a proveedores entre {{fechainicio}} y {{fechafinal}}</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="rif-column">RIF</th>
+        <th>Nombre del Proveedor</th>
+        <th>Fecha de la Compra</th>
+        <th>Monto Pagado</th>
+        <th class="codigo-column">ID del Pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each fila}}
+      <tr>
+        <td class="rif-column">{{rif}}</td>
+        <td>{{nombreproveedor}}</td>
+        <td>{{fecha}}</td>
+        <td>{{pago}}</td>
+        <td class="codigo-column">{{codigo}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>

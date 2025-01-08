@@ -1,0 +1,84 @@
+2025-01-07T08:39:57.358Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=qvn7gd1ewnzk04b, id=qvn7gd1ewnzk04b
+2025-01-07T08:39:57.358Z - error: Rendering request 1 finished with error in 4309 ms rootId=qvn7gd1ewnzk04b, id=qvn7gd1ewnzk04b
+2025-01-07T08:40:52.046Z - error: Error when processing render request 2
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=60hfdeagypgu4gw, id=60hfdeagypgu4gw
+2025-01-07T08:40:52.046Z - error: Rendering request 2 finished with error in 765 ms rootId=60hfdeagypgu4gw, id=60hfdeagypgu4gw
+2025-01-07T08:43:26.030Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=for7mjaorrndn73, id=for7mjaorrndn73
+2025-01-07T08:43:26.030Z - error: Rendering request 1 finished with error in 585 ms rootId=for7mjaorrndn73, id=for7mjaorrndn73
+2025-01-07T08:45:00.070Z - error: Error when processing render request 4
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=zncncf81ves1p1m, id=zncncf81ves1p1m
+2025-01-07T08:45:00.070Z - error: Rendering request 4 finished with error in 598 ms rootId=zncncf81ves1p1m, id=zncncf81ves1p1m
