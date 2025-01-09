@@ -1,3 +1,8 @@
+insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (93, 7, '2024-11-26', 40);
+insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (94, 6, '2024-11-26', 40);
+insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (95, 10, '2024-11-26', 40);
+insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (96, 2, '2024-11-26', 40);
+insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (97, 1, '2024-11-26', 40);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (98, 3, '2024-09-02', 24);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (99, 2, '2024-07-21', 27);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (100, 6, '2024-02-23', 42);
@@ -33,8 +38,3 @@ insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio",
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (130, 1, '2024-06-28', 50);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (131, 5, '2024-12-31', 27);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (132, 7, '2024-11-26', 40);
-insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (133, 6, '2024-03-02', 48);
-insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (134, 1, '2024-05-06', 38);
-insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (135, 7, '2024-01-21', 28);
-insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (136, 1, '2024-05-24', 46);
-insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (137, 8, '2024-05-10', 38);

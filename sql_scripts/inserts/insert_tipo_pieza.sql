@@ -1,20 +1,44 @@
-insert into tipo_pieza (tp_nombre) values ('Alas');
-insert into tipo_pieza (tp_nombre) values ('Fuselaje');
-insert into tipo_pieza (tp_nombre) values ('Timón de dirección');
-insert into tipo_pieza (tp_nombre) values ('Timón de profundidad');
-insert into tipo_pieza (tp_nombre) values ('Tren de aterrizaje');
-insert into tipo_pieza (tp_nombre) values ('Motor');
-insert into tipo_pieza (tp_nombre) values ('Hélice');
-insert into tipo_pieza (tp_nombre) values ('Flaps');
-insert into tipo_pieza (tp_nombre) values ('Alerones');
-insert into tipo_pieza (tp_nombre) values ('Estabilizador horizontal');
-insert into tipo_pieza (tp_nombre) values ('Estabilizador vertical');
-insert into tipo_pieza (tp_nombre) values ('Cabina');
-insert into tipo_pieza (tp_nombre) values ('Ventanas');
-insert into tipo_pieza (tp_nombre) values ('Puertas');
-insert into tipo_pieza (tp_nombre) values ('Tanque de combustible');
-insert into tipo_pieza (tp_nombre) values ('Sistema de navegación');
-insert into tipo_pieza (tp_nombre) values ('Sistema de comunicación');
-insert into tipo_pieza (tp_nombre) values ('Sistema hidráulico');
-insert into tipo_pieza (tp_nombre) values ('Sistema eléctrico');
-insert into tipo_pieza (tp_nombre) values ('Sistema de control de vuelo');
+--Fuselaje
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Puerta', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Suelo', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Bano', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Aislamiento', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Techo', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ventanilla', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de Fuselaje', '');
+
+--Alas
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Aleron', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Slat', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Spoiler', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Slot', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Tanque de combustible', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Flap', '');
+
+--Cola
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Antena', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Actuador de control', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Estabilizador', '');
+
+--Tren aterrizaje
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Tren Principal', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Rueda', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Amortiguador', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Luces de posicion', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de aterrizaje', '');
+
+--Potencia
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Motor', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de Potencia', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Turbina', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Helice', '');
+
+--Avionica
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Panel de instrumento', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'GPS', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Radio', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Autopiloto', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Radar', '');
+insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de cabina', '');
+

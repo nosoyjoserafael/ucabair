@@ -1,4 +1,4 @@
---falta verificar las fk de area
+--insertar depues de natural, juridica, lugar y area (en ese orden)
 insert into "Personal" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Per_apellido", "Per_Per_experiencia", fk_area) values ('Pedro', '2023-07-20', 30495240, 8, 'Calle 23', 'Martinez', 6, 10);
 insert into "Personal" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Per_apellido", "Per_Per_experiencia", fk_area) values ('Luis', '2014-01-04', 21634237, 3, 'Calle 23', 'Garcia', 3, 4);
 insert into "Personal" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Per_apellido", "Per_Per_experiencia", fk_area) values ('Carlos', '2018-09-12', 9040979, 4, 'Calle 1', 'Martinez', 1, 9);

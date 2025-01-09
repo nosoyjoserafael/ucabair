@@ -1,0 +1,21 @@
+--insertar despues de sede y zona
+insert into public.area ("ar_nombre", fk_zona) values ( '1', 1);
+insert into public.area ("ar_nombre", fk_zona) values ( '2', 1);
+insert into public.area ("ar_nombre", fk_zona) values ( '3', 2);
+insert into public.area ("ar_nombre", fk_zona) values ( '4', 2);
+insert into public.area ("ar_nombre", fk_zona) values ( '5', 3);
+insert into public.area ("ar_nombre", fk_zona) values ( '6', 3);
+insert into public.area ("ar_nombre", fk_zona) values ( '7', 4);
+insert into public.area ("ar_nombre", fk_zona) values ( '8', 4);
+insert into public.area ("ar_nombre", fk_zona) values ( '9', 5);
+insert into public.area ("ar_nombre", fk_zona) values ( '10', 5);
+insert into public.area ("ar_nombre", fk_zona) values ( '11', 6);
+insert into public.area ("ar_nombre", fk_zona) values ( '12', 6);
+insert into public.area ("ar_nombre", fk_zona) values ( '13', 7);
+insert into public.area ("ar_nombre", fk_zona) values ( '14', 7);
+insert into public.area ("ar_nombre", fk_zona) values ( '15', 8);
+insert into public.area ("ar_nombre", fk_zona) values ( '16', 8);
+insert into public.area ("ar_nombre", fk_zona) values ( '17', 9);
+insert into public.area ("ar_nombre", fk_zona) values ( '18', 9);
+insert into public.area ("ar_nombre", fk_zona) values ( '19', 10);
+insert into public.area ("ar_nombre", fk_zona) values ( '20', 10);
