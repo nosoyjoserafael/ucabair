@@ -1,0 +1,13 @@
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Capacidad de tripulacion', 'cantidad');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Capacidad de pasajeros', 'cantidad');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Longitud', 'm');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Envergadura', 'm');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Altura', 'm');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Flecha alar', 'grados');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Paso vacio', 'kg');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Paso maximo de despegue', 'kg');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Paso maximo de aterrizaje', 'kg');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Velocidad máxima', 'km/h');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Velocidad crucero', 'km/h');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Capacidad máxima de combustible', 'L');
+insert into caracteristica (carac_nombre, carac_unidad_medida) values ('Motores', 'cantidad');
