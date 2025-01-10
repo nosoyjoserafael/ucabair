@@ -1,18 +1,25 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-
 const jsreport = require('jsreport')({
   chrome: {
     launchOptions: {
       args: ['--no-sandbox', '--disable-setuid-sandbox']
+    },
+    strategy: 'dedicated-process' // Reutilizar la misma instancia de Chromium
+  },
+  extensions: {
+    'express': {
+      enabled: false, // Deshabilitar el servidor HTTP de jsreport
+      appPath: "/jsreport", // Ruta base para jsreport
+      port: 5488 // Puerto para el servidor HTTP de jsreport
     }
   }
 });
 const jsreportReady = jsreport.init();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const errorHandler = require('./middlewares/errorHandler');
 const user_dataRoutes = require('./routes/usuario-Routes');
@@ -47,7 +54,6 @@ app.use('/compra', compra_dataRoutes);
 app.use(errorHandler);
 
 jsreportReady.then(() => {
-  
   module.exports = { jsreport, jsreportReady };
   const reporte_dataRoutes = require('./routes/reporte-Routes'); // Importar las rutas de reporte
   app.use('/reporte', reporte_dataRoutes); // Usar las rutas de reporte

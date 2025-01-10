@@ -7,7 +7,7 @@ async function generatePdf(data) {
     template: {
       name: 'reporte18', // Nombre del template en la carpeta data
       engine: 'handlebars',
-      recipe: 'chrome-pdf'
+      recipe: 'chrome-pdf',
     },
     data: data
   });
