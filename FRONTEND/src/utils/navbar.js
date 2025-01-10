@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const cruds = {
             Proveedores: '../pages/crud-proveedor.html', 
             Empleados: '../pages/crud-empleado.html', 
-            Modelo: '../pages/crud-modelo.html'
+            Modelo: '../pages/crud-modelo.html',
+            Materiales: '../pages/crud-material.html'
         };
         
         const urlsKeys = Object.keys(cruds);
