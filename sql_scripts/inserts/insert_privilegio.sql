@@ -1,0 +1,10 @@
+insert into privilegio (priv_nombre) values ('ADMINISTRAR USUARIOS');
+insert into privilegio (priv_nombre) values ('VER REPORTES');
+insert into privilegio (priv_nombre) values ('ADMINISTRAR PRUEBAS');
+insert into privilegio (priv_nombre) values ('ADMINISTRAR INVENTARIO');
+insert into privilegio (priv_nombre) values ('ADMINISTRAR PEDIDOS');
+insert into privilegio (priv_nombre) values ('ADMINISTRAR PERSONAL');
+insert into privilegio (priv_nombre) values ('ADMINISTRAR PROVEEDORES');
+insert into privilegio (priv_nombre) values ('VER ESTADISTICAS');
+insert into privilegio (priv_nombre) values ('ADMINISTRAR ROLES');
+insert into privilegio (priv_nombre) values ('ACCESO TOTAL');
