@@ -2015,3 +2015,188 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
 2025-01-09T23:28:17.601Z - info: 2 worker threads initialized in 683ms
 2025-01-09T23:28:17.602Z - info: Starting temp files cleanup with 180000ms threshold
 2025-01-09T23:28:17.603Z - info: reporter initialized
+2025-01-09T23:37:56.761Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-09T23:37:56.764Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-09T23:37:56.772Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-09T23:37:56.777Z - info: Found 35 extension(s)
+2025-01-09T23:37:56.842Z - info: Using extension base@4.0.0
+2025-01-09T23:37:56.847Z - info: Using extension child-templates@4.1.0
+2025-01-09T23:37:56.850Z - info: Using extension cli@4.0.5
+2025-01-09T23:37:56.852Z - info: Using extension components@4.0.2
+2025-01-09T23:37:56.853Z - info: Using extension data@4.1.0
+2025-01-09T23:37:56.854Z - info: Using extension express@4.1.3
+2025-01-09T23:37:57.009Z - info: Using extension freeze@4.0.0
+2025-01-09T23:37:57.011Z - info: Using extension fs-store@4.0.5
+2025-01-09T23:37:57.078Z - info: Using extension handlebars@4.0.1
+2025-01-09T23:37:57.080Z - info: Using extension import-export@4.0.5
+2025-01-09T23:37:57.086Z - info: Using extension jsrender@4.0.0
+2025-01-09T23:37:57.087Z - info: Using extension licensing@4.0.3
+2025-01-09T23:37:57.108Z - info: Using extension localization@4.0.1
+2025-01-09T23:37:57.108Z - info: Using extension npm@4.0.0
+2025-01-09T23:37:57.110Z - info: Using extension pdf-utils@4.2.2
+2025-01-09T23:37:57.112Z - info: Using extension reports@4.1.2
+2025-01-09T23:37:57.114Z - info: Using extension tags@4.0.1
+2025-01-09T23:37:57.115Z - info: Using extension text@4.0.2
+2025-01-09T23:37:57.116Z - info: Using extension version-control@4.0.0
+2025-01-09T23:37:57.123Z - info: Using extension assets@4.2.0
+2025-01-09T23:37:57.130Z - info: Using extension authorization@4.0.1
+2025-01-09T23:37:57.132Z - info: Using extension browser-client@4.1.0
+2025-01-09T23:37:57.133Z - info: Using extension chrome-pdf@4.1.0
+2025-01-09T23:37:57.136Z - info: Using extension docx@4.6.0
+2025-01-09T23:37:57.137Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-09T23:37:57.273Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-09T23:37:57.273Z - info: Using extension pptx@4.3.2
+2025-01-09T23:37:57.275Z - info: Using extension scheduling@4.0.0
+2025-01-09T23:37:57.302Z - info: Using extension scripts@4.1.0
+2025-01-09T23:37:57.303Z - info: Using extension static-pdf@4.1.0
+2025-01-09T23:37:57.304Z - info: Using extension studio@4.2.0
+2025-01-09T23:37:57.364Z - info: Using extension xlsx@4.3.0
+2025-01-09T23:37:57.366Z - info: Using extension public-templates@4.0.0
+2025-01-09T23:37:57.367Z - info: Using extension sample-template@4.0.0
+2025-01-09T23:37:57.368Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-09T23:37:57.369Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-09T23:37:57.369Z - info: Using fs provider for template store.
+2025-01-09T23:37:57.375Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-09T23:37:57.380Z - info: fs store is loading data
+2025-01-09T23:37:57.400Z - info: fs store is initialized successfully
+2025-01-09T23:37:57.411Z - info: Creating default express app.
+2025-01-09T23:37:57.423Z - info: jsreport server successfully started on http port: 5488
+2025-01-09T23:37:57.424Z - info: Verifying license key free
+2025-01-09T23:37:57.759Z - info: Using enterprise trial license
+2025-01-09T23:37:57.762Z - info: Initializing worker threads
+2025-01-09T23:37:58.474Z - info: 2 worker threads initialized in 712ms
+2025-01-09T23:37:58.475Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-09T23:37:58.475Z - info: reporter initialized
+2025-01-09T23:38:27.164Z - info: Render request 1 queued for execution and waiting for available worker rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:38:27.189Z - info: Starting rendering request 1 rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:38:27.190Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:38:27.977Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:38:27.977Z - error: Rendering request 1 finished with error in 815 ms rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:50:29.395Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-09T23:50:29.399Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-09T23:50:29.414Z - info: Extensions location cache /tmp/jsreport/core/locations.json contains older information, crawling
+2025-01-09T23:50:29.692Z - info: Found 35 extension(s)
+2025-01-09T23:50:29.755Z - info: Using extension base@4.0.0
+2025-01-09T23:50:29.760Z - info: Using extension child-templates@4.1.0
+2025-01-09T23:50:29.763Z - info: Using extension cli@4.0.5
+2025-01-09T23:50:29.765Z - info: Using extension components@4.0.2
+2025-01-09T23:50:29.766Z - info: Using extension data@4.1.0
+2025-01-09T23:50:29.767Z - info: Using extension express@4.1.3
+2025-01-09T23:50:29.902Z - info: Using extension freeze@4.0.0
+2025-01-09T23:50:29.903Z - info: Using extension fs-store@4.0.5
+2025-01-09T23:50:29.972Z - info: Using extension handlebars@4.0.1
+2025-01-09T23:50:29.974Z - info: Using extension import-export@4.0.5
+2025-01-09T23:50:29.980Z - info: Using extension jsrender@4.0.0
+2025-01-09T23:50:29.981Z - info: Using extension licensing@4.0.3
+2025-01-09T23:50:29.999Z - info: Using extension localization@4.0.1
+2025-01-09T23:50:30.000Z - info: Using extension npm@4.0.0
+2025-01-09T23:50:30.003Z - info: Using extension pdf-utils@4.2.2
+2025-01-09T23:50:30.004Z - info: Using extension reports@4.1.2
+2025-01-09T23:50:30.006Z - info: Using extension tags@4.0.1
+2025-01-09T23:50:30.007Z - info: Using extension text@4.0.2
+2025-01-09T23:50:30.008Z - info: Using extension version-control@4.0.0
+2025-01-09T23:50:30.016Z - info: Using extension assets@4.2.0
+2025-01-09T23:50:30.023Z - info: Using extension authorization@4.0.1
+2025-01-09T23:50:30.026Z - info: Using extension browser-client@4.1.0
+2025-01-09T23:50:30.027Z - info: Using extension chrome-pdf@4.1.0
+2025-01-09T23:50:30.029Z - info: Using extension docx@4.6.0
+2025-01-09T23:50:30.031Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-09T23:50:30.217Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-09T23:50:30.217Z - info: Using extension pptx@4.3.2
+2025-01-09T23:50:30.218Z - info: Using extension scheduling@4.0.0
+2025-01-09T23:50:30.240Z - info: Using extension scripts@4.1.0
+2025-01-09T23:50:30.241Z - info: Using extension static-pdf@4.1.0
+2025-01-09T23:50:30.241Z - info: Using extension studio@4.2.0
+2025-01-09T23:50:30.302Z - info: Using extension xlsx@4.3.0
+2025-01-09T23:50:30.304Z - info: Using extension public-templates@4.0.0
+2025-01-09T23:50:30.305Z - info: Using extension sample-template@4.0.0
+2025-01-09T23:50:30.306Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-09T23:50:30.307Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-09T23:50:30.307Z - info: Using fs provider for template store.
+2025-01-09T23:50:30.312Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-09T23:50:30.319Z - info: fs store is loading data
+2025-01-09T23:50:30.340Z - info: fs store is initialized successfully
+2025-01-09T23:50:30.350Z - info: Creating default express app.
+2025-01-09T23:50:30.363Z - info: jsreport server successfully started on http port: 5488
+2025-01-09T23:50:30.369Z - info: Verifying license key free
+2025-01-09T23:50:30.708Z - info: Using enterprise trial license
+2025-01-09T23:50:30.711Z - info: Initializing worker threads
+2025-01-09T23:50:31.472Z - info: 2 worker threads initialized in 761ms
+2025-01-09T23:50:31.473Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-09T23:50:31.473Z - info: reporter initialized
+2025-01-09T23:50:45.029Z - info: Render request 1 queued for execution and waiting for available worker rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:50:45.050Z - info: Starting rendering request 1 rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:50:45.050Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:50:45.893Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:50:45.893Z - error: Rendering request 1 finished with error in 866 ms rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:54:21.030Z - info: Render request 2 queued for execution and waiting for available worker rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-09T23:54:21.039Z - info: Starting rendering request 2 rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-09T23:54:21.040Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-09T23:54:21.709Z - error: Error when processing render request 2
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-09T23:54:21.709Z - error: Rendering request 2 finished with error in 680 ms rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-09T23:54:24.294Z - info: Render request 3 queued for execution and waiting for available worker rootId=9nclki8bq5dsvzw, id=9nclki8bq5dsvzw
+2025-01-09T23:54:24.301Z - info: Starting rendering request 3 rootId=9nclki8bq5dsvzw, id=9nclki8bq5dsvzw
+2025-01-09T23:54:24.302Z - info: Rendering template { name: reporte19, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=9nclki8bq5dsvzw, id=9nclki8bq5dsvzw
+2025-01-09T23:55:26.299Z - warn: Report render failed
+(because) report timeout. Last profiler operation: (recipe) chrome-pdf. You can inspect and find more details here: http://127.0.0.1:5488/studio/profiles/Z9kOKbyj3bXI50zx
+Error: Report timeout. Last profiler operation: (recipe) chrome-pdf. You can inspect and find more details here: http://127.0.0.1:5488/studio/profiles/Z9kOKbyj3bXI50zx
+    at Timeout.<anonymous> (/workspaces/ucabair/BACKEND/node_modules/@jsreport/advanced-workers/lib/threadWorker.js:43:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) rootId=9nclki8bq5dsvzw, id=9nclki8bq5dsvzw

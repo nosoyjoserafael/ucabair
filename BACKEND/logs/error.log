@@ -82,3 +82,66 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
   at endReadableNT (node:internal/streams/readable:1359:12)
   at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=zncncf81ves1p1m, id=zncncf81ves1p1m
 2025-01-07T08:45:00.070Z - error: Rendering request 4 finished with error in 598 ms rootId=zncncf81ves1p1m, id=zncncf81ves1p1m
+2025-01-09T23:38:27.977Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-130.0.6723.69/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:38:27.977Z - error: Rendering request 1 finished with error in 815 ms rootId=0jek22km57mwpa9, id=0jek22km57mwpa9
+2025-01-09T23:50:45.893Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:50:45.893Z - error: Rendering request 1 finished with error in 866 ms rootId=683uul575ha9o1x, id=683uul575ha9o1x
+2025-01-09T23:54:21.709Z - error: Error when processing render request 2
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-09T23:54:21.709Z - error: Rendering request 2 finished with error in 680 ms rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
