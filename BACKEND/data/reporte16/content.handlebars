@@ -46,7 +46,7 @@
 </head>
 <body>
   <header>
-    <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
+    <!-- <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo"> -->
     <div class="date">Fecha: {{formatDate}}</div>
   </header>
   <div class="report-title">Ingresos al inventario por solicitudes a proveedores</div>
@@ -62,10 +62,10 @@
     <tbody>
       {{#each fila}}
       <tr>
-        <td>{{nombre}}</td>
+        <td>{{material}}</td>
         <td>{{cantidad}}</td>
-        <td>{{nombreempresa}}</td>
-        <td>{{codigo}}</td>
+        <td>{{proveedor}}</td>
+        <td>{{cod_compra}}</td>
       </tr>
       {{/each}}
     </tbody>

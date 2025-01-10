@@ -6566,3 +6566,1110 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
 2025-01-10T20:05:35.803Z - info: Starting rendering request 1 rootId=ej1op3ydn5zqel2, id=ej1op3ydn5zqel2
 2025-01-10T20:05:35.804Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=ej1op3ydn5zqel2, id=ej1op3ydn5zqel2
 2025-01-10T20:05:46.843Z - info: Rendering request 1 finished in 11071 ms rootId=ej1op3ydn5zqel2, id=ej1op3ydn5zqel2
+2025-01-10T21:06:18.999Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:06:19.001Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:06:19.003Z - info: Extensions location cache not found, crawling directories
+2025-01-10T21:06:19.274Z - info: Found 35 extension(s)
+2025-01-10T21:06:19.400Z - info: Using extension base@4.0.0
+2025-01-10T21:06:19.414Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:06:19.421Z - info: Using extension cli@4.0.5
+2025-01-10T21:06:19.453Z - info: Using extension components@4.0.2
+2025-01-10T21:06:19.455Z - info: Using extension data@4.1.0
+2025-01-10T21:06:19.457Z - info: Using extension express@4.1.3
+2025-01-10T21:06:19.799Z - info: Using extension freeze@4.0.0
+2025-01-10T21:06:19.801Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:06:19.971Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:06:19.972Z - info: Using extension import-export@4.0.5
+2025-01-10T21:06:19.984Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:06:19.985Z - info: Using extension licensing@4.0.3
+2025-01-10T21:06:20.014Z - info: Using extension localization@4.0.1
+2025-01-10T21:06:20.015Z - info: Using extension npm@4.0.0
+2025-01-10T21:06:20.019Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:06:20.022Z - info: Using extension reports@4.1.2
+2025-01-10T21:06:20.026Z - info: Using extension tags@4.0.1
+2025-01-10T21:06:20.028Z - info: Using extension text@4.0.2
+2025-01-10T21:06:20.029Z - info: Using extension version-control@4.0.0
+2025-01-10T21:06:20.044Z - info: Using extension assets@4.2.0
+2025-01-10T21:06:20.055Z - info: Using extension authorization@4.0.1
+2025-01-10T21:06:20.060Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:06:20.063Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:06:20.067Z - info: Using extension docx@4.6.0
+2025-01-10T21:06:20.069Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:06:20.353Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:06:20.353Z - info: Using extension pptx@4.3.2
+2025-01-10T21:06:20.355Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:06:20.400Z - info: Using extension scripts@4.1.0
+2025-01-10T21:06:20.401Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:06:20.402Z - info: Using extension studio@4.2.0
+2025-01-10T21:06:20.512Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:06:20.513Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:06:20.523Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:06:20.525Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:06:20.526Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:06:20.527Z - info: Using fs provider for template store.
+2025-01-10T21:06:20.535Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:06:20.546Z - info: fs store is loading data
+2025-01-10T21:06:20.578Z - info: fs store is initialized successfully
+2025-01-10T21:06:20.592Z - info: Creating default express app.
+2025-01-10T21:06:20.630Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:06:20.631Z - info: Verifying license key free
+2025-01-10T21:06:21.016Z - info: Using enterprise trial license
+2025-01-10T21:06:21.020Z - info: Initializing worker threads
+2025-01-10T21:06:21.886Z - info: 2 worker threads initialized in 866ms
+2025-01-10T21:06:21.889Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:06:21.889Z - info: reporter initialized
+2025-01-10T21:10:08.060Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:10:08.063Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:10:08.071Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:10:08.076Z - info: Found 35 extension(s)
+2025-01-10T21:10:08.136Z - info: Using extension base@4.0.0
+2025-01-10T21:10:08.140Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:10:08.144Z - info: Using extension cli@4.0.5
+2025-01-10T21:10:08.146Z - info: Using extension components@4.0.2
+2025-01-10T21:10:08.147Z - info: Using extension data@4.1.0
+2025-01-10T21:10:08.148Z - info: Using extension express@4.1.3
+2025-01-10T21:10:08.266Z - info: Using extension freeze@4.0.0
+2025-01-10T21:10:08.267Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:10:08.369Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:10:08.371Z - info: Using extension import-export@4.0.5
+2025-01-10T21:10:08.379Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:10:08.380Z - info: Using extension licensing@4.0.3
+2025-01-10T21:10:08.405Z - info: Using extension localization@4.0.1
+2025-01-10T21:10:08.406Z - info: Using extension npm@4.0.0
+2025-01-10T21:10:08.409Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:10:08.414Z - info: Using extension reports@4.1.2
+2025-01-10T21:10:08.416Z - info: Using extension tags@4.0.1
+2025-01-10T21:10:08.418Z - info: Using extension text@4.0.2
+2025-01-10T21:10:08.419Z - info: Using extension version-control@4.0.0
+2025-01-10T21:10:08.429Z - info: Using extension assets@4.2.0
+2025-01-10T21:10:08.435Z - info: Using extension authorization@4.0.1
+2025-01-10T21:10:08.438Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:10:08.439Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:10:08.442Z - info: Using extension docx@4.6.0
+2025-01-10T21:10:08.444Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:10:08.602Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:10:08.602Z - info: Using extension pptx@4.3.2
+2025-01-10T21:10:08.603Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:10:08.625Z - info: Using extension scripts@4.1.0
+2025-01-10T21:10:08.626Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:10:08.626Z - info: Using extension studio@4.2.0
+2025-01-10T21:10:08.681Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:10:08.682Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:10:08.688Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:10:08.699Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:10:08.700Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:10:08.700Z - info: Using fs provider for template store.
+2025-01-10T21:10:08.705Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:10:08.710Z - info: fs store is loading data
+2025-01-10T21:10:08.731Z - info: fs store is initialized successfully
+2025-01-10T21:10:08.742Z - info: Creating default express app.
+2025-01-10T21:10:08.754Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:10:08.759Z - info: Verifying license key free
+2025-01-10T21:10:09.131Z - info: Using enterprise trial license
+2025-01-10T21:10:09.134Z - info: Initializing worker threads
+2025-01-10T21:10:09.811Z - info: 2 worker threads initialized in 677ms
+2025-01-10T21:10:09.812Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:10:09.813Z - info: reporter initialized
+2025-01-10T21:10:20.995Z - info: Render request 1 queued for execution and waiting for available worker rootId=813jiskjut9w1yl, id=813jiskjut9w1yl
+2025-01-10T21:10:21.014Z - info: Starting rendering request 1 rootId=813jiskjut9w1yl, id=813jiskjut9w1yl
+2025-01-10T21:10:21.016Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=813jiskjut9w1yl, id=813jiskjut9w1yl
+2025-01-10T21:10:24.710Z - info: Rendering request 1 finished in 3717 ms rootId=813jiskjut9w1yl, id=813jiskjut9w1yl
+2025-01-10T21:10:48.954Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:10:48.956Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:10:48.965Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:10:48.970Z - info: Found 35 extension(s)
+2025-01-10T21:10:49.031Z - info: Using extension base@4.0.0
+2025-01-10T21:10:49.036Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:10:49.039Z - info: Using extension cli@4.0.5
+2025-01-10T21:10:49.042Z - info: Using extension components@4.0.2
+2025-01-10T21:10:49.042Z - info: Using extension data@4.1.0
+2025-01-10T21:10:49.044Z - info: Using extension express@4.1.3
+2025-01-10T21:10:49.179Z - info: Using extension freeze@4.0.0
+2025-01-10T21:10:49.180Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:10:49.270Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:10:49.271Z - info: Using extension import-export@4.0.5
+2025-01-10T21:10:49.277Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:10:49.278Z - info: Using extension licensing@4.0.3
+2025-01-10T21:10:49.296Z - info: Using extension localization@4.0.1
+2025-01-10T21:10:49.297Z - info: Using extension npm@4.0.0
+2025-01-10T21:10:49.302Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:10:49.304Z - info: Using extension reports@4.1.2
+2025-01-10T21:10:49.306Z - info: Using extension tags@4.0.1
+2025-01-10T21:10:49.307Z - info: Using extension text@4.0.2
+2025-01-10T21:10:49.308Z - info: Using extension version-control@4.0.0
+2025-01-10T21:10:49.318Z - info: Using extension assets@4.2.0
+2025-01-10T21:10:49.328Z - info: Using extension authorization@4.0.1
+2025-01-10T21:10:49.332Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:10:49.333Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:10:49.337Z - info: Using extension docx@4.6.0
+2025-01-10T21:10:49.338Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:10:49.557Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:10:49.558Z - info: Using extension pptx@4.3.2
+2025-01-10T21:10:49.560Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:10:49.645Z - info: Using extension scripts@4.1.0
+2025-01-10T21:10:49.651Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:10:49.657Z - info: Using extension studio@4.2.0
+2025-01-10T21:10:49.826Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:10:49.827Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:10:49.832Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:10:49.833Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:10:49.834Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:10:49.834Z - info: Using fs provider for template store.
+2025-01-10T21:10:49.838Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:10:49.847Z - info: fs store is loading data
+2025-01-10T21:10:49.866Z - info: fs store is initialized successfully
+2025-01-10T21:10:49.877Z - info: Creating default express app.
+2025-01-10T21:10:49.889Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:10:49.895Z - info: Verifying license key free
+2025-01-10T21:10:50.245Z - info: Using enterprise trial license
+2025-01-10T21:10:50.248Z - info: Initializing worker threads
+2025-01-10T21:10:51.055Z - info: 2 worker threads initialized in 807ms
+2025-01-10T21:10:51.056Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:10:51.057Z - info: reporter initialized
+2025-01-10T21:10:57.569Z - info: Render request 1 queued for execution and waiting for available worker rootId=0r2cm6sklgxzvr3, id=0r2cm6sklgxzvr3
+2025-01-10T21:10:57.593Z - info: Starting rendering request 1 rootId=0r2cm6sklgxzvr3, id=0r2cm6sklgxzvr3
+2025-01-10T21:10:57.595Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=0r2cm6sklgxzvr3, id=0r2cm6sklgxzvr3
+2025-01-10T21:10:58.704Z - warn: Page request failed: GET (image) file:///tmp/jsreport/logo_ucabair.jpg, failure: net::ERR_ACCESS_DENIED rootId=0r2cm6sklgxzvr3, id=0r2cm6sklgxzvr3
+2025-01-10T21:10:59.171Z - info: Rendering request 1 finished in 1605 ms rootId=0r2cm6sklgxzvr3, id=0r2cm6sklgxzvr3
+2025-01-10T21:12:08.077Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:12:08.079Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:12:08.087Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:12:08.092Z - info: Found 35 extension(s)
+2025-01-10T21:12:08.190Z - info: Using extension base@4.0.0
+2025-01-10T21:12:08.197Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:12:08.201Z - info: Using extension cli@4.0.5
+2025-01-10T21:12:08.203Z - info: Using extension components@4.0.2
+2025-01-10T21:12:08.204Z - info: Using extension data@4.1.0
+2025-01-10T21:12:08.206Z - info: Using extension express@4.1.3
+2025-01-10T21:12:08.320Z - info: Using extension freeze@4.0.0
+2025-01-10T21:12:08.322Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:12:08.400Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:12:08.401Z - info: Using extension import-export@4.0.5
+2025-01-10T21:12:08.407Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:12:08.408Z - info: Using extension licensing@4.0.3
+2025-01-10T21:12:08.423Z - info: Using extension localization@4.0.1
+2025-01-10T21:12:08.424Z - info: Using extension npm@4.0.0
+2025-01-10T21:12:08.426Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:12:08.428Z - info: Using extension reports@4.1.2
+2025-01-10T21:12:08.430Z - info: Using extension tags@4.0.1
+2025-01-10T21:12:08.431Z - info: Using extension text@4.0.2
+2025-01-10T21:12:08.431Z - info: Using extension version-control@4.0.0
+2025-01-10T21:12:08.439Z - info: Using extension assets@4.2.0
+2025-01-10T21:12:08.445Z - info: Using extension authorization@4.0.1
+2025-01-10T21:12:08.448Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:12:08.449Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:12:08.452Z - info: Using extension docx@4.6.0
+2025-01-10T21:12:08.453Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:12:08.606Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:12:08.607Z - info: Using extension pptx@4.3.2
+2025-01-10T21:12:08.608Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:12:08.630Z - info: Using extension scripts@4.1.0
+2025-01-10T21:12:08.630Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:12:08.631Z - info: Using extension studio@4.2.0
+2025-01-10T21:12:08.685Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:12:08.687Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:12:08.691Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:12:08.692Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:12:08.694Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:12:08.694Z - info: Using fs provider for template store.
+2025-01-10T21:12:08.698Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:12:08.703Z - info: fs store is loading data
+2025-01-10T21:12:08.729Z - info: fs store is initialized successfully
+2025-01-10T21:12:08.741Z - info: Creating default express app.
+2025-01-10T21:12:08.753Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:12:08.759Z - info: Verifying license key free
+2025-01-10T21:12:09.118Z - info: Using enterprise trial license
+2025-01-10T21:12:09.122Z - info: Initializing worker threads
+2025-01-10T21:12:09.911Z - info: 2 worker threads initialized in 789ms
+2025-01-10T21:12:09.911Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:12:09.913Z - info: reporter initialized
+2025-01-10T21:12:14.440Z - info: Render request 1 queued for execution and waiting for available worker rootId=w7uphsb4i94x434, id=w7uphsb4i94x434
+2025-01-10T21:12:14.454Z - info: Starting rendering request 1 rootId=w7uphsb4i94x434, id=w7uphsb4i94x434
+2025-01-10T21:12:14.456Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=w7uphsb4i94x434, id=w7uphsb4i94x434
+2025-01-10T21:12:15.643Z - warn: Page request failed: GET (image) file:///workspaces/ucabair/BACKEND/logo_ucabair.jpg, failure: net::ERR_ACCESS_DENIED rootId=w7uphsb4i94x434, id=w7uphsb4i94x434
+2025-01-10T21:12:16.152Z - info: Rendering request 1 finished in 1714 ms rootId=w7uphsb4i94x434, id=w7uphsb4i94x434
+2025-01-10T21:15:16.372Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:15:16.375Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:15:16.383Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:15:16.388Z - info: Found 35 extension(s)
+2025-01-10T21:15:16.450Z - info: Using extension base@4.0.0
+2025-01-10T21:15:16.454Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:15:16.458Z - info: Using extension cli@4.0.5
+2025-01-10T21:15:16.459Z - info: Using extension components@4.0.2
+2025-01-10T21:15:16.460Z - info: Using extension data@4.1.0
+2025-01-10T21:15:16.461Z - info: Using extension express@4.1.3
+2025-01-10T21:15:16.584Z - info: Using extension freeze@4.0.0
+2025-01-10T21:15:16.585Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:15:16.672Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:15:16.673Z - info: Using extension import-export@4.0.5
+2025-01-10T21:15:16.679Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:15:16.680Z - info: Using extension licensing@4.0.3
+2025-01-10T21:15:16.696Z - info: Using extension localization@4.0.1
+2025-01-10T21:15:16.697Z - info: Using extension npm@4.0.0
+2025-01-10T21:15:16.700Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:15:16.701Z - info: Using extension reports@4.1.2
+2025-01-10T21:15:16.703Z - info: Using extension tags@4.0.1
+2025-01-10T21:15:16.704Z - info: Using extension text@4.0.2
+2025-01-10T21:15:16.705Z - info: Using extension version-control@4.0.0
+2025-01-10T21:15:16.713Z - info: Using extension assets@4.2.0
+2025-01-10T21:15:16.720Z - info: Using extension authorization@4.0.1
+2025-01-10T21:15:16.723Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:15:16.724Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:15:16.727Z - info: Using extension docx@4.6.0
+2025-01-10T21:15:16.729Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:15:16.902Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:15:16.903Z - info: Using extension pptx@4.3.2
+2025-01-10T21:15:16.905Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:15:16.926Z - info: Using extension scripts@4.1.0
+2025-01-10T21:15:16.927Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:15:16.927Z - info: Using extension studio@4.2.0
+2025-01-10T21:15:16.991Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:15:16.993Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:15:16.998Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:15:16.999Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:15:17.000Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:15:17.000Z - info: Using fs provider for template store.
+2025-01-10T21:15:17.004Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:15:17.013Z - info: fs store is loading data
+2025-01-10T21:15:17.035Z - info: fs store is initialized successfully
+2025-01-10T21:15:17.045Z - info: Creating default express app.
+2025-01-10T21:15:17.057Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:15:17.063Z - info: Verifying license key free
+2025-01-10T21:15:17.430Z - info: Using enterprise trial license
+2025-01-10T21:15:17.433Z - info: Initializing worker threads
+2025-01-10T21:15:18.099Z - info: 2 worker threads initialized in 666ms
+2025-01-10T21:15:18.100Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:15:18.102Z - info: reporter initialized
+2025-01-10T21:15:35.829Z - info: Render request 1 queued for execution and waiting for available worker rootId=nx1nirvd7h948qb, id=nx1nirvd7h948qb
+2025-01-10T21:15:35.846Z - info: Starting rendering request 1 rootId=nx1nirvd7h948qb, id=nx1nirvd7h948qb
+2025-01-10T21:15:35.847Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=nx1nirvd7h948qb, id=nx1nirvd7h948qb
+2025-01-10T21:15:36.920Z - warn: Page request failed: GET (image) file:///data/logo_ucabair.jpg, failure: net::ERR_ACCESS_DENIED rootId=nx1nirvd7h948qb, id=nx1nirvd7h948qb
+2025-01-10T21:15:37.364Z - info: Rendering request 1 finished in 1537 ms rootId=nx1nirvd7h948qb, id=nx1nirvd7h948qb
+2025-01-10T21:19:40.432Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:19:40.434Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:19:40.443Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:19:40.447Z - info: Found 35 extension(s)
+2025-01-10T21:19:40.511Z - info: Using extension base@4.0.0
+2025-01-10T21:19:40.515Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:19:40.518Z - info: Using extension cli@4.0.5
+2025-01-10T21:19:40.520Z - info: Using extension components@4.0.2
+2025-01-10T21:19:40.521Z - info: Using extension data@4.1.0
+2025-01-10T21:19:40.522Z - info: Using extension express@4.1.3
+2025-01-10T21:19:40.648Z - info: Using extension freeze@4.0.0
+2025-01-10T21:19:40.650Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:19:40.730Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:19:40.731Z - info: Using extension import-export@4.0.5
+2025-01-10T21:19:40.738Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:19:40.738Z - info: Using extension licensing@4.0.3
+2025-01-10T21:19:40.754Z - info: Using extension localization@4.0.1
+2025-01-10T21:19:40.755Z - info: Using extension npm@4.0.0
+2025-01-10T21:19:40.757Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:19:40.759Z - info: Using extension reports@4.1.2
+2025-01-10T21:19:40.760Z - info: Using extension tags@4.0.1
+2025-01-10T21:19:40.762Z - info: Using extension text@4.0.2
+2025-01-10T21:19:40.762Z - info: Using extension version-control@4.0.0
+2025-01-10T21:19:40.770Z - info: Using extension assets@4.2.0
+2025-01-10T21:19:40.776Z - info: Using extension authorization@4.0.1
+2025-01-10T21:19:40.779Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:19:40.781Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:19:40.784Z - info: Using extension docx@4.6.0
+2025-01-10T21:19:40.786Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:19:40.937Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:19:40.938Z - info: Using extension pptx@4.3.2
+2025-01-10T21:19:40.939Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:19:40.962Z - info: Using extension scripts@4.1.0
+2025-01-10T21:19:40.963Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:19:40.963Z - info: Using extension studio@4.2.0
+2025-01-10T21:19:41.018Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:19:41.020Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:19:41.025Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:19:41.027Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:19:41.028Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:19:41.028Z - info: Using fs provider for template store.
+2025-01-10T21:19:41.032Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:19:41.043Z - info: fs store is loading data
+2025-01-10T21:19:41.054Z - info: fs store is initialized successfully
+2025-01-10T21:19:41.065Z - info: Creating default express app.
+2025-01-10T21:19:41.080Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:19:41.081Z - info: Verifying license key free
+2025-01-10T21:19:41.429Z - info: Using enterprise trial license
+2025-01-10T21:19:41.432Z - info: Initializing worker threads
+2025-01-10T21:19:42.128Z - info: 2 worker threads initialized in 696ms
+2025-01-10T21:19:42.128Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:19:42.129Z - info: reporter initialized
+2025-01-10T21:19:47.561Z - info: Render request 1 queued for execution and waiting for available worker rootId=zb1g6z8aakullbc, id=zb1g6z8aakullbc
+2025-01-10T21:19:47.575Z - info: Starting rendering request 1 rootId=zb1g6z8aakullbc, id=zb1g6z8aakullbc
+2025-01-10T21:19:47.577Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=zb1g6z8aakullbc, id=zb1g6z8aakullbc
+2025-01-10T21:19:48.627Z - warn: Page request failed: GET (image) file:///data/img/logo_ucabair.jpg, failure: net::ERR_ACCESS_DENIED rootId=zb1g6z8aakullbc, id=zb1g6z8aakullbc
+2025-01-10T21:19:49.053Z - info: Rendering request 1 finished in 1493 ms rootId=zb1g6z8aakullbc, id=zb1g6z8aakullbc
+2025-01-10T21:23:09.898Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:23:09.901Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:23:09.909Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:23:09.913Z - info: Found 35 extension(s)
+2025-01-10T21:23:09.973Z - info: Using extension base@4.0.0
+2025-01-10T21:23:09.977Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:23:09.980Z - info: Using extension cli@4.0.5
+2025-01-10T21:23:09.982Z - info: Using extension components@4.0.2
+2025-01-10T21:23:09.983Z - info: Using extension data@4.1.0
+2025-01-10T21:23:09.983Z - info: Using extension express@4.1.3
+2025-01-10T21:23:10.115Z - info: Using extension freeze@4.0.0
+2025-01-10T21:23:10.116Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:23:10.252Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:23:10.254Z - info: Using extension import-export@4.0.5
+2025-01-10T21:23:10.262Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:23:10.262Z - info: Using extension licensing@4.0.3
+2025-01-10T21:23:10.284Z - info: Using extension localization@4.0.1
+2025-01-10T21:23:10.285Z - info: Using extension npm@4.0.0
+2025-01-10T21:23:10.288Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:23:10.290Z - info: Using extension reports@4.1.2
+2025-01-10T21:23:10.292Z - info: Using extension tags@4.0.1
+2025-01-10T21:23:10.296Z - info: Using extension text@4.0.2
+2025-01-10T21:23:10.297Z - info: Using extension version-control@4.0.0
+2025-01-10T21:23:10.307Z - info: Using extension assets@4.2.0
+2025-01-10T21:23:10.316Z - info: Using extension authorization@4.0.1
+2025-01-10T21:23:10.319Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:23:10.321Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:23:10.325Z - info: Using extension docx@4.6.0
+2025-01-10T21:23:10.326Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:23:10.491Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:23:10.491Z - info: Using extension pptx@4.3.2
+2025-01-10T21:23:10.493Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:23:10.515Z - info: Using extension scripts@4.1.0
+2025-01-10T21:23:10.516Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:23:10.517Z - info: Using extension studio@4.2.0
+2025-01-10T21:23:10.593Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:23:10.595Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:23:10.602Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:23:10.604Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:23:10.605Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:23:10.605Z - info: Using fs provider for template store.
+2025-01-10T21:23:10.623Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:23:10.629Z - info: fs store is loading data
+2025-01-10T21:23:10.646Z - info: fs store is initialized successfully
+2025-01-10T21:23:10.657Z - info: Creating default express app.
+2025-01-10T21:23:10.670Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:23:10.676Z - info: Verifying license key free
+2025-01-10T21:23:11.093Z - info: Using enterprise trial license
+2025-01-10T21:23:11.098Z - info: Initializing worker threads
+2025-01-10T21:23:11.856Z - info: 2 worker threads initialized in 758ms
+2025-01-10T21:23:11.857Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:23:11.857Z - info: reporter initialized
+2025-01-10T21:23:18.706Z - info: Render request 1 queued for execution and waiting for available worker rootId=sy8fbnus8gxkq6w, id=sy8fbnus8gxkq6w
+2025-01-10T21:23:18.720Z - info: Starting rendering request 1 rootId=sy8fbnus8gxkq6w, id=sy8fbnus8gxkq6w
+2025-01-10T21:23:18.721Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=sy8fbnus8gxkq6w, id=sy8fbnus8gxkq6w
+2025-01-10T21:23:19.853Z - warn: Page request failed: GET (image) http://localhost:3000/BACKEND/data/img/logo_ucabair.jpg, failure: net::ERR_BLOCKED_BY_ORB rootId=sy8fbnus8gxkq6w, id=sy8fbnus8gxkq6w
+2025-01-10T21:23:20.252Z - info: Rendering request 1 finished in 1548 ms rootId=sy8fbnus8gxkq6w, id=sy8fbnus8gxkq6w
+2025-01-10T21:25:07.701Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:25:07.703Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:25:07.711Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:25:07.716Z - info: Found 35 extension(s)
+2025-01-10T21:25:07.777Z - info: Using extension base@4.0.0
+2025-01-10T21:25:07.781Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:25:07.784Z - info: Using extension cli@4.0.5
+2025-01-10T21:25:07.786Z - info: Using extension components@4.0.2
+2025-01-10T21:25:07.787Z - info: Using extension data@4.1.0
+2025-01-10T21:25:07.788Z - info: Using extension express@4.1.3
+2025-01-10T21:25:07.918Z - info: Using extension freeze@4.0.0
+2025-01-10T21:25:07.919Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:25:08.053Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:25:08.054Z - info: Using extension import-export@4.0.5
+2025-01-10T21:25:08.059Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:25:08.060Z - info: Using extension licensing@4.0.3
+2025-01-10T21:25:08.079Z - info: Using extension localization@4.0.1
+2025-01-10T21:25:08.079Z - info: Using extension npm@4.0.0
+2025-01-10T21:25:08.082Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:25:08.083Z - info: Using extension reports@4.1.2
+2025-01-10T21:25:08.085Z - info: Using extension tags@4.0.1
+2025-01-10T21:25:08.086Z - info: Using extension text@4.0.2
+2025-01-10T21:25:08.087Z - info: Using extension version-control@4.0.0
+2025-01-10T21:25:08.094Z - info: Using extension assets@4.2.0
+2025-01-10T21:25:08.100Z - info: Using extension authorization@4.0.1
+2025-01-10T21:25:08.103Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:25:08.104Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:25:08.107Z - info: Using extension docx@4.6.0
+2025-01-10T21:25:08.108Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:25:08.260Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:25:08.261Z - info: Using extension pptx@4.3.2
+2025-01-10T21:25:08.262Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:25:08.283Z - info: Using extension scripts@4.1.0
+2025-01-10T21:25:08.284Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:25:08.284Z - info: Using extension studio@4.2.0
+2025-01-10T21:25:08.340Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:25:08.342Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:25:08.346Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:25:08.348Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:25:08.349Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:25:08.349Z - info: Using fs provider for template store.
+2025-01-10T21:25:08.354Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:25:08.360Z - info: fs store is loading data
+2025-01-10T21:25:08.377Z - info: fs store is initialized successfully
+2025-01-10T21:25:08.388Z - info: Creating default express app.
+2025-01-10T21:25:08.400Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:25:08.406Z - info: Verifying license key free
+2025-01-10T21:25:08.774Z - info: Using enterprise trial license
+2025-01-10T21:25:08.777Z - info: Initializing worker threads
+2025-01-10T21:25:09.463Z - info: 2 worker threads initialized in 686ms
+2025-01-10T21:25:09.463Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:25:09.464Z - info: reporter initialized
+2025-01-10T21:25:37.371Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:25:37.373Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:25:37.381Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:25:37.385Z - info: Found 35 extension(s)
+2025-01-10T21:25:37.446Z - info: Using extension base@4.0.0
+2025-01-10T21:25:37.450Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:25:37.453Z - info: Using extension cli@4.0.5
+2025-01-10T21:25:37.455Z - info: Using extension components@4.0.2
+2025-01-10T21:25:37.456Z - info: Using extension data@4.1.0
+2025-01-10T21:25:37.457Z - info: Using extension express@4.1.3
+2025-01-10T21:25:37.635Z - info: Using extension freeze@4.0.0
+2025-01-10T21:25:37.637Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:25:37.720Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:25:37.721Z - info: Using extension import-export@4.0.5
+2025-01-10T21:25:37.727Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:25:37.727Z - info: Using extension licensing@4.0.3
+2025-01-10T21:25:37.744Z - info: Using extension localization@4.0.1
+2025-01-10T21:25:37.744Z - info: Using extension npm@4.0.0
+2025-01-10T21:25:37.747Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:25:37.748Z - info: Using extension reports@4.1.2
+2025-01-10T21:25:37.750Z - info: Using extension tags@4.0.1
+2025-01-10T21:25:37.751Z - info: Using extension text@4.0.2
+2025-01-10T21:25:37.751Z - info: Using extension version-control@4.0.0
+2025-01-10T21:25:37.761Z - info: Using extension assets@4.2.0
+2025-01-10T21:25:37.767Z - info: Using extension authorization@4.0.1
+2025-01-10T21:25:37.770Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:25:37.771Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:25:37.774Z - info: Using extension docx@4.6.0
+2025-01-10T21:25:37.776Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:25:37.973Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:25:37.973Z - info: Using extension pptx@4.3.2
+2025-01-10T21:25:37.975Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:25:37.995Z - info: Using extension scripts@4.1.0
+2025-01-10T21:25:37.996Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:25:37.996Z - info: Using extension studio@4.2.0
+2025-01-10T21:25:38.074Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:25:38.076Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:25:38.084Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:25:38.085Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:25:38.086Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:25:38.086Z - info: Using fs provider for template store.
+2025-01-10T21:25:38.091Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:25:38.099Z - info: fs store is loading data
+2025-01-10T21:25:38.111Z - info: fs store is initialized successfully
+2025-01-10T21:25:38.121Z - info: Creating default express app.
+2025-01-10T21:25:38.133Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:25:38.138Z - info: Verifying license key free
+2025-01-10T21:25:38.484Z - info: Using enterprise trial license
+2025-01-10T21:25:38.487Z - info: Initializing worker threads
+2025-01-10T21:25:39.174Z - info: 2 worker threads initialized in 687ms
+2025-01-10T21:25:39.175Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:25:39.176Z - info: reporter initialized
+2025-01-10T21:28:13.930Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:28:13.933Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:28:13.946Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:28:13.954Z - info: Found 35 extension(s)
+2025-01-10T21:28:14.018Z - info: Using extension base@4.0.0
+2025-01-10T21:28:14.023Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:28:14.026Z - info: Using extension cli@4.0.5
+2025-01-10T21:28:14.028Z - info: Using extension components@4.0.2
+2025-01-10T21:28:14.029Z - info: Using extension data@4.1.0
+2025-01-10T21:28:14.030Z - info: Using extension express@4.1.3
+2025-01-10T21:28:14.153Z - info: Using extension freeze@4.0.0
+2025-01-10T21:28:14.155Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:28:14.235Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:28:14.236Z - info: Using extension import-export@4.0.5
+2025-01-10T21:28:14.241Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:28:14.242Z - info: Using extension licensing@4.0.3
+2025-01-10T21:28:14.258Z - info: Using extension localization@4.0.1
+2025-01-10T21:28:14.259Z - info: Using extension npm@4.0.0
+2025-01-10T21:28:14.261Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:28:14.262Z - info: Using extension reports@4.1.2
+2025-01-10T21:28:14.265Z - info: Using extension tags@4.0.1
+2025-01-10T21:28:14.266Z - info: Using extension text@4.0.2
+2025-01-10T21:28:14.266Z - info: Using extension version-control@4.0.0
+2025-01-10T21:28:14.273Z - info: Using extension assets@4.2.0
+2025-01-10T21:28:14.282Z - info: Using extension authorization@4.0.1
+2025-01-10T21:28:14.285Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:28:14.286Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:28:14.289Z - info: Using extension docx@4.6.0
+2025-01-10T21:28:14.290Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:28:14.446Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:28:14.447Z - info: Using extension pptx@4.3.2
+2025-01-10T21:28:14.448Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:28:14.469Z - info: Using extension scripts@4.1.0
+2025-01-10T21:28:14.470Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:28:14.470Z - info: Using extension studio@4.2.0
+2025-01-10T21:28:14.529Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:28:14.531Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:28:14.539Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:28:14.540Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:28:14.541Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:28:14.541Z - info: Using fs provider for template store.
+2025-01-10T21:28:14.545Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:28:14.555Z - info: fs store is loading data
+2025-01-10T21:28:14.568Z - info: fs store is initialized successfully
+2025-01-10T21:28:14.579Z - info: Creating default express app.
+2025-01-10T21:28:14.592Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:28:14.598Z - info: Verifying license key free
+2025-01-10T21:28:14.953Z - info: Using enterprise trial license
+2025-01-10T21:28:14.958Z - info: Initializing worker threads
+2025-01-10T21:28:15.743Z - info: 2 worker threads initialized in 785ms
+2025-01-10T21:28:15.744Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:28:15.744Z - info: reporter initialized
+2025-01-10T21:32:33.729Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:32:33.731Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:32:33.739Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:32:33.743Z - info: Found 35 extension(s)
+2025-01-10T21:32:33.807Z - info: Using extension base@4.0.0
+2025-01-10T21:32:33.812Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:32:33.815Z - info: Using extension cli@4.0.5
+2025-01-10T21:32:33.817Z - info: Using extension components@4.0.2
+2025-01-10T21:32:33.818Z - info: Using extension data@4.1.0
+2025-01-10T21:32:33.818Z - info: Using extension express@4.1.3
+2025-01-10T21:32:33.937Z - info: Using extension freeze@4.0.0
+2025-01-10T21:32:33.938Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:32:34.025Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:32:34.026Z - info: Using extension import-export@4.0.5
+2025-01-10T21:32:34.033Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:32:34.033Z - info: Using extension licensing@4.0.3
+2025-01-10T21:32:34.049Z - info: Using extension localization@4.0.1
+2025-01-10T21:32:34.049Z - info: Using extension npm@4.0.0
+2025-01-10T21:32:34.052Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:32:34.053Z - info: Using extension reports@4.1.2
+2025-01-10T21:32:34.055Z - info: Using extension tags@4.0.1
+2025-01-10T21:32:34.056Z - info: Using extension text@4.0.2
+2025-01-10T21:32:34.057Z - info: Using extension version-control@4.0.0
+2025-01-10T21:32:34.064Z - info: Using extension assets@4.2.0
+2025-01-10T21:32:34.071Z - info: Using extension authorization@4.0.1
+2025-01-10T21:32:34.074Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:32:34.075Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:32:34.078Z - info: Using extension docx@4.6.0
+2025-01-10T21:32:34.080Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:32:34.235Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:32:34.235Z - info: Using extension pptx@4.3.2
+2025-01-10T21:32:34.237Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:32:34.261Z - info: Using extension scripts@4.1.0
+2025-01-10T21:32:34.261Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:32:34.262Z - info: Using extension studio@4.2.0
+2025-01-10T21:32:34.317Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:32:34.319Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:32:34.326Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:32:34.327Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:32:34.329Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:32:34.329Z - info: Using fs provider for template store.
+2025-01-10T21:32:34.351Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:32:34.370Z - info: fs store is loading data
+2025-01-10T21:32:34.403Z - info: fs store is initialized successfully
+2025-01-10T21:32:34.414Z - info: Creating default express app.
+2025-01-10T21:32:34.427Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:32:34.433Z - info: Verifying license key free
+2025-01-10T21:32:34.817Z - info: Using enterprise trial license
+2025-01-10T21:32:34.821Z - info: Initializing worker threads
+2025-01-10T21:32:35.716Z - info: 2 worker threads initialized in 895ms
+2025-01-10T21:32:35.716Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:32:35.717Z - info: reporter initialized
+2025-01-10T21:33:27.783Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:33:27.785Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:33:27.794Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:33:27.798Z - info: Found 35 extension(s)
+2025-01-10T21:33:27.860Z - info: Using extension base@4.0.0
+2025-01-10T21:33:27.864Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:33:27.867Z - info: Using extension cli@4.0.5
+2025-01-10T21:33:27.870Z - info: Using extension components@4.0.2
+2025-01-10T21:33:27.871Z - info: Using extension data@4.1.0
+2025-01-10T21:33:27.872Z - info: Using extension express@4.1.3
+2025-01-10T21:33:28.009Z - info: Using extension freeze@4.0.0
+2025-01-10T21:33:28.011Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:33:28.113Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:33:28.114Z - info: Using extension import-export@4.0.5
+2025-01-10T21:33:28.120Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:33:28.120Z - info: Using extension licensing@4.0.3
+2025-01-10T21:33:28.139Z - info: Using extension localization@4.0.1
+2025-01-10T21:33:28.139Z - info: Using extension npm@4.0.0
+2025-01-10T21:33:28.142Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:33:28.143Z - info: Using extension reports@4.1.2
+2025-01-10T21:33:28.145Z - info: Using extension tags@4.0.1
+2025-01-10T21:33:28.146Z - info: Using extension text@4.0.2
+2025-01-10T21:33:28.147Z - info: Using extension version-control@4.0.0
+2025-01-10T21:33:28.154Z - info: Using extension assets@4.2.0
+2025-01-10T21:33:28.161Z - info: Using extension authorization@4.0.1
+2025-01-10T21:33:28.163Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:33:28.165Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:33:28.168Z - info: Using extension docx@4.6.0
+2025-01-10T21:33:28.170Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:33:28.319Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:33:28.320Z - info: Using extension pptx@4.3.2
+2025-01-10T21:33:28.321Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:33:28.342Z - info: Using extension scripts@4.1.0
+2025-01-10T21:33:28.343Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:33:28.344Z - info: Using extension studio@4.2.0
+2025-01-10T21:33:28.401Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:33:28.402Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:33:28.406Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:33:28.408Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:33:28.409Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:33:28.409Z - info: Using fs provider for template store.
+2025-01-10T21:33:28.414Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:33:28.424Z - info: fs store is loading data
+2025-01-10T21:33:28.438Z - info: fs store is initialized successfully
+2025-01-10T21:33:28.448Z - info: Creating default express app.
+2025-01-10T21:33:28.459Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:33:28.465Z - info: Verifying license key free
+2025-01-10T21:33:28.814Z - info: Using enterprise trial license
+2025-01-10T21:33:28.817Z - info: Initializing worker threads
+2025-01-10T21:33:29.502Z - info: 2 worker threads initialized in 685ms
+2025-01-10T21:33:29.503Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:33:29.504Z - info: reporter initialized
+2025-01-10T21:46:07.534Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:46:07.537Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:46:07.546Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:46:07.550Z - info: Found 35 extension(s)
+2025-01-10T21:46:07.612Z - info: Using extension base@4.0.0
+2025-01-10T21:46:07.616Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:46:07.619Z - info: Using extension cli@4.0.5
+2025-01-10T21:46:07.621Z - info: Using extension components@4.0.2
+2025-01-10T21:46:07.622Z - info: Using extension data@4.1.0
+2025-01-10T21:46:07.623Z - info: Using extension express@4.1.3
+2025-01-10T21:46:07.744Z - info: Using extension freeze@4.0.0
+2025-01-10T21:46:07.745Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:46:07.889Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:46:07.890Z - info: Using extension import-export@4.0.5
+2025-01-10T21:46:07.896Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:46:07.897Z - info: Using extension licensing@4.0.3
+2025-01-10T21:46:07.915Z - info: Using extension localization@4.0.1
+2025-01-10T21:46:07.915Z - info: Using extension npm@4.0.0
+2025-01-10T21:46:07.919Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:46:07.920Z - info: Using extension reports@4.1.2
+2025-01-10T21:46:07.923Z - info: Using extension tags@4.0.1
+2025-01-10T21:46:07.924Z - info: Using extension text@4.0.2
+2025-01-10T21:46:07.925Z - info: Using extension version-control@4.0.0
+2025-01-10T21:46:07.936Z - info: Using extension assets@4.2.0
+2025-01-10T21:46:07.945Z - info: Using extension authorization@4.0.1
+2025-01-10T21:46:07.949Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:46:07.951Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:46:07.955Z - info: Using extension docx@4.6.0
+2025-01-10T21:46:07.957Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:46:08.118Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:46:08.118Z - info: Using extension pptx@4.3.2
+2025-01-10T21:46:08.119Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:46:08.141Z - info: Using extension scripts@4.1.0
+2025-01-10T21:46:08.142Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:46:08.143Z - info: Using extension studio@4.2.0
+2025-01-10T21:46:08.197Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:46:08.198Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:46:08.203Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:46:08.205Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:46:08.206Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:46:08.206Z - info: Using fs provider for template store.
+2025-01-10T21:46:08.211Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:46:08.221Z - info: fs store is loading data
+2025-01-10T21:46:08.235Z - info: fs store is initialized successfully
+2025-01-10T21:46:08.246Z - info: Creating default express app.
+2025-01-10T21:46:08.260Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:46:08.267Z - info: Verifying license key free
+2025-01-10T21:46:08.642Z - info: Using enterprise trial license
+2025-01-10T21:46:08.645Z - info: Initializing worker threads
+2025-01-10T21:46:09.394Z - info: 2 worker threads initialized in 749ms
+2025-01-10T21:46:09.394Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:46:09.395Z - info: reporter initialized
+2025-01-10T21:46:16.290Z - info: Render request 1 queued for execution and waiting for available worker rootId=kwlgwu96nfsff40, id=kwlgwu96nfsff40
+2025-01-10T21:46:16.304Z - info: Starting rendering request 1 rootId=kwlgwu96nfsff40, id=kwlgwu96nfsff40
+2025-01-10T21:46:16.305Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=kwlgwu96nfsff40, id=kwlgwu96nfsff40
+2025-01-10T21:46:17.337Z - warn: Page request failed: GET (image) http://localhost:3000/BACKEND/data/img/logo_ucabair.png, failure: net::ERR_BLOCKED_BY_ORB rootId=kwlgwu96nfsff40, id=kwlgwu96nfsff40
+2025-01-10T21:46:17.782Z - info: Rendering request 1 finished in 1494 ms rootId=kwlgwu96nfsff40, id=kwlgwu96nfsff40
+2025-01-10T21:51:01.906Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:51:01.908Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:51:01.916Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:51:01.920Z - info: Found 35 extension(s)
+2025-01-10T21:51:01.982Z - info: Using extension base@4.0.0
+2025-01-10T21:51:01.986Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:51:01.989Z - info: Using extension cli@4.0.5
+2025-01-10T21:51:01.991Z - info: Using extension components@4.0.2
+2025-01-10T21:51:01.992Z - info: Using extension data@4.1.0
+2025-01-10T21:51:01.993Z - info: Using extension express@4.1.3
+2025-01-10T21:51:02.116Z - info: Using extension freeze@4.0.0
+2025-01-10T21:51:02.118Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:51:02.224Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:51:02.226Z - info: Using extension import-export@4.0.5
+2025-01-10T21:51:02.233Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:51:02.234Z - info: Using extension licensing@4.0.3
+2025-01-10T21:51:02.320Z - info: Using extension localization@4.0.1
+2025-01-10T21:51:02.321Z - info: Using extension npm@4.0.0
+2025-01-10T21:51:02.358Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:51:02.360Z - info: Using extension reports@4.1.2
+2025-01-10T21:51:02.362Z - info: Using extension tags@4.0.1
+2025-01-10T21:51:02.363Z - info: Using extension text@4.0.2
+2025-01-10T21:51:02.364Z - info: Using extension version-control@4.0.0
+2025-01-10T21:51:02.395Z - info: Using extension assets@4.2.0
+2025-01-10T21:51:02.421Z - info: Using extension authorization@4.0.1
+2025-01-10T21:51:02.427Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:51:02.431Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:51:02.441Z - info: Using extension docx@4.6.0
+2025-01-10T21:51:02.444Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:51:02.673Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:51:02.674Z - info: Using extension pptx@4.3.2
+2025-01-10T21:51:02.675Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:51:02.697Z - info: Using extension scripts@4.1.0
+2025-01-10T21:51:02.698Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:51:02.698Z - info: Using extension studio@4.2.0
+2025-01-10T21:51:02.774Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:51:02.776Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:51:02.780Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:51:02.782Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:51:02.783Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:51:02.783Z - info: Using fs provider for template store.
+2025-01-10T21:51:02.799Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:51:02.807Z - info: fs store is loading data
+2025-01-10T21:51:02.833Z - info: fs store is initialized successfully
+2025-01-10T21:51:02.844Z - info: Creating default express app.
+2025-01-10T21:51:02.857Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:51:02.863Z - info: Verifying license key free
+2025-01-10T21:51:03.239Z - info: Using enterprise trial license
+2025-01-10T21:51:03.243Z - info: Initializing worker threads
+2025-01-10T21:51:03.920Z - info: 2 worker threads initialized in 677ms
+2025-01-10T21:51:03.920Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:51:03.921Z - info: reporter initialized
+2025-01-10T21:51:10.230Z - info: Render request 1 queued for execution and waiting for available worker rootId=8pecch4hn2v6sid, id=8pecch4hn2v6sid
+2025-01-10T21:51:10.246Z - info: Starting rendering request 1 rootId=8pecch4hn2v6sid, id=8pecch4hn2v6sid
+2025-01-10T21:51:10.247Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=8pecch4hn2v6sid, id=8pecch4hn2v6sid
+2025-01-10T21:51:11.397Z - warn: Page request failed: GET (image) http://localhost:3000/BACKEND/img/logo_ucabair.png, failure: net::ERR_BLOCKED_BY_ORB rootId=8pecch4hn2v6sid, id=8pecch4hn2v6sid
+2025-01-10T21:51:11.770Z - info: Rendering request 1 finished in 1542 ms rootId=8pecch4hn2v6sid, id=8pecch4hn2v6sid
+2025-01-10T21:52:40.702Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:52:40.706Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:52:40.720Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:52:40.727Z - info: Found 35 extension(s)
+2025-01-10T21:52:40.789Z - info: Using extension base@4.0.0
+2025-01-10T21:52:40.793Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:52:40.796Z - info: Using extension cli@4.0.5
+2025-01-10T21:52:40.798Z - info: Using extension components@4.0.2
+2025-01-10T21:52:40.799Z - info: Using extension data@4.1.0
+2025-01-10T21:52:40.800Z - info: Using extension express@4.1.3
+2025-01-10T21:52:40.923Z - info: Using extension freeze@4.0.0
+2025-01-10T21:52:40.925Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:52:41.057Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:52:41.058Z - info: Using extension import-export@4.0.5
+2025-01-10T21:52:41.064Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:52:41.065Z - info: Using extension licensing@4.0.3
+2025-01-10T21:52:41.082Z - info: Using extension localization@4.0.1
+2025-01-10T21:52:41.083Z - info: Using extension npm@4.0.0
+2025-01-10T21:52:41.085Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:52:41.086Z - info: Using extension reports@4.1.2
+2025-01-10T21:52:41.088Z - info: Using extension tags@4.0.1
+2025-01-10T21:52:41.089Z - info: Using extension text@4.0.2
+2025-01-10T21:52:41.090Z - info: Using extension version-control@4.0.0
+2025-01-10T21:52:41.097Z - info: Using extension assets@4.2.0
+2025-01-10T21:52:41.103Z - info: Using extension authorization@4.0.1
+2025-01-10T21:52:41.106Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:52:41.107Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:52:41.110Z - info: Using extension docx@4.6.0
+2025-01-10T21:52:41.112Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:52:41.263Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:52:41.263Z - info: Using extension pptx@4.3.2
+2025-01-10T21:52:41.264Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:52:41.286Z - info: Using extension scripts@4.1.0
+2025-01-10T21:52:41.286Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:52:41.287Z - info: Using extension studio@4.2.0
+2025-01-10T21:52:41.343Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:52:41.344Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:52:41.349Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:52:41.350Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:52:41.351Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:52:41.351Z - info: Using fs provider for template store.
+2025-01-10T21:52:41.357Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:52:41.364Z - info: fs store is loading data
+2025-01-10T21:52:41.377Z - info: fs store is initialized successfully
+2025-01-10T21:52:41.390Z - info: Creating default express app.
+2025-01-10T21:52:41.402Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:52:41.408Z - info: Verifying license key free
+2025-01-10T21:52:41.762Z - info: Using enterprise trial license
+2025-01-10T21:52:41.765Z - info: Initializing worker threads
+2025-01-10T21:52:42.442Z - info: 2 worker threads initialized in 677ms
+2025-01-10T21:52:42.442Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:52:42.443Z - info: reporter initialized
+2025-01-10T21:55:24.726Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T21:55:24.729Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T21:55:24.737Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T21:55:24.741Z - info: Found 35 extension(s)
+2025-01-10T21:55:24.802Z - info: Using extension base@4.0.0
+2025-01-10T21:55:24.806Z - info: Using extension child-templates@4.1.0
+2025-01-10T21:55:24.809Z - info: Using extension cli@4.0.5
+2025-01-10T21:55:24.811Z - info: Using extension components@4.0.2
+2025-01-10T21:55:24.812Z - info: Using extension data@4.1.0
+2025-01-10T21:55:24.813Z - info: Using extension express@4.1.3
+2025-01-10T21:55:24.986Z - info: Using extension freeze@4.0.0
+2025-01-10T21:55:24.992Z - info: Using extension fs-store@4.0.5
+2025-01-10T21:55:25.078Z - info: Using extension handlebars@4.0.1
+2025-01-10T21:55:25.079Z - info: Using extension import-export@4.0.5
+2025-01-10T21:55:25.087Z - info: Using extension jsrender@4.0.0
+2025-01-10T21:55:25.088Z - info: Using extension licensing@4.0.3
+2025-01-10T21:55:25.103Z - info: Using extension localization@4.0.1
+2025-01-10T21:55:25.104Z - info: Using extension npm@4.0.0
+2025-01-10T21:55:25.106Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T21:55:25.107Z - info: Using extension reports@4.1.2
+2025-01-10T21:55:25.109Z - info: Using extension tags@4.0.1
+2025-01-10T21:55:25.110Z - info: Using extension text@4.0.2
+2025-01-10T21:55:25.111Z - info: Using extension version-control@4.0.0
+2025-01-10T21:55:25.118Z - info: Using extension assets@4.2.0
+2025-01-10T21:55:25.124Z - info: Using extension authorization@4.0.1
+2025-01-10T21:55:25.127Z - info: Using extension browser-client@4.1.0
+2025-01-10T21:55:25.128Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T21:55:25.131Z - info: Using extension docx@4.6.0
+2025-01-10T21:55:25.132Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T21:55:25.296Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T21:55:25.296Z - info: Using extension pptx@4.3.2
+2025-01-10T21:55:25.297Z - info: Using extension scheduling@4.0.0
+2025-01-10T21:55:25.319Z - info: Using extension scripts@4.1.0
+2025-01-10T21:55:25.320Z - info: Using extension static-pdf@4.1.0
+2025-01-10T21:55:25.321Z - info: Using extension studio@4.2.0
+2025-01-10T21:55:25.378Z - info: Using extension xlsx@4.3.0
+2025-01-10T21:55:25.380Z - info: Using extension public-templates@4.0.0
+2025-01-10T21:55:25.387Z - info: Using extension sample-template@4.0.0
+2025-01-10T21:55:25.389Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T21:55:25.392Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T21:55:25.393Z - info: Using fs provider for template store.
+2025-01-10T21:55:25.399Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T21:55:25.410Z - info: fs store is loading data
+2025-01-10T21:55:25.431Z - info: fs store is initialized successfully
+2025-01-10T21:55:25.448Z - info: Creating default express app.
+2025-01-10T21:55:25.466Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T21:55:25.467Z - info: Verifying license key free
+2025-01-10T21:55:25.905Z - info: Using enterprise trial license
+2025-01-10T21:55:25.908Z - info: Initializing worker threads
+2025-01-10T21:55:26.655Z - info: 2 worker threads initialized in 747ms
+2025-01-10T21:55:26.656Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T21:55:26.657Z - info: reporter initialized
+2025-01-10T21:55:36.859Z - info: Render request 1 queued for execution and waiting for available worker rootId=87nnhopccg2vfiu, id=87nnhopccg2vfiu
+2025-01-10T21:55:36.876Z - info: Starting rendering request 1 rootId=87nnhopccg2vfiu, id=87nnhopccg2vfiu
+2025-01-10T21:55:36.877Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=87nnhopccg2vfiu, id=87nnhopccg2vfiu
+2025-01-10T21:55:38.057Z - warn: Page request failed: GET (image) http://localhost:3000/img/logo_ucabair.png, failure: net::ERR_BLOCKED_BY_ORB rootId=87nnhopccg2vfiu, id=87nnhopccg2vfiu
+2025-01-10T21:55:38.488Z - info: Rendering request 1 finished in 1631 ms rootId=87nnhopccg2vfiu, id=87nnhopccg2vfiu
+2025-01-10T22:05:45.151Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T22:05:45.153Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T22:05:45.161Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T22:05:45.165Z - info: Found 35 extension(s)
+2025-01-10T22:05:45.233Z - info: Using extension base@4.0.0
+2025-01-10T22:05:45.239Z - info: Using extension child-templates@4.1.0
+2025-01-10T22:05:45.243Z - info: Using extension cli@4.0.5
+2025-01-10T22:05:45.246Z - info: Using extension components@4.0.2
+2025-01-10T22:05:45.247Z - info: Using extension data@4.1.0
+2025-01-10T22:05:45.248Z - info: Using extension express@4.1.3
+2025-01-10T22:05:45.401Z - info: Using extension freeze@4.0.0
+2025-01-10T22:05:45.402Z - info: Using extension fs-store@4.0.5
+2025-01-10T22:05:45.480Z - info: Using extension handlebars@4.0.1
+2025-01-10T22:05:45.482Z - info: Using extension import-export@4.0.5
+2025-01-10T22:05:45.487Z - info: Using extension jsrender@4.0.0
+2025-01-10T22:05:45.488Z - info: Using extension licensing@4.0.3
+2025-01-10T22:05:45.504Z - info: Using extension localization@4.0.1
+2025-01-10T22:05:45.505Z - info: Using extension npm@4.0.0
+2025-01-10T22:05:45.507Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T22:05:45.509Z - info: Using extension reports@4.1.2
+2025-01-10T22:05:45.511Z - info: Using extension tags@4.0.1
+2025-01-10T22:05:45.512Z - info: Using extension text@4.0.2
+2025-01-10T22:05:45.513Z - info: Using extension version-control@4.0.0
+2025-01-10T22:05:45.521Z - info: Using extension assets@4.2.0
+2025-01-10T22:05:45.528Z - info: Using extension authorization@4.0.1
+2025-01-10T22:05:45.530Z - info: Using extension browser-client@4.1.0
+2025-01-10T22:05:45.532Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T22:05:45.534Z - info: Using extension docx@4.6.0
+2025-01-10T22:05:45.536Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T22:05:45.690Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T22:05:45.690Z - info: Using extension pptx@4.3.2
+2025-01-10T22:05:45.691Z - info: Using extension scheduling@4.0.0
+2025-01-10T22:05:45.713Z - info: Using extension scripts@4.1.0
+2025-01-10T22:05:45.714Z - info: Using extension static-pdf@4.1.0
+2025-01-10T22:05:45.715Z - info: Using extension studio@4.2.0
+2025-01-10T22:05:45.772Z - info: Using extension xlsx@4.3.0
+2025-01-10T22:05:45.774Z - info: Using extension public-templates@4.0.0
+2025-01-10T22:05:45.778Z - info: Using extension sample-template@4.0.0
+2025-01-10T22:05:45.779Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T22:05:45.781Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T22:05:45.781Z - info: Using fs provider for template store.
+2025-01-10T22:05:45.791Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T22:05:45.795Z - info: fs store is loading data
+2025-01-10T22:05:45.808Z - info: fs store is initialized successfully
+2025-01-10T22:05:45.819Z - info: Creating default express app.
+2025-01-10T22:05:45.832Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T22:05:45.837Z - info: Verifying license key free
+2025-01-10T22:05:46.194Z - info: Using enterprise trial license
+2025-01-10T22:05:46.197Z - info: Initializing worker threads
+2025-01-10T22:05:46.926Z - info: 2 worker threads initialized in 729ms
+2025-01-10T22:05:46.927Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T22:05:46.928Z - info: reporter initialized
+2025-01-10T22:05:54.939Z - info: Render request 1 queued for execution and waiting for available worker rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:05:54.955Z - info: Starting rendering request 1 rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:05:54.956Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:05:56.173Z - warn: Page request failed: GET (image) 308 https://pin.it/30gktJH2p (redirect to: https://api.pinterest.com/url_shortener/30gktJH2p/redirect/) rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:05:56.250Z - warn: Page request failed: GET (image) 302 https://api.pinterest.com/url_shortener/30gktJH2p/redirect/ (redirect to: https://www.pinterest.com/pin/660621839124469780/sent/?invite_code=a9d76e2426c3475aa8afaeae08ceab13&sfo=1) rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:05:56.528Z - warn: Page request failed: GET (image) https://www.pinterest.com/pin/660621839124469780/sent/?invite_code=a9d76e2426c3475aa8afaeae08ceab13&sfo=1, failure: net::ERR_BLOCKED_BY_ORB rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:05:56.937Z - info: Rendering request 1 finished in 2000 ms rootId=af1q8jchmsqfand, id=af1q8jchmsqfand
+2025-01-10T22:13:43.907Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T22:13:43.911Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T22:13:43.924Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T22:13:43.931Z - info: Found 35 extension(s)
+2025-01-10T22:13:43.996Z - info: Using extension base@4.0.0
+2025-01-10T22:13:44.001Z - info: Using extension child-templates@4.1.0
+2025-01-10T22:13:44.004Z - info: Using extension cli@4.0.5
+2025-01-10T22:13:44.007Z - info: Using extension components@4.0.2
+2025-01-10T22:13:44.008Z - info: Using extension data@4.1.0
+2025-01-10T22:13:44.009Z - info: Using extension express@4.1.3
+2025-01-10T22:13:44.151Z - info: Using extension freeze@4.0.0
+2025-01-10T22:13:44.153Z - info: Using extension fs-store@4.0.5
+2025-01-10T22:13:44.233Z - info: Using extension handlebars@4.0.1
+2025-01-10T22:13:44.234Z - info: Using extension import-export@4.0.5
+2025-01-10T22:13:44.242Z - info: Using extension jsrender@4.0.0
+2025-01-10T22:13:44.242Z - info: Using extension licensing@4.0.3
+2025-01-10T22:13:44.260Z - info: Using extension localization@4.0.1
+2025-01-10T22:13:44.260Z - info: Using extension npm@4.0.0
+2025-01-10T22:13:44.263Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T22:13:44.264Z - info: Using extension reports@4.1.2
+2025-01-10T22:13:44.266Z - info: Using extension tags@4.0.1
+2025-01-10T22:13:44.268Z - info: Using extension text@4.0.2
+2025-01-10T22:13:44.268Z - info: Using extension version-control@4.0.0
+2025-01-10T22:13:44.276Z - info: Using extension assets@4.2.0
+2025-01-10T22:13:44.283Z - info: Using extension authorization@4.0.1
+2025-01-10T22:13:44.286Z - info: Using extension browser-client@4.1.0
+2025-01-10T22:13:44.287Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T22:13:44.290Z - info: Using extension docx@4.6.0
+2025-01-10T22:13:44.292Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T22:13:44.451Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T22:13:44.451Z - info: Using extension pptx@4.3.2
+2025-01-10T22:13:44.452Z - info: Using extension scheduling@4.0.0
+2025-01-10T22:13:44.475Z - info: Using extension scripts@4.1.0
+2025-01-10T22:13:44.476Z - info: Using extension static-pdf@4.1.0
+2025-01-10T22:13:44.477Z - info: Using extension studio@4.2.0
+2025-01-10T22:13:44.532Z - info: Using extension xlsx@4.3.0
+2025-01-10T22:13:44.533Z - info: Using extension public-templates@4.0.0
+2025-01-10T22:13:44.537Z - info: Using extension sample-template@4.0.0
+2025-01-10T22:13:44.538Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T22:13:44.540Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T22:13:44.540Z - info: Using fs provider for template store.
+2025-01-10T22:13:44.544Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T22:13:44.571Z - info: fs store is loading data
+2025-01-10T22:13:44.597Z - info: fs store is initialized successfully
+2025-01-10T22:13:44.618Z - info: Creating default express app.
+2025-01-10T22:13:44.637Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T22:13:44.643Z - info: Verifying license key free
+2025-01-10T22:13:45.075Z - info: Using enterprise trial license
+2025-01-10T22:13:45.079Z - info: Initializing worker threads
+2025-01-10T22:13:46.094Z - info: 2 worker threads initialized in 1015ms
+2025-01-10T22:13:46.095Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T22:13:46.095Z - info: reporter initialized
+2025-01-10T22:13:58.962Z - info: Render request 1 queued for execution and waiting for available worker rootId=dw0n2h08cexnbbh, id=dw0n2h08cexnbbh
+2025-01-10T22:13:58.977Z - info: Starting rendering request 1 rootId=dw0n2h08cexnbbh, id=dw0n2h08cexnbbh
+2025-01-10T22:13:58.979Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=dw0n2h08cexnbbh, id=dw0n2h08cexnbbh
+2025-01-10T22:14:00.599Z - info: Rendering request 1 finished in 1639 ms rootId=dw0n2h08cexnbbh, id=dw0n2h08cexnbbh
+2025-01-10T22:32:59.775Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T22:32:59.778Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T22:32:59.786Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T22:32:59.791Z - info: Found 35 extension(s)
+2025-01-10T22:32:59.852Z - info: Using extension base@4.0.0
+2025-01-10T22:32:59.856Z - info: Using extension child-templates@4.1.0
+2025-01-10T22:32:59.859Z - info: Using extension cli@4.0.5
+2025-01-10T22:32:59.861Z - info: Using extension components@4.0.2
+2025-01-10T22:32:59.862Z - info: Using extension data@4.1.0
+2025-01-10T22:32:59.863Z - info: Using extension express@4.1.3
+2025-01-10T22:33:00.009Z - info: Using extension freeze@4.0.0
+2025-01-10T22:33:00.011Z - info: Using extension fs-store@4.0.5
+2025-01-10T22:33:00.096Z - info: Using extension handlebars@4.0.1
+2025-01-10T22:33:00.098Z - info: Using extension import-export@4.0.5
+2025-01-10T22:33:00.104Z - info: Using extension jsrender@4.0.0
+2025-01-10T22:33:00.105Z - info: Using extension licensing@4.0.3
+2025-01-10T22:33:00.121Z - info: Using extension localization@4.0.1
+2025-01-10T22:33:00.122Z - info: Using extension npm@4.0.0
+2025-01-10T22:33:00.124Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T22:33:00.125Z - info: Using extension reports@4.1.2
+2025-01-10T22:33:00.128Z - info: Using extension tags@4.0.1
+2025-01-10T22:33:00.129Z - info: Using extension text@4.0.2
+2025-01-10T22:33:00.129Z - info: Using extension version-control@4.0.0
+2025-01-10T22:33:00.138Z - info: Using extension assets@4.2.0
+2025-01-10T22:33:00.146Z - info: Using extension authorization@4.0.1
+2025-01-10T22:33:00.149Z - info: Using extension browser-client@4.1.0
+2025-01-10T22:33:00.150Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T22:33:00.153Z - info: Using extension docx@4.6.0
+2025-01-10T22:33:00.154Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T22:33:00.310Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T22:33:00.311Z - info: Using extension pptx@4.3.2
+2025-01-10T22:33:00.312Z - info: Using extension scheduling@4.0.0
+2025-01-10T22:33:00.336Z - info: Using extension scripts@4.1.0
+2025-01-10T22:33:00.337Z - info: Using extension static-pdf@4.1.0
+2025-01-10T22:33:00.338Z - info: Using extension studio@4.2.0
+2025-01-10T22:33:00.397Z - info: Using extension xlsx@4.3.0
+2025-01-10T22:33:00.398Z - info: Using extension public-templates@4.0.0
+2025-01-10T22:33:00.402Z - info: Using extension sample-template@4.0.0
+2025-01-10T22:33:00.404Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T22:33:00.405Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T22:33:00.405Z - info: Using fs provider for template store.
+2025-01-10T22:33:00.411Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T22:33:00.422Z - info: fs store is loading data
+2025-01-10T22:33:00.436Z - info: fs store is initialized successfully
+2025-01-10T22:33:00.446Z - info: Creating default express app.
+2025-01-10T22:33:00.459Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T22:33:00.464Z - info: Verifying license key free
+2025-01-10T22:33:00.868Z - info: Using enterprise trial license
+2025-01-10T22:33:00.871Z - info: Initializing worker threads
+2025-01-10T22:33:01.628Z - info: 2 worker threads initialized in 757ms
+2025-01-10T22:33:01.628Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T22:33:01.629Z - info: reporter initialized
+2025-01-10T22:33:14.962Z - info: Render request 1 queued for execution and waiting for available worker rootId=12x70wa92esoq86, id=12x70wa92esoq86
+2025-01-10T22:33:14.981Z - info: Starting rendering request 1 rootId=12x70wa92esoq86, id=12x70wa92esoq86
+2025-01-10T22:33:14.982Z - info: Rendering template { name: reporte18, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=12x70wa92esoq86, id=12x70wa92esoq86
+2025-01-10T22:33:16.283Z - info: Rendering request 1 finished in 1324 ms rootId=12x70wa92esoq86, id=12x70wa92esoq86
+2025-01-10T22:34:30.950Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 18.16.0)
+2025-01-10T22:34:30.952Z - info: Searching for available extensions in /workspaces/ucabair/BACKEND/
+2025-01-10T22:34:30.960Z - info: Extensions location cache contains up to date information, skipping crawling in /workspaces/ucabair/BACKEND/
+2025-01-10T22:34:30.965Z - info: Found 35 extension(s)
+2025-01-10T22:34:31.029Z - info: Using extension base@4.0.0
+2025-01-10T22:34:31.034Z - info: Using extension child-templates@4.1.0
+2025-01-10T22:34:31.037Z - info: Using extension cli@4.0.5
+2025-01-10T22:34:31.038Z - info: Using extension components@4.0.2
+2025-01-10T22:34:31.039Z - info: Using extension data@4.1.0
+2025-01-10T22:34:31.040Z - info: Using extension express@4.1.3
+2025-01-10T22:34:31.166Z - info: Using extension freeze@4.0.0
+2025-01-10T22:34:31.167Z - info: Using extension fs-store@4.0.5
+2025-01-10T22:34:31.248Z - info: Using extension handlebars@4.0.1
+2025-01-10T22:34:31.250Z - info: Using extension import-export@4.0.5
+2025-01-10T22:34:31.255Z - info: Using extension jsrender@4.0.0
+2025-01-10T22:34:31.256Z - info: Using extension licensing@4.0.3
+2025-01-10T22:34:31.272Z - info: Using extension localization@4.0.1
+2025-01-10T22:34:31.272Z - info: Using extension npm@4.0.0
+2025-01-10T22:34:31.275Z - info: Using extension pdf-utils@4.2.2
+2025-01-10T22:34:31.278Z - info: Using extension reports@4.1.2
+2025-01-10T22:34:31.280Z - info: Using extension tags@4.0.1
+2025-01-10T22:34:31.281Z - info: Using extension text@4.0.2
+2025-01-10T22:34:31.282Z - info: Using extension version-control@4.0.0
+2025-01-10T22:34:31.292Z - info: Using extension assets@4.2.0
+2025-01-10T22:34:31.298Z - info: Using extension authorization@4.0.1
+2025-01-10T22:34:31.301Z - info: Using extension browser-client@4.1.0
+2025-01-10T22:34:31.302Z - info: Using extension chrome-pdf@4.1.0
+2025-01-10T22:34:31.305Z - info: Using extension docx@4.6.0
+2025-01-10T22:34:31.307Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-10T22:34:31.462Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-10T22:34:31.462Z - info: Using extension pptx@4.3.2
+2025-01-10T22:34:31.464Z - info: Using extension scheduling@4.0.0
+2025-01-10T22:34:31.485Z - info: Using extension scripts@4.1.0
+2025-01-10T22:34:31.486Z - info: Using extension static-pdf@4.1.0
+2025-01-10T22:34:31.487Z - info: Using extension studio@4.2.0
+2025-01-10T22:34:31.543Z - info: Using extension xlsx@4.3.0
+2025-01-10T22:34:31.545Z - info: Using extension public-templates@4.0.0
+2025-01-10T22:34:31.550Z - info: Using extension sample-template@4.0.0
+2025-01-10T22:34:31.552Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-10T22:34:31.553Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-10T22:34:31.553Z - info: Using fs provider for template store.
+2025-01-10T22:34:31.558Z - info: fs store is persisting using fs for /workspaces/ucabair/BACKEND/data
+2025-01-10T22:34:31.563Z - info: fs store is loading data
+2025-01-10T22:34:31.577Z - info: fs store is initialized successfully
+2025-01-10T22:34:31.588Z - info: Creating default express app.
+2025-01-10T22:34:31.600Z - info: jsreport server successfully started on http port: 5488
+2025-01-10T22:34:31.606Z - info: Verifying license key free
+2025-01-10T22:34:32.005Z - info: Using enterprise trial license
+2025-01-10T22:34:32.009Z - info: Initializing worker threads
+2025-01-10T22:34:32.721Z - info: 2 worker threads initialized in 713ms
+2025-01-10T22:34:32.722Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-10T22:34:32.723Z - info: reporter initialized
+2025-01-10T22:34:42.058Z - info: Render request 1 queued for execution and waiting for available worker rootId=ezeihz6ezilynap, id=ezeihz6ezilynap
+2025-01-10T22:34:42.073Z - info: Starting rendering request 1 rootId=ezeihz6ezilynap, id=ezeihz6ezilynap
+2025-01-10T22:34:42.074Z - info: Rendering template { name: reporte16, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=ezeihz6ezilynap, id=ezeihz6ezilynap
+2025-01-10T22:34:43.431Z - info: Rendering request 1 finished in 1374 ms rootId=ezeihz6ezilynap, id=ezeihz6ezilynap
+2025-01-10T22:37:36.090Z - info: Render request 2 queued for execution and waiting for available worker rootId=57iqs7xra13cklq, id=57iqs7xra13cklq
+2025-01-10T22:37:36.097Z - info: Starting rendering request 2 rootId=57iqs7xra13cklq, id=57iqs7xra13cklq
+2025-01-10T22:37:36.099Z - info: Rendering template { name: reporte16, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=57iqs7xra13cklq, id=57iqs7xra13cklq
+2025-01-10T22:37:37.404Z - info: Rendering request 2 finished in 1315 ms rootId=57iqs7xra13cklq, id=57iqs7xra13cklq

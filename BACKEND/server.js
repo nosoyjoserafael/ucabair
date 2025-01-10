@@ -38,14 +38,14 @@ app.use(cors());
 // Middleware para parsear JSON
 app.use(express.json());
 
-// Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+// Servir archivos estáticos desde la carpeta 'data/img'
+app.use('/data/img', express.static(path.join(__dirname, 'img')));
 
 // Rutas
 app.use('/usuario', user_dataRoutes);
 app.use('/adduser', add_user_dataRoutes);
 app.use('/modelo', modelo_dataRoutes);
-app.use('/tipoPrueba', tipo_pruebaRoutes);
+app.use('/tipoprueba', tipo_pruebaRoutes);
 app.use('/proveedor', proveedor_dataRoutes);
 app.use('/empleado', empleado_dataRoutes);
 app.use('/rol', rol_dataRoutes);
@@ -54,14 +54,15 @@ app.use('/compra', compra_dataRoutes);
 // Middleware para manejar errores
 app.use(errorHandler);
 
-jsreportReady.then(() => {
+jsreportReady.then(() => { //Para que jsreport se inicialice antes de que el servidor empiece a escuchar
+
   module.exports = { jsreport, jsreportReady };
-  const reporte_dataRoutes = require('./routes/reporte-Routes'); // Importar las rutas de reporte
-  app.use('/reporte', reporte_dataRoutes); // Usar las rutas de reporte
+  const reporte_dataRoutes = require('./routes/reporte-Routes');
+  app.use('/reporte', reporte_dataRoutes);
 
   app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
-    console.log(`jsreport corriendo en el puerto 5488`);
+    console.log(`jsreport corriendo en el puerto 5488 \n`);
   });
 }).catch((e) => {
   console.error('Error al inicializar jsreport', e);

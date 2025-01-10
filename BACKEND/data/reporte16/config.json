@@ -2,9 +2,7 @@
     "name": "reporte16",
     "engine": "handlebars",
     "recipe": "chrome-pdf",
-    "data": {
-        "shortid": "ku72NkH1l"
-    },
+    "data": null,
     "shortid": "MdSbkcWflH",
     "chrome": {
         "printBackground": true
@@ -13,7 +11,7 @@
         "$$date": 1736049426205
     },
     "modificationDate": {
-        "$$date": 1736095740484
+        "$$date": 1736544964423
     },
     "_id": "sMGdYkLzwiEY1i6t",
     "$entitySet": "templates"
