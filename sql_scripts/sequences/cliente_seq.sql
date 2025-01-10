@@ -1,0 +1,2 @@
+CREATE SEQUENCE cliente_seq INCREMENT BY 1 START WITH 1;
+ALTER TABLE cliente ALTER COLUMN cli_cod SET DEFAULT nextval('cliente_seq');
