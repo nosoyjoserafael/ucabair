@@ -1,8 +1,19 @@
 const express = require('express');
 const cors = require('cors');
-const jsreport = require('jsreport')();
+const path = require('path');
+
+const jsreport = require('jsreport')({
+  chrome: {
+    launchOptions: {
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
+  }
+});
+const jsreportReady = jsreport.init();
+
 const app = express();
 const port = process.env.PORT || 3000;
+
 const errorHandler = require('./middlewares/errorHandler');
 const user_dataRoutes = require('./routes/usuario-Routes');
 const add_user_dataRoutes = require('./routes/add_user-Routes');
@@ -19,26 +30,33 @@ app.use(cors());
 // Middleware para parsear JSON
 app.use(express.json());
 
-// Configuración de jsreport
-jsreport.init().then(() => {
-  // Rutas
-  app.use('/usuario', user_dataRoutes);
-  app.use('/adduser', add_user_dataRoutes);
-  app.use('/modelo', modelo_dataRoutes);
-  app.use('/tipoPrueba', tipo_pruebaRoutes);
-  app.use('/proveedor', proveedor_dataRoutes);
-  app.use('/empleado', empleado_dataRoutes);
-  app.use('/rol', rol_dataRoutes);
-  app.use('/compra', compra_dataRoutes);
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Rutas
+app.use('/usuario', user_dataRoutes);
+app.use('/adduser', add_user_dataRoutes);
+app.use('/modelo', modelo_dataRoutes);
+app.use('/tipoPrueba', tipo_pruebaRoutes);
+app.use('/proveedor', proveedor_dataRoutes);
+app.use('/empleado', empleado_dataRoutes);
+app.use('/rol', rol_dataRoutes);
+app.use('/compra', compra_dataRoutes);
+
+// Middleware para manejar errores
+app.use(errorHandler);
+
+jsreportReady.then(() => {
   
-  // Middleware para manejar errores
-  app.use(errorHandler);
-  
+  module.exports = { jsreport, jsreportReady };
+  const reporte_dataRoutes = require('./routes/reporte-Routes'); // Importar las rutas de reporte
+  app.use('/reporte', reporte_dataRoutes); // Usar las rutas de reporte
+
   app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
   });
   
 }).catch((e) => {
-  console.error('Exploto toda verga', e);
+  console.error('Error al inicializar jsreport', e);
   process.exit(1);
 });

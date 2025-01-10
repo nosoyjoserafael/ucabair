@@ -145,3 +145,426 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
   at endReadableNT (node:internal/streams/readable:1359:12)
   at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
 2025-01-09T23:54:21.709Z - error: Rendering request 2 finished with error in 680 ms rootId=7b5uv1fgj6ejb3g, id=7b5uv1fgj6ejb3g
+2025-01-10T01:40:59.768Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=e0kjxje0bmc1b4u, id=e0kjxje0bmc1b4u
+2025-01-10T01:40:59.768Z - error: Rendering request 1 finished with error in 539 ms rootId=e0kjxje0bmc1b4u, id=e0kjxje0bmc1b4u
+2025-01-10T01:43:56.663Z - error: Error when processing render request 2
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=cwsp4z9c9jdv6wa, id=cwsp4z9c9jdv6wa
+2025-01-10T01:43:56.663Z - error: Rendering request 2 finished with error in 596 ms rootId=cwsp4z9c9jdv6wa, id=cwsp4z9c9jdv6wa
+2025-01-10T01:46:13.327Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=nwhzkx27d5qouo6, id=nwhzkx27d5qouo6
+2025-01-10T01:46:13.327Z - error: Rendering request 1 finished with error in 554 ms rootId=nwhzkx27d5qouo6, id=nwhzkx27d5qouo6
+2025-01-10T02:03:40.857Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libdrm.so.2: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+/home/node/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libdrm.so.2: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=lpp5cxgn9yxp80k, id=lpp5cxgn9yxp80k
+2025-01-10T02:03:40.857Z - error: Rendering request 1 finished with error in 701 ms rootId=lpp5cxgn9yxp80k, id=lpp5cxgn9yxp80k
+2025-01-10T02:08:40.423Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[1470:1470:0110/020839.793572:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/020840.166123:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/020840.166503:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[1470:1470:0110/020839.793572:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/020840.166123:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/020840.166503:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=c6gjuwlt2g3vybw, id=c6gjuwlt2g3vybw
+2025-01-10T02:08:40.423Z - error: Rendering request 1 finished with error in 16738 ms rootId=c6gjuwlt2g3vybw, id=c6gjuwlt2g3vybw
+2025-01-10T02:13:18.873Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[3541:3541:0110/021318.766364:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/021318.774121:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/021318.774188:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[3541:3541:0110/021318.766364:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/021318.774121:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/021318.774188:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=pkqyv1qif1dg9ak, id=pkqyv1qif1dg9ak
+2025-01-10T02:13:18.873Z - error: Rendering request 1 finished with error in 673 ms rootId=pkqyv1qif1dg9ak, id=pkqyv1qif1dg9ak
+2025-01-10T02:23:39.181Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[8226:8226:0110/022339.079582:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/022339.088752:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/022339.088806:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[8226:8226:0110/022339.079582:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/022339.088752:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/022339.088806:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=j6l51oehz6gnynw, id=j6l51oehz6gnynw
+2025-01-10T02:23:39.181Z - error: Rendering request 1 finished with error in 713 ms rootId=j6l51oehz6gnynw, id=j6l51oehz6gnynw
+2025-01-10T02:31:38.897Z - error: Report render failed
+(because) worker unexpectedly exited
+Error: Worker unexpectedly exited
+    at Worker.<anonymous> (/workspaces/ucabair/BACKEND/node_modules/@jsreport/advanced-workers/lib/threadWorker.js:136:21)
+    at Worker.emit (node:events:513:28)
+    at [kOnExit] (node:internal/worker:289:10)
+    at Worker.<computed>.onexit (node:internal/worker:209:20) rootId=veehmtgmmk1mm6d, id=veehmtgmmk1mm6d
+2025-01-10T02:32:11.309Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[12454:12454:0110/023211.198395:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/023211.206300:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/023211.206359:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[12454:12454:0110/023211.198395:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/023211.206300:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/023211.206359:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=1m1i9184ukvzgam, id=1m1i9184ukvzgam
+2025-01-10T02:32:11.309Z - error: Rendering request 1 finished with error in 756 ms rootId=1m1i9184ukvzgam, id=1m1i9184ukvzgam
+2025-01-10T02:34:46.939Z - error: Report render failed
+(because) worker unexpectedly exited
+Error: Worker unexpectedly exited
+    at Worker.<anonymous> (/workspaces/ucabair/BACKEND/node_modules/@jsreport/advanced-workers/lib/threadWorker.js:136:21)
+    at Worker.emit (node:events:513:28)
+    at [kOnExit] (node:internal/worker:289:10)
+    at Worker.<computed>.onexit (node:internal/worker:209:20) rootId=1mi418bhgkpbu21, id=1mi418bhgkpbu21
+2025-01-10T02:41:02.768Z - error: Report render failed
+(because) worker unexpectedly exited
+Error: Worker unexpectedly exited
+    at Worker.<anonymous> (/workspaces/ucabair/BACKEND/node_modules/@jsreport/advanced-workers/lib/threadWorker.js:136:21)
+    at Worker.emit (node:events:513:28)
+    at [kOnExit] (node:internal/worker:289:10)
+    at Worker.<computed>.onexit (node:internal/worker:209:20) rootId=72g4ukgwmue7ej6, id=72g4ukgwmue7ej6
+2025-01-10T02:45:50.876Z - error: Report render failed
+(because) worker unexpectedly exited
+Error: Worker unexpectedly exited
+    at Worker.<anonymous> (/workspaces/ucabair/BACKEND/node_modules/@jsreport/advanced-workers/lib/threadWorker.js:136:21)
+    at Worker.emit (node:events:513:28)
+    at [kOnExit] (node:internal/worker:289:10)
+    at Worker.<computed>.onexit (node:internal/worker:209:20) rootId=h2gpybysyiiwn45, id=h2gpybysyiiwn45
+2025-01-10T02:46:54.273Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[18799:18799:0110/024654.172540:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/024654.181279:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/024654.181334:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[18799:18799:0110/024654.172540:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/024654.181279:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/024654.181334:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=3dfnxac3ytd81j5, id=3dfnxac3ytd81j5
+2025-01-10T02:46:54.274Z - error: Rendering request 1 finished with error in 659 ms rootId=3dfnxac3ytd81j5, id=3dfnxac3ytd81j5
+2025-01-10T17:08:30.014Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[6046:6046:0110/170829.774902:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/170829.795140:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/170829.795522:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[6046:6046:0110/170829.774902:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/170829.795140:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/170829.795522:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at Interface.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at Interface.emit (node:events:525:35)
+  at Interface.close (node:internal/readline/interface:533:10)
+  at Socket.onend (node:internal/readline/interface:259:10)
+  at Socket.emit (node:events:525:35)
+  at endReadableNT (node:internal/streams/readable:1359:12)
+  at process.processTicksAndRejections (node:internal/process/task_queues:82:21) rootId=3ieawx7ro3955n7, id=3ieawx7ro3955n7
+2025-01-10T17:08:30.014Z - error: Rendering request 1 finished with error in 1649 ms rootId=3ieawx7ro3955n7, id=3ieawx7ro3955n7
+2025-01-10T17:15:25.170Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[8947:8947:0110/171525.060501:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/171525.068237:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/171525.068297:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[8947:8947:0110/171525.060501:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/171525.068237:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/171525.068297:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=xd4v0pk6zhnhrzq, id=xd4v0pk6zhnhrzq
+2025-01-10T17:15:25.170Z - error: Rendering request 1 finished with error in 709 ms rootId=xd4v0pk6zhnhrzq, id=xd4v0pk6zhnhrzq
+2025-01-10T17:16:03.535Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[9379:9379:0110/171603.431000:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/171603.438889:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/171603.438952:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[9379:9379:0110/171603.431000:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/171603.438889:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/171603.438952:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=l2qvdlx269135jr, id=l2qvdlx269135jr
+2025-01-10T17:16:03.535Z - error: Rendering request 1 finished with error in 700 ms rootId=l2qvdlx269135jr, id=l2qvdlx269135jr
+2025-01-10T17:21:18.977Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[15550:15550:0110/172118.860182:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172118.867874:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172118.867943:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[15550:15550:0110/172118.860182:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172118.867874:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172118.867943:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=mdca0hzj9iyi0mb, id=mdca0hzj9iyi0mb
+2025-01-10T17:21:18.977Z - error: Rendering request 1 finished with error in 846 ms rootId=mdca0hzj9iyi0mb, id=mdca0hzj9iyi0mb
+2025-01-10T17:22:29.748Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[16211:16211:0110/172229.645956:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172229.653620:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172229.653677:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[16211:16211:0110/172229.645956:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172229.653620:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172229.653677:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=v8x3e2h33krd0nz, id=v8x3e2h33krd0nz
+2025-01-10T17:22:29.748Z - error: Rendering request 1 finished with error in 752 ms rootId=v8x3e2h33krd0nz, id=v8x3e2h33krd0nz
+2025-01-10T17:25:29.146Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[17668:17668:0110/172529.032057:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172529.039754:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172529.039811:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[17668:17668:0110/172529.032057:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172529.039754:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172529.039811:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=h9sswvw9u8rul2f, id=h9sswvw9u8rul2f
+2025-01-10T17:25:29.146Z - error: Rendering request 1 finished with error in 691 ms rootId=h9sswvw9u8rul2f, id=h9sswvw9u8rul2f
+2025-01-10T17:27:39.970Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[18719:18719:0110/172739.856300:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172739.864679:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172739.864732:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[18719:18719:0110/172739.856300:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/172739.864679:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/172739.864732:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=6ou5j6rztd0ukwy, id=6ou5j6rztd0ukwy
+2025-01-10T17:27:39.970Z - error: Rendering request 1 finished with error in 703 ms rootId=6ou5j6rztd0ukwy, id=6ou5j6rztd0ukwy
+2025-01-10T17:31:55.967Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[20667:20667:0110/173155.811205:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/173155.824369:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/173155.824875:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[20667:20667:0110/173155.811205:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/173155.824369:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/173155.824875:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=nzptdbhd0wgs2m0, id=nzptdbhd0wgs2m0
+2025-01-10T17:31:55.967Z - error: Rendering request 1 finished with error in 982 ms rootId=nzptdbhd0wgs2m0, id=nzptdbhd0wgs2m0
+2025-01-10T17:48:00.916Z - error: Error when processing render request 1
+(because) failed to launch the browser process!
+[27160:27160:0110/174800.814469:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/174800.822146:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/174800.822203:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+Error: Failed to launch the browser process!
+[27160:27160:0110/174800.814469:FATAL:zygote_host_impl_linux.cc(128)] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+[0110/174800.822146:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0110/174800.822203:ERROR:file_io_posix.cc(145)] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+  at ChildProcess.onClose (/workspaces/ucabair/BACKEND/node_modules/@puppeteer/browsers/lib/cjs/launch.js:314:24)
+  at ChildProcess.emit (node:events:525:35)
+  at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+  at Process.callbackTrampoline (node:internal/async_hooks:130:17) rootId=iv5b4m5hb9iqou7, id=iv5b4m5hb9iqou7
+2025-01-10T17:48:00.916Z - error: Rendering request 1 finished with error in 835 ms rootId=iv5b4m5hb9iqou7, id=iv5b4m5hb9iqou7
