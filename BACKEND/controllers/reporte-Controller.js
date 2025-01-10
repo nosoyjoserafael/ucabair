@@ -16,8 +16,8 @@ async function generatePdf(data) {
 
 const get18 = async (req, res, next) => {
   try {
-    const resultFila = await pool.query('SELECT * FROM get_modelo()');
-    //console.log(resultFila.rows);
+    const resultFila = await pool.query('SELECT * FROM get_reporte18()');
+    console.log(resultFila.rows);
     const data = {
       formatDate: new Date().toLocaleDateString(),
       fila: resultFila.rows

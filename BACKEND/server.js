@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+
 const jsreport = require('jsreport')({
   chrome: {
     launchOptions: {
@@ -10,7 +11,7 @@ const jsreport = require('jsreport')({
   },
   extensions: {
     'express': {
-      enabled: false, // Deshabilitar el servidor HTTP de jsreport
+      enabled: true, // Habilitar el servidor HTTP de jsreport
       appPath: "/jsreport", // Ruta base para jsreport
       port: 5488 // Puerto para el servidor HTTP de jsreport
     }
@@ -60,8 +61,8 @@ jsreportReady.then(() => {
 
   app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
+    console.log(`jsreport corriendo en el puerto 5488`);
   });
-  
 }).catch((e) => {
   console.error('Error al inicializar jsreport', e);
   process.exit(1);
