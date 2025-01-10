@@ -1,3 +1,4 @@
+--insertar despues de modelo y tipo_pieza
 insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 4, 1);
 insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 5, 2);
 insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 3, 3);

@@ -1,3 +1,4 @@
+--insertar despues de tipo_maquina y de modelo
 insert into public."Maq_Mod" ("fk_tpMaquinaria", "fk_Modelo") values (8, 4);
 insert into public."Maq_Mod" ("fk_tpMaquinaria", "fk_Modelo") values (4, 14);
 insert into public."Maq_Mod" ("fk_tpMaquinaria", "fk_Modelo") values (6, 3);

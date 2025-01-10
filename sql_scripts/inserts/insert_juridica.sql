@@ -1,3 +1,4 @@
+--Insertar de segundo (Despues de natural)
 insert into "Juridica" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Jur_razon_social") values ('Consultoría Global', '2013-04-17', 16902668, 1, 'Calle Miranda', 'Empresa ABC');
 insert into "Juridica" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Jur_razon_social") values ('Empresa ABC', '2012-08-14', 30444387, 1, 'Avenida Bolivar', 'Compañía XYZ');
 insert into "Juridica" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Jur_razon_social") values ('Servicios Legales S.A.', '2023-09-24', 1090820, 2, 'Avenida Bolivar', 'Sociedad Anónima 456');

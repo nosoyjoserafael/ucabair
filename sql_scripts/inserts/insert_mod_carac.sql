@@ -1,3 +1,4 @@
+--insertar despues de modelo y caracteristica
 --AU-80
 insert into mod_carac(fk_modelo, mod_carac_cantidad ,fk_carac) values (1,5,1);
 insert into mod_carac(fk_modelo, mod_carac_cantidad ,fk_carac) values (1,179,2);

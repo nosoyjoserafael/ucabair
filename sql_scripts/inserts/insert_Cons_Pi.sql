@@ -1,5 +1,4 @@
 --insertar despues de construccion y pieza
-
 insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 1);
 insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 2);
 insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 3);

@@ -1,4 +1,4 @@
---insertar en sede y en material
+--insertar despues de sede y material
 insert into solicitud_sede (solsed_tipo, fk_sede, fk_material) values ('Solicitud de material', 1, 1);
 insert into solicitud_sede (solsed_tipo, fk_sede, fk_material) values ('Solicitud de material', 1, 2);
 insert into solicitud_sede (solsed_tipo, fk_sede, fk_material) values ('Solicitud de material', 1, 3);

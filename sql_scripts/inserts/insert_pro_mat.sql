@@ -1,3 +1,4 @@
+--insertar despues de proveedor y tipo_material
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (290, 86, 31, 6);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (255, 96, 43, 6);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (272, 33, 4, 7);

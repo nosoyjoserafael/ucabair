@@ -1,3 +1,4 @@
+--insertar despues de tipo_maquinaria
 insert into maquinaria (maq_descripcion, "fk_Tmaquina") values ('Maquinaria utilizada para el mantenimiento general de equipos y sistemas.', 1);
 insert into maquinaria (maq_descripcion, "fk_Tmaquina") values ('Tornos utilizados para dar forma a materiales mediante rotación.', 2);
 insert into maquinaria (maq_descripcion, "fk_Tmaquina") values ('Máquinas de corte que utilizan láser para realizar cortes precisos.', 3);

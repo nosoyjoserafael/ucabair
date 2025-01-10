@@ -1,3 +1,4 @@
+--insertar despues de avion y prueba
 insert into public."avi_pru" ("avipr_fecha_ini","fk_avion","fk_pru") values ('2024-08-06',1,1);
 insert into public."avi_pru" ("avipr_fecha_ini","fk_avion","fk_pru") values ('2024-08-06',1,2);
 insert into public."avi_pru" ("avipr_fecha_ini","fk_avion","fk_pru") values ('2024-08-06',1,3);

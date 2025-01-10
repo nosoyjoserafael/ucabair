@@ -1,3 +1,4 @@
+--insertar despues de personal y horario
 insert into asistencia (fk_personal, fk_hora, asis_fecha) values (93, 1, '11/8/2015');
 insert into asistencia (fk_personal, fk_hora, asis_fecha) values (94, 2, '2/24/2019');
 insert into asistencia (fk_personal, fk_hora, asis_fecha) values (95, 3, '4/27/2014');

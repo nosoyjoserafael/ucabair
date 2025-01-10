@@ -1,3 +1,4 @@
+--insertar despues de tipo_material y tipo_pieza
 insert into public."recetario" ("fk_tpPieza", "cantidad", "fk_tpMaterial") values (1, 1, 2);
 insert into public."recetario" ("fk_tpPieza", "cantidad", "fk_tpMaterial") values (1, 2, 3);
 insert into public."recetario" ("fk_tpPieza", "cantidad", "fk_tpMaterial") values (2, 5, 6);

@@ -1,3 +1,4 @@
+--insertar despues de natural y juridica
 INSERT INTO cliente (cli_fecha_registro, fk_natural, fk_juridica) VALUES
 ('2015-01-01'::DATE + (RANDOM() * (2024-2015) * 365)::INT * INTERVAL '1 day', 1, NULL),
 ('2015-01-01'::DATE + (RANDOM() * (2024-2015) * 365)::INT * INTERVAL '1 day', 2, NULL),

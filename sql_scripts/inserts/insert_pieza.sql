@@ -1,3 +1,4 @@
+--insertar despues de tipo_pieza
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-09', 1, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-11', 2, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-12-17', 3, 20, null);

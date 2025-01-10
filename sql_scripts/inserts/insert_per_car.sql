@@ -1,3 +1,4 @@
+--insertar despues de personal y cargo
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (93, 7, '2024-11-26', 40);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (94, 6, '2024-11-26', 40);
 insert into public."per_car" ("fk_personal", "fk_cargo", "per_car_fecha_inicio", "per_car_sueldo_base") values (95, 10, '2024-11-26', 40);

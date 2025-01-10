@@ -1,3 +1,4 @@
+--insertar despues de area y construccion
 insert into area_cons (fk_area, fk_const) values (1, 1);
 insert into area_cons (fk_area, fk_const) values (2, 1);
 insert into area_cons (fk_area, fk_const) values (3, 1);
