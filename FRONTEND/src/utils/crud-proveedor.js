@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addEntityButton.addEventListener('click', () => addEntity());
     document.getElementById('compra-btn').addEventListener('click', () => solicitarMateriales());
+    document.getElementById('historial-btn').addEventListener('click', () => verHistorial());
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
@@ -203,6 +204,10 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.insertBefore(proveedoresDropDown, submitButton);
         overlayForm.insertBefore(materialesDropDown, submitButton);
         overlayForm.insertBefore(cantidadInput, submitButton);
+
+    }
+
+    function verHistorial(){
 
     }
 

@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Modelo: '../pages/crud-modelo.html',
             Materiales: '../pages/crud-material.html',
             Roles: '../pages/crud-rol.html',
+            Pruebas: '../pages/crud-tipo-prueba.html'
         };
         
         const urlsKeys = Object.keys(cruds);
