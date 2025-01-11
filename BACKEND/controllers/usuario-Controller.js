@@ -40,4 +40,18 @@ const getUsuariosPersona = async (req, res, next) => {
   }
 };
 
-module.exports = { login, getUsuariosPersona };
+const putUserRol = async (req, res, next) => {
+  const { user, rolcod } = req.body;
+  try {
+    const result = await pool.query(
+      `
+      SELECT * FROM put_UserRol($1, $2)
+      `, [user, rolcod]
+    );
+  return res.status(200).json({ message: 'Rol actualizado correctamente' });
+} catch (err) {
+  next(err);
+}
+};
+
+module.exports = { login, getUsuariosPersona, putUserRol };

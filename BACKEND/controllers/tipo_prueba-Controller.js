@@ -41,12 +41,11 @@ const putTPprueba = async (req, res, next) => {
 
 const deleteTPprueba = async (req, res, next) => {
   try {
-    const { Nombre } = req.body;
+    const { TPcod } = req.body;
     const result = await pool.query(
       `
-      DELETE FROM public."tipo_prueba"
-      WHERE tprueba_nombre = $1
-      `, [Nombre]
+      CALL delete_tipo_prueba($1)
+      `, [TPcod]
     );
     return res.status(200).json({ message: 'Tipo de prueba eliminada correctamente' });
   } catch (err) {

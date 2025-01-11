@@ -10,26 +10,28 @@ const getProveedor = async (req, res, next) => {
 };
 
 const getMateriales = async (req, res, next) => {
+  const { prove_cod } = req.body;
   try {
     const result = await pool.query(`
       SELECT p.prove_cod, t.tipo_mat_nombre, pm.promat_cantidad, pm.promat_costo
       FROM public."proveedor" p
       JOIN public."pro_mat" pm ON p.prove_cod = pm.fk_proveedor
       JOIN public."tipo_material" t ON pm.fk_tmat = t.tipo_mat_cod
-    `);
+      WHERE p.prove_cod = $1
+    `, [prove_cod]);
 
-    const proveedores = {};
-    result.rows.forEach(row => {
-      if (!proveedores[row.prove_cod]) {
-        proveedores[row.prove_cod] = {};
-      }
-      proveedores[row.prove_cod][row.tipo_mat_nombre] = {
-        cantidad: row.promat_cantidad,
-        costo: row.promat_costo
-      };
-    });
+    // const proveedores = {};
+    // result.rows.forEach(row => {
+    //   if (!proveedores[row.prove_cod]) {
+    //     proveedores[row.prove_cod] = {};
+    //   }
+    //   proveedores[row.prove_cod][row.tipo_mat_nombre] = {
+    //     cantidad: row.promat_cantidad,
+    //     costo: row.promat_costo
+    //   };
+    // });
 
-    res.json(proveedores);
+    return res.json(result.rows);
   } catch (err) {
     next(err);
   }
