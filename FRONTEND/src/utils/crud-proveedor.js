@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const entityName = 'proveedor'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/rol'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/proveedor'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addEntityButton.addEventListener('click', () => addEntity());
     document.getElementById('compra-btn').addEventListener('click', () => solicitarMateriales());
-    document.getElementById('historial-btn').addEventListener('click', () => verHistorial());
+    //document.getElementById('historial-btn').addEventListener('click', () => verHistorial());
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
@@ -178,14 +178,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedProveedorId) {
             fetch(`${entityEndpoint}/inventario`)
                 .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    /*materiales.forEach(material => {
+                .then(data => {       
+                    //no funciona aun
+                    data.forEach(material => {
                     const option = document.createElement('option');
-                    option.value = material.id;
+                    option.value = material;
                     option.textContent = material.nombre;
                     materialesDropDown.appendChild(option);
-                    });*/
+                    });
                 })
                 .catch(error => {
                 console.error('Error:', error);

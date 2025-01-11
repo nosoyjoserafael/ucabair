@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const entityName = 'tipo prueba'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = '/materiales'; // Reemplazar con la URL del endpoint de la entidad
+    const entityName = 'tipo de prueba'; // Reemplaza con el nombre de la entidad
+    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/tipoprueba'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -26,22 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayEntities() {
-       // fetch(entityEndpoint)
-         //   .then(response => response.json())
-           // .then(data => {
-                entityTableBody.innerHTML = '';
-                const data = [
-                    { id: 1, name: 'Entidad 1' },
-                    { id: 2, name: 'Entidad 2' },
-                    { id: 3, name: 'Entidad 3' }
-                ]
-                data.forEach(entity => {
+       fetch(entityEndpoint)
+         .then(response => response.json())
+         .then(data => {
+                entityTableBody.innerHTML = '';  
+                const dataValues = Object.values(data);        
+                dataValues.forEach(entity => {
                     const row = document.createElement('tr');
+                    let descripcion = entity.tprueba_descripcion;
+                    if (descripcion == null) {
+                        descripcion = 'No disponible';
+                    }
                     
                     //Se reemplazan las columnas por los atributos de la entidad
                     row.innerHTML = `
-                    <td>${entity.id}</td>
-                    <td>${entity.name}</td>                
+                    <td>${entity.tprueba_cod}</td>
+                    <td>${entity.tprueba_nombre}</td>                
+                    <td>${descripcion}</td>  
+                    <td>${entity.tprueba_duracion_estim}</td>  
                     <td>
                         <button class="edit-btn">Editar</button>
                         <button class="delete-btn">Eliminar</button>
@@ -49,79 +51,123 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                     const editButton = row.querySelector('.edit-btn');
                     const deleteButton = row.querySelector('.delete-btn');
-                    editButton.addEventListener('click', () => modifyEntity(entity.id));
-                    deleteButton.addEventListener('click', () => deleteEntity(entity.id));
+                    editButton.addEventListener('click', () => modifyEntity(entity));
+                    deleteButton.addEventListener('click', () => deleteEntity(entity.tprueba_cod));
                     entityTableBody.appendChild(row);
-               // });
-            //});
+               });
             });
     }
 
-    function addInputsToFormData() {        
-        //Aqui se agregan los inputs del formulario al 
-        // overLayForm segun sea necesario        
-
-        //Ejemplo
-        const inp1 = document.createElement('input');
-        inp1.type = 'text';
-        inp1.name = 'inp1';
-        inp1.value = 'valor1';        
-
-        //...Y asi sucesivamente
-
-        //El insertBefore es para agregar siempre 
-        // el input antes del boton de submit
-        overlayForm.insertBefore(inp1, submitButton);        
-    }
-
-
     function addEntity() { 
         overlay.classList.add('visible');
-        overlayTitle.textContent = `Agregar ${entityName}`;
+        overlayTitle.textContent = `Agregar tipo de ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
-        overlayForm.appendChild(submitButton)
-        overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+        overlayForm.appendChild(submitButton)        
+        overlayFormAction.textContent = `Guardar`;     
+        
+        const inp1 = document.createElement('input');
+        inp1.type = 'text';
+        inp1.placeholder = 'Nombre del tipo';
+        inp1.required = true;
+        inp1.name = 'Nombre';
+        const inp2 = document.createElement('input');
+        inp2.type = 'text';        
+        inp2.placeholder = 'Descripción del tipo';
+        inp2.required = true;
+        inp2.name = 'Descripción';
+        const inp3 = document.createElement('input');
+        inp3.type = 'number';
+        inp3.placeholder = 'Tiempo estimado (dias)';
+        inp3.required = true;
+        inp3.name = 'Tiempo estimado';
+
+        overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+        overlayForm.insertBefore(inp3, submitButton);
+
         overlayForm.reset();
 
-        /*fetch(entityEndpoint, {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-        name: entityName,
-        })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            displayEntities();
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(entityEndpoint, {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nombre: inp1.value,
+                    descripcion: inp2.value,
+                    timestim: inp3.value
+                })
             })
-        .catch((error) => {
-            console.error('Error:', error);
-        }
-        );*/
+            .then(response => response.json())
+            .then(data => {
+                    alert(data);
+                    displayEntities();
+                    window.location.reload();
+                })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        })
     }
 
-    function modifyEntity(entityId) {
+    function modifyEntity(entity) {
         overlay.classList.add('visible');
         overlayTitle.textContent = `Editar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
-        overlayForm.reset();
+        
+        const inp1 = document.createElement('input');
+        inp1.type = 'text';        
+        inp1.value = entity.tprueba_nombre;
+        inp1.placeholder = entity.tprueba_nombre;
+        inp1.required = true;
+        inp1.name = 'Nombre';
+        const inp2 = document.createElement('input');
+        inp2.type = 'text';     
+        inp2.value = entity.tprueba_descripcion;
+        inp2.placeholder = entity.tprueba_descripcion;
+        inp2.required = true;
+        inp2.placeholder = entity.tprueba_descripcion !== null ? entity.tprueba_descripcion : 'No disponible';
+        inp2.name = 'Descripción';
+        const inp3 = document.createElement('input');
+        inp3.type = 'number';        
+        inp3.value = entity.tprueba_duracion_estim;
+        inp3.placeholder = entity.tprueba_duracion_estim;
+        inp3.required = true;
+        inp3.name = 'Tiempo estimado';
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'PUT'
-        })
+        overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+        overlayForm.insertBefore(inp3, submitButton);
+
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            fetch(`${entityEndpoint}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    TPcod: entity.tprueba_cod,
+                    nombre: inp1.value,
+                    descripcion: inp2.value,
+                    timestim: inp3.value
+                })
+            })
             .then(response => response.json())
             .then(data => {
-                overlayForm.id.value = data.id;
-                overlayForm.name.value = data.name;
+                alert(data.message);
+                displayEntities();
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-        */
+        });
     }
 
     function deleteEntity(entityId) {
@@ -131,14 +177,28 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Si`;
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'DELETE'
-        })
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(`${entityEndpoint}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    TPcod: entityId
+                })
+            })
             .then(response => response.json())
             .then(data => {
+                alert(data.message);
                 displayEntities();
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-        */
+        });
     }    
 
 });
