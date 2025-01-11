@@ -2,7 +2,7 @@ const pool = require('../config/db');
 
 const getTPprueba = async (req, res, next) => {
   try {
-    const result = await pool.query('SELECT * FROM public."tipo_prueba"');
+    const result = await pool.query('SELECT * FROM get_tipos_de_pruebas()');
     res.json(result.rows);
   } catch (err) {
     next(err);
@@ -10,31 +10,28 @@ const getTPprueba = async (req, res, next) => {
 };
 
 const postTPprueba = async (req, res, next) => {
-    const { Nombre } = req.body;
+    const { nombre, descripcion, timestim } = req.body;
     try {
         const result = await pool.query(
             `
-            INSERT INTO public."tipo_prueba" (tprueba_cod, tprueba_nombre, tprueba_duracion_estim)
-            VALUES (nextval('tpPru_cod_seq'), $1, $2)
-            `, [Nombre, (Math.floor(Math.random() * 100) + 1)]
+            CALL post_tipo_prueba($1, $2, $3)
+            `, [ nombre, descripcion, timestim]
         );
         return res.status(200).json({ message: 'Tipo de prueba registrada correctamente' });
 
     } catch (err) {
-    next(err);
+      next(err);
     }
 };
 
 const putTPprueba = async (req, res, next) => {
+  const { TPcod, nombre, descripcion, timestim } = req.body;
     try {
-    const { Nombre, NewNombre, timestim } = req.body;
-    const result = await pool.query(
-        `
-        UPDATE public."tipo_prueba"
-        SET tprueba_nombre = $1, tprueba_duracion_estim = $2
-        WHERE tprueba_nombre = $3
-        `, [NewNombre, timestim, Nombre]
-    );
+          const result = await pool.query(
+            `
+            CALL put_tipos_de_pruebas($1, $2, $3, $4)
+            `, [TPcod, nombre, descripcion, timestim]
+          );
     return res.status(200).json({ message: 'Tipo de prueba actualizada correctamente' });
 
     } catch (err) {

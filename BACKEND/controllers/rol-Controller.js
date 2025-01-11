@@ -9,4 +9,12 @@ const getRol = async (req, res, next) => {
     }
 };
 
+const putRol = async (req, res, next) => {
+    try {
+        
+    } catch (err) {
+        next(err);
+    }
+};
+
 module.exports = { getRol };

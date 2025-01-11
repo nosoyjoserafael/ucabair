@@ -1,8 +1,7 @@
 const pool = require('../config/db');
 const jwt = require('jsonwebtoken');
 
-// Crear datos
-const createData = async (req, res, next) => {
+const login = async (req, res, next) => {
   const { username, clave } = req.body;
   const secretKey = '12345';
   try {
@@ -24,11 +23,21 @@ const createData = async (req, res, next) => {
     const token = jwt.sign({ id: usuario.user_cod, username: usuario.user_nombre, role: role }, secretKey, { expiresIn: '1h' });
 
     return res.status(200).json({ token });
-    //res.status(200).json({ message: 'Usuario validado correctamente', result: true });
 
   } catch (err) {
     next(err);
   }
 };
 
-module.exports = { createData };
+const getUsuariosPersona = async (req, res, next) => {
+  try {
+    const result = await pool.query(
+      'SELECT * FROM get_usuarios_personas()'
+    );
+    return res.status(200).json(result.rows);
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { login, getUsuariosPersona };

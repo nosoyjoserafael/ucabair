@@ -31,6 +31,7 @@ const proveedor_dataRoutes = require('./routes/proveedor-Routes');
 const empleado_dataRoutes = require('./routes/empleado-Routes');
 const rol_dataRoutes = require('./routes/rol-Routes');
 const compra_dataRoutes = require('./routes/compra-Routes');
+const prueba_dataRoutes = require('./routes/prueba-Routes');
 
 // Middleware para habilitar CORS
 app.use(cors());
@@ -50,6 +51,7 @@ app.use('/proveedor', proveedor_dataRoutes);
 app.use('/empleado', empleado_dataRoutes);
 app.use('/rol', rol_dataRoutes);
 app.use('/compra', compra_dataRoutes);
+app.use('/prueba', prueba_dataRoutes);
 
 // Middleware para manejar errores
 app.use(errorHandler);
@@ -61,8 +63,8 @@ jsreportReady.then(() => { //Para que jsreport se inicialice antes de que el ser
   app.use('/reporte', reporte_dataRoutes);
 
   app.listen(port, () => {
-    console.log(`Servidor corriendo en el puerto ${port}`);
-    console.log(`jsreport corriendo en el puerto 5488 \n`);
+    console.log(`\n Servidor corriendo en el puerto ${port}`);
+    console.log(` jsreport corriendo en el puerto 5488 \n`);
   });
 }).catch((e) => {
   console.error('Error al inicializar jsreport', e);

@@ -2,7 +2,6 @@ const pool = require('../config/db');
 
 // Crear datos
 const addPerson = async (req, res, next) => {
-    //console.log(req.body);
     const { tipo = null, usuario = null, contra = null, nombre = null, fecha_nac = null, cedula = null, fk_lugar = null, direccion = null, estado_civir = null, apellido = null, razon_social = null } = req.body;
   try {
     const result = await pool.query(
