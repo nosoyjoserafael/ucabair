@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const entityName = 'proveedor'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = '/entidad'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/rol'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const addEntityButton = document.getElementById('add-entity-btn');
     const overlayFormAction = document.getElementById('overlay-form-action');
 
+    const proveedores = []
+
     displayEntities();
 
     addEntityButton.addEventListener('click', () => addEntity());
+    document.getElementById('compra-btn').addEventListener('click', () => solicitarMateriales());
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
@@ -26,35 +29,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayEntities() {
-       // fetch(entityEndpoint)
-         //   .then(response => response.json())
-           // .then(data => {
-                entityTableBody.innerHTML = '';
-                const data = [
-                    { id: 1, name: 'Entidad 1' },
-                    { id: 2, name: 'Entidad 2' },
-                    { id: 3, name: 'Entidad 3' }
-                ]
-                data.forEach(entity => {
-                    const row = document.createElement('tr');
-                    
-                    //Se reemplazan las columnas por los atributos de la entidad
-                    row.innerHTML = `
-                    <td>${entity.id}</td>
-                    <td>${entity.name}</td>                
-                    <td>
-                        <button class="edit-btn">Editar</button>
-                        <button class="delete-btn">Eliminar</button>
-                    </td>
-                    `;
-                    const editButton = row.querySelector('.edit-btn');
-                    const deleteButton = row.querySelector('.delete-btn');
-                    editButton.addEventListener('click', () => modifyEntity(entity.id));
-                    deleteButton.addEventListener('click', () => deleteEntity(entity.id));
-                    entityTableBody.appendChild(row);
-               // });
-            //});
-            });
+       fetch(entityEndpoint)
+        .then(response => response.json())
+        .then(data => {
+            entityTableBody.innerHTML = '';
+            const dataValues = Object.values(data);
+            dataValues.forEach(entity => {
+                const row = document.createElement('tr');
+                
+                //Se reemplazan las columnas por los atributos de la entidad
+                row.innerHTML = `
+                <td>${entity.prove_cod}</td>
+                <td>${entity.prove_nombre}</td>                
+                <td>
+                    <button class="edit-btn">Editar</button>
+                    <button class="delete-btn">Eliminar</button>
+                </td>
+                `;
+
+                const proveedor = {
+                    prove_cod: entity.prove_cod,
+                    prove_nombre: entity.prove_nombre
+                }
+
+                proveedores.push(proveedor);
+
+                const editButton = row.querySelector('.edit-btn');
+                const deleteButton = row.querySelector('.delete-btn');
+                editButton.addEventListener('click', () => modifyEntity(entity.prove_cod));
+                deleteButton.addEventListener('click', () => deleteEntity(entity.prove_cod));
+                entityTableBody.appendChild(row);
+            });            
+        });
     }
 
     function addInputsToFormData() {        
@@ -139,6 +145,65 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayEntities();
             });
         */
+    }
+
+    function solicitarMateriales(){
+        overlay.classList.add('visible');
+        overlayTitle.textContent = `Solicitar materiales a ${entityName}`;
+        overlayForm.innerHTML = '';
+        overlayForm.appendChild(submitButton)
+
+        const proveedoresDropDown = document.createElement('select');
+        proveedoresDropDown.name = 'proveedorDropDown';
+        proveedoresDropDown.id = 'proveedorDropDown';
+        proveedoresDropDown.required = true;
+        proveedoresDropDown.innerHTML = `<option value="">Seleccione un proveedor</option>`;
+        proveedores.forEach(proveedor => {
+            const option = document.createElement('option');
+            option.value = proveedor.prove_cod;
+            option.textContent = proveedor.prove_nombre;
+            proveedoresDropDown.appendChild(option);
+        });        
+        
+        const materialesDropDown = document.createElement('select');
+        materialesDropDown.name = 'materialesDropDown';
+        materialesDropDown.id = 'materialesDropDown';
+        materialesDropDown.required = true;
+        materialesDropDown.innerHTML = `<option value="">Seleccione un material</option>`; // Reset materials dropdown
+
+        proveedoresDropDown.addEventListener('change', function() {
+            const selectedProveedorId = this.value;
+
+            if (selectedProveedorId) {
+            fetch(`${entityEndpoint}/inventario`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    /*materiales.forEach(material => {
+                    const option = document.createElement('option');
+                    option.value = material.id;
+                    option.textContent = material.nombre;
+                    materialesDropDown.appendChild(option);
+                    });*/
+                })
+                .catch(error => {
+                console.error('Error:', error);
+                });
+            }
+        });
+
+        const cantidadInput = document.createElement('input');
+        cantidadInput.type = 'number';
+        cantidadInput.name = 'cantidadInput';
+        cantidadInput.id = 'cantidadInput';
+        cantidadInput.min = 1;
+        cantidadInput.required = true;
+        cantidadInput.placeholder = 'Cantidad a solicitar';
+
+        overlayForm.insertBefore(proveedoresDropDown, submitButton);
+        overlayForm.insertBefore(materialesDropDown, submitButton);
+        overlayForm.insertBefore(cantidadInput, submitButton);
+
     }
 
 });

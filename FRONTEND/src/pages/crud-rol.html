@@ -6,7 +6,7 @@
     <title>CRUD Template</title>
     <link rel="stylesheet" href="../css/crud.css">
 </head>
-<body data-roles="admin, empleado">
+<body data-roles="admin">
     <iframe src="../components/navbar.html" frameborder="0" style="width: 100%; height: auto;"></iframe> 
     <header>
         <h1>Gestión de <span id="entity-name">Entidad</span></h1>
@@ -15,13 +15,12 @@
         <section>
             <h2>Lista de <span id="entity-name-list">Entidades</span></h2>
             <button id="add-entity-btn">Agregar</button>
-            <button id="compra-btn">Solicitar materiales</button>
             <table id="entity-table">
                 <thead>
                     <tr>
                         <!-- Add table headers here (th) -->
-                         <th>ID</th>
-                         <th>Nombre</th>
+                        <th>Nombre de usuario</th>
+                        <th>Rol</th>
                          <th>Acciones</th>
                     </tr>
                 </thead>
@@ -41,6 +40,6 @@
             </form>
         </div>
     </div>
-    <script src="../utils/crud-proveedor.js"></script>
+    <script src="../utils/crud-rol.js"></script>
 </body>
 </html>

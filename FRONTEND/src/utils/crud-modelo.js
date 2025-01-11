@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     displayEntities();
 
     addEntityButton.addEventListener('click', () => addEntity());
+    document.getElementById('reports-btn').addEventListener('click', async () => {
+        await dowloadReports();
+        
+    });
+
+    addEntityButton.addEventListener('click', () => addEntity());
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
@@ -139,6 +145,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayEntities();
             });
         */
+    }
+
+    async function dowloadReports(){
+        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/reporte/18')
+        .then(response => response.blob())
+        .then(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'reporteModelosConSusPiezas.pdf';
+            a.click();
+            URL.revokeObjectURL(url);
+        
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
 });

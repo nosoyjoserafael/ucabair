@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const entityName = 'materiales'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = '/materiales'; // Reemplazar con la URL del endpoint de la entidad
+    const entityName = 'roles'; // Reemplaza con el nombre de la entidad
+    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/rol'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const addEntityButton = document.getElementById('add-entity-btn');
     const overlayFormAction = document.getElementById('overlay-form-action');
 
+    const rolesExistentes = []
+
     displayEntities();
 
     addEntityButton.addEventListener('click', () => addEntity());
@@ -26,38 +28,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayEntities() {
-       // fetch(entityEndpoint)
-         //   .then(response => response.json())
-           // .then(data => {
-                entityTableBody.innerHTML = '';
-                const data = [
-                    { id: 1, name: 'Entidad 1' },
-                    { id: 2, name: 'Entidad 2' },
-                    { id: 3, name: 'Entidad 3' }
-                ]
-                data.forEach(entity => {
-                    const row = document.createElement('tr');
-                    
-                    //Se reemplazan las columnas por los atributos de la entidad
-                    row.innerHTML = `
-                    <td>${entity.id}</td>
-                    <td>${entity.name}</td>                
+        fetch(entityEndpoint)
+        .then(response => response.json())
+        .then(data => {
+            entityTableBody.innerHTML = '';     
+            const entityValues = Object.values(data);                 
+            entityValues.forEach(entity => {
+                if (!rolesExistentes.includes(entity.rol_nombre)) {
+                    rolesExistentes.push(entity.rol_nombre)
+                }
+                const row = document.createElement('tr');
+                
+                //Se reemplazan las columnas por los atributos de la entidad
+                row.innerHTML = `
+                    <td>${entity.user_nombre}</td>
+                    <td>${entity.rol_nombre}</td>                
                     <td>
                         <button class="edit-btn">Editar</button>
-                        <button class="delete-btn">Eliminar</button>
                     </td>
                     `;
                     const editButton = row.querySelector('.edit-btn');
-                    const deleteButton = row.querySelector('.delete-btn');
                     editButton.addEventListener('click', () => modifyEntity(entity.id));
-                    deleteButton.addEventListener('click', () => deleteEntity(entity.id));
                     entityTableBody.appendChild(row);
-               // });
-            //});
             });
-    }
+        });
+    }        
 
-    function addInputsToFormData() {        
+    function addInputsToFormData(addOrModify) {        
         //Aqui se agregan los inputs del formulario al 
         // overLayForm segun sea necesario        
 
@@ -110,7 +107,20 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+
+        const rolesDropdown = document.createElement('select');
+        rolesDropdown.name = 'roles';
+        rolesDropdown.id = 'roles';
+        rolesDropdown.innerHTML = `<option value="">Seleccione un rol</option>`;
+        rolesExistentes.forEach(rol => {
+            const option = document.createElement('option');
+            option.value = rol.id;
+            option.textContent = rol;
+            rolesDropdown.appendChild(option);
+        })
+
+        overlayForm.insertBefore(rolesDropdown, submitButton);
+        
         overlayForm.reset();
 
         /*fetch(`${entityEndpoint}/${entityId}`, {
@@ -122,23 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 overlayForm.name.value = data.name;
             });
         */
-    }
-
-    function deleteEntity(entityId) {
-        overlay.classList.add('visible');
-        overlayTitle.textContent = `¿Está seguro de que desea\neliminar este ${entityName}?`;
-        overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
-        overlayForm.appendChild(submitButton)
-        overlayFormAction.textContent = `Si`;
-
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'DELETE'
-        })
-            .then(response => response.json())
-            .then(data => {
-                displayEntities();
-            });
-        */
-    }    
+    }     
 
 });
