@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         overlayForm.insertBefore(inp1, submitButton);
 
-        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/tipo_material')
+        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/tipomaterial')
             .then(response => response.json())
             .then(materiales => {
                 materiales.forEach(material => {
@@ -98,18 +98,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     const cantidadInput = document.createElement('input');
                     cantidadInput.type = 'number';
-                    cantidadInput.name = `cantidad-${material.tipo_mat_cod}`;
+                    cantidadInput.name = `cantidades`;
+                    cantidadInput.placeholder = 'Cantidad';
                     cantidadInput.id = `cantidad-${material.tipo_mat_cod}`;
                     cantidadInput.min = 200;
                     cantidadInput.disabled = true;
 
+                    const precioInput = document.createElement('input');
+                    precioInput.type = 'number';
+                    precioInput.name = `precios`;
+                    precioInput.placeholder = 'Precio';
+                    precioInput.id = `precio-${material.tipo_mat_cod}`;
+                    precioInput.min = 1;
+                    precioInput.disabled = true;                    
+
                     checkbox.addEventListener('change', function() {
                         cantidadInput.disabled = !this.checked;
+                        cantidadInput.required = this.checked;                    
+                        precioInput.disabled = !this.checked;
+                        precioInput.required = this.checked;
                     });
 
                     checkboxContainer.appendChild(checkbox);
                     checkboxContainer.appendChild(label);
                     checkboxContainer.appendChild(cantidadInput);
+                    checkboxContainer.appendChild(precioInput);
+                    checkboxContainer.style.display = 'flex';
+                    checkboxContainer.style.justifyContent = 'space-between';
+                    checkboxContainer.style.marginBottom = '10px';
+
                     overlayForm.insertBefore(checkboxContainer, submitButton);
                 });
                 overlayForm.reset();
@@ -119,8 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            const materiales = Array.from(formData.getAll('materiales')).map(material => material);
-            const cantidades = Array.from(formData.getAll('cantidad-')).map(cantidad => cantidad);            
+            const materiales = Array.from(formData.getAll('materiales')).map(material => Number(material));
+            const cantidades = Array.from(formData.getAll('cantidades')).map(cantidad => Number(cantidad));            
+            const precios = Array.from(formData.getAll('precios')).map(precio => Number(precio));
 
             fetch(entityEndpoint, {
                 method: 'POST',
@@ -128,15 +146,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    prove_nombre: formData.get('Nombre'),
-                    materiales: materiales,
-                    cantidades: cantidades
+                    Nombre: inp1.value,
+                    materialOfrece: materiales,
+                    cantidad: cantidades,
+                    precio: precios
                 })
             })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                displayEntities();
+                alert('Proveedor agregado exitosamente');
                 window.location.reload();
             })
             .catch((error) => {
@@ -156,28 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
         inp1.name = 'Materiales';
         inp1.required = true;
         inp1.innerHTML = `<option value="">Seleccione un material</option>`;        
-        fetch(`${entityEndpoint}/inventario`,
-            {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({prove_cod: selectedProveedorId})
-            })
-            .then(response => response.json())
-            .then(data => {       
-                //no funciona aun
-                data.forEach(material => {
-                const option = document.createElement('option');
-                option.value = material.tmat_cod;
-                option.textContent = material.nombre;
-                inp1.appendChild(option);
-                });
-            })
-            .catch(error => {
-            console.error('Error:', error);
-            });
-
         const inp2 = document.createElement('input');
         inp2.type = 'number';
         inp2.placeholder = 'Cantidad';
@@ -191,34 +187,63 @@ document.addEventListener('DOMContentLoaded', function() {
         inp3.required = true;
         inp3.min = 1;
 
+        fetch(`${entityEndpoint}/inventario/${entityId}`,
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {       
+                const materiales = Object.values(data);                
+                materiales.forEach(material => {
+                    const option = document.createElement('option');
+                    option.value = material.tipo_mat_cod;
+                    option.textContent = material.tipo_mat_nombre;
+                    inp1.appendChild(option);
+                });
+                inp1.addEventListener('change', (event) => {
+                    const selectedMaterial = materiales.find(material => material.tmat_cod == this.value);
+                    if (selectedMaterial) {
+                        inp2.value = selectedMaterial.promat_cantidad; // Asigna el valor actual de cantidad
+                        inp3.value = selectedMaterial.promat_costo;   // Asigna el valor actual de precio
+                    } else {
+                        inp2.value = '';
+                        inp3.value = '';
+                    }
+                });                
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });        
+            
         overlayForm.insertBefore(inp1, submitButton);
         overlayForm.insertBefore(inp2, submitButton);
-        overlayForm.insertBefore(inp3, submitButton);
-
-        overlayForm.reset();
+        overlayForm.insertBefore(inp3, submitButton);        
 
         overlayForm.addEventListener('submit', function(event) {
             event.preventDefault();
-
+            
             fetch(`${entityEndpoint}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    prove_cod: entityId,
-                    tmat_cod: inp1.value,
-                    cantidad: inp3.value,
-                    precio: inp3.value
+                    proveedor: entityId,
+                    material: inp1.value,
+                    cantidad: inp2.value,
+                    costo: inp3.value
 
                 })
             })
             .then(response => response.json())
             .then(data => {
-                overlayForm.id.value = data.id;
-                overlayForm.name.value = data.name;
-            });
-            
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch(error => console.error('Error:', error));                    
         });
     }
 
@@ -229,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Si`;
 
-        overlayFormAction.addEventListener('click', function(event) {
+        overlayForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
             fetch(`${entityEndpoint}`, {
@@ -241,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => response.json())
             .then(data => {
-                alert('Proveedor eliminado exitosamente');
+                alert(data.message);
                 window.location.reload();
             })
             .catch(error => console.error('Error:', error));            

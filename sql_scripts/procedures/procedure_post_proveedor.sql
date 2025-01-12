@@ -1,7 +1,8 @@
 CREATE OR REPLACE PROCEDURE post_proveedor(    
     p_prove_nombre VARCHAR,
     p_tmats_cods NUMERIC[],
-    p_tmats_cantidades NUMERIC[]
+    p_tmats_cantidades NUMERIC[], 
+    p_tmats_costos NUMERIC[]
 ) AS $$
 DECLARE
     v_prove_cod INTEGER;   
@@ -14,7 +15,7 @@ BEGIN
     FOR i IN 1..array_length(p_tmats_cods, 1)
     LOOP    
         INSERT INTO public."pro_mat" (fk_proveedor, fk_tmat, promat_cantidad, promat_costo)
-          VALUES (v_prove_cod, p_tmats_cods[i], p_tmats_cantidades[i], floor(random() * (1000 - 100 + 1) + 100));
+          VALUES (v_prove_cod, p_tmats_cods[i], p_tmats_cantidades[i], p_tmats_costos[i]);
     END LOOP;
 
 END;
