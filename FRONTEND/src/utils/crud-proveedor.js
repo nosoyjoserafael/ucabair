@@ -301,22 +301,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const selectedProveedorId = this.value;
 
             if (selectedProveedorId) {
-            fetch(`${entityEndpoint}/inventario`,
+            fetch(`${entityEndpoint}/inventario/${selectedProveedorId}`,
                 {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({prove_cod: selectedProveedorId})
+                    }
                 })
                 .then(response => response.json())
                 .then(data => {       
-                    //no funciona aun
-                    data.forEach(material => {
-                    const option = document.createElement('option');
-                    option.value = material.tmat_cod;
-                    option.textContent = material.nombre;
-                    materialesDropDown.appendChild(option);
+                    const materiales = Object.values(data);   
+                    materiales.forEach(material => {
+                        const option = document.createElement('option');
+                        option.value = material.tipo_mat_cod;
+                        option.textContent = material.tipo_mat_nombre;
+                        materialesDropDown.appendChild(option);
                     });
                 })
                 .catch(error => {
@@ -336,6 +335,8 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.insertBefore(proveedoresDropDown, submitButton);
         overlayForm.insertBefore(materialesDropDown, submitButton);
         overlayForm.insertBefore(cantidadInput, submitButton);
+
+        //falta
 
     }
 
