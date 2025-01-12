@@ -64,51 +64,85 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function addInputsToFormData() {        
-        //Aqui se agregan los inputs del formulario al 
-        // overLayForm segun sea necesario        
-
-        //Ejemplo
-        const inp1 = document.createElement('input');
-        inp1.type = 'text';
-        inp1.name = 'inp1';
-        inp1.value = 'valor1';        
-
-        //...Y asi sucesivamente
-
-        //El insertBefore es para agregar siempre 
-        // el input antes del boton de submit
-        overlayForm.insertBefore(inp1, submitButton);        
-    }
-
-
     function addEntity() { 
         overlay.classList.add('visible');
         overlayTitle.textContent = `Agregar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
-        overlayForm.reset();
+        
+        const inp1 = document.createElement('input');
+        inp1.type = 'text';
+        inp1.placeholder = 'Nombre';
+        inp1.name = 'Nombre';
+        inp1.required = true;
 
-        /*fetch(entityEndpoint, {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-        name: entityName,
-        })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            displayEntities();
+        overlayForm.insertBefore(inp1, submitButton);
+
+        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/tipo_material')
+            .then(response => response.json())
+            .then(materiales => {
+                materiales.forEach(material => {
+                    const checkboxContainer = document.createElement('div');
+                    checkboxContainer.classList.add('checkbox-container');
+
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.name = 'materiales';
+                    checkbox.value = material.tipo_mat_cod;
+                    checkbox.id = `material-${material.tipo_mat_cod}`;
+
+                    const label = document.createElement('label');
+                    label.htmlFor = `material-${material.tipo_mat_cod}`;
+                    label.textContent = material.tipo_mat_nombre;
+
+                    const cantidadInput = document.createElement('input');
+                    cantidadInput.type = 'number';
+                    cantidadInput.name = `cantidad-${material.tipo_mat_cod}`;
+                    cantidadInput.id = `cantidad-${material.tipo_mat_cod}`;
+                    cantidadInput.min = 200;
+                    cantidadInput.disabled = true;
+
+                    checkbox.addEventListener('change', function() {
+                        cantidadInput.disabled = !this.checked;
+                    });
+
+                    checkboxContainer.appendChild(checkbox);
+                    checkboxContainer.appendChild(label);
+                    checkboxContainer.appendChild(cantidadInput);
+                    overlayForm.insertBefore(checkboxContainer, submitButton);
+                });
+                overlayForm.reset();
             })
-        .catch((error) => {
-            console.error('Error:', error);
-        }
-        );*/
+            .catch(error => console.error('Error:', error));
+
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const materiales = Array.from(formData.getAll('materiales')).map(material => material);
+            const cantidades = Array.from(formData.getAll('cantidad-')).map(cantidad => cantidad);            
+
+            fetch(entityEndpoint, {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    prove_nombre: formData.get('Nombre'),
+                    materiales: materiales,
+                    cantidades: cantidades
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                displayEntities();
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        })
     }
 
     function modifyEntity(entityId) {
@@ -117,18 +151,75 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+        
+        const inp1 = document.createElement('select');
+        inp1.name = 'Materiales';
+        inp1.required = true;
+        inp1.innerHTML = `<option value="">Seleccione un material</option>`;        
+        fetch(`${entityEndpoint}/inventario`,
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({prove_cod: selectedProveedorId})
+            })
+            .then(response => response.json())
+            .then(data => {       
+                //no funciona aun
+                data.forEach(material => {
+                const option = document.createElement('option');
+                option.value = material.tmat_cod;
+                option.textContent = material.nombre;
+                inp1.appendChild(option);
+                });
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            });
+
+        const inp2 = document.createElement('input');
+        inp2.type = 'number';
+        inp2.placeholder = 'Cantidad';
+        inp2.name = 'Cantidad';
+        inp2.required = true;
+        inp2.min = 1;
+        const inp3 = document.createElement('input');
+        inp3.type = 'number';
+        inp3.placeholder = 'Precio';
+        inp3.name = 'Precio';
+        inp3.required = true;
+        inp3.min = 1;
+
+        overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+        overlayForm.insertBefore(inp3, submitButton);
+
         overlayForm.reset();
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'PUT'
-        })
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(`${entityEndpoint}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    prove_cod: entityId,
+                    tmat_cod: inp1.value,
+                    cantidad: inp3.value,
+                    precio: inp3.value
+
+                })
+            })
             .then(response => response.json())
             .then(data => {
                 overlayForm.id.value = data.id;
                 overlayForm.name.value = data.name;
             });
-        */
+            
+        });
     }
 
     function deleteEntity(entityId) {
@@ -138,14 +229,23 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Si`;
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'DELETE'
-        })
+        overlayFormAction.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            fetch(`${entityEndpoint}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({prove_cod: entityId})
+            })
             .then(response => response.json())
             .then(data => {
-                displayEntities();
-            });
-        */
+                alert('Proveedor eliminado exitosamente');
+                window.location.reload();
+            })
+            .catch(error => console.error('Error:', error));            
+        });
     }
 
     function solicitarMateriales(){
@@ -176,13 +276,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const selectedProveedorId = this.value;
 
             if (selectedProveedorId) {
-            fetch(`${entityEndpoint}/inventario`)
+            fetch(`${entityEndpoint}/inventario`,
+                {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({prove_cod: selectedProveedorId})
+                })
                 .then(response => response.json())
                 .then(data => {       
                     //no funciona aun
                     data.forEach(material => {
                     const option = document.createElement('option');
-                    option.value = material;
+                    option.value = material.tmat_cod;
                     option.textContent = material.nombre;
                     materialesDropDown.appendChild(option);
                     });

@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                     `;
                     const editButton = row.querySelector('.edit-btn');
-                    editButton.addEventListener('click', () => modifyEntity(entity.id));
+                    editButton.addEventListener('click', () => modifyEntity(entity.user_nombre));
                     entityTableBody.appendChild(row);
             });
         });
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         );*/
     }
 
-    function modifyEntity(entityId) {
+    function modifyEntity(username) {
         overlay.classList.add('visible');
         overlayTitle.textContent = `Editar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
@@ -123,15 +123,26 @@ document.addEventListener('DOMContentLoaded', function() {
         
         overlayForm.reset();
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'PUT'
-        })
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(`https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/usuario`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    user: username,
+                    rolcod: rolesDropdown.value
+                })
+            })
             .then(response => response.json())
             .then(data => {
-                overlayForm.id.value = data.id;
-                overlayForm.name.value = data.name;
-            });
-        */
+                alert(data.message);
+                displayEntities();
+                window.location.reload();
+            });  
+        });  
     }     
 
 });
