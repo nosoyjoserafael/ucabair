@@ -53,7 +53,6 @@
   <table id="reporte">
     <thead>
       <tr>
-        <th>Cédula</th>
         <th>Nombre y Apellido</th>
         <th>Dia de la Semana</th>
         <th>Hora de Entrada</th>
@@ -63,11 +62,10 @@
     <tbody>
       {{#each fila}}
       <tr>
-        <td>{{cedula}}</td>
-        <td>{{nombre}}</td>
+        <td>{{nombreempleado}} {{apellidoempleado}}</td>
         <td>{{dia}}</td>
-        <td>{{inicio}}</td>
-        <td>{{fin}}</td>
+        <td>{{horaentrada}}</td>
+        <td>{{horasalida}}</td>
       </tr>
       {{/each}}
     </tbody>

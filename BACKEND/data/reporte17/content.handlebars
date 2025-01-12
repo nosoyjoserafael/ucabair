@@ -55,25 +55,23 @@
     <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
     <div class="date">Fecha: {{formatDate}}</div>
   </header>
-  <div class="report-title">Pagos realizados a proveedores entre {{fechainicio}} y {{fechafinal}}</div>
+  <div class="report-title">Pagos realizados a proveedores</div>
   <table>
     <thead>
       <tr>
-        <th class="rif-column">RIF</th>
         <th>Nombre del Proveedor</th>
-        <th>Fecha de la Compra</th>
-        <th>Monto Pagado</th>
-        <th class="codigo-column">ID del Pago</th>
+        <th>Codigo pago</th>
+        <th>Fecha pago</th>
+        <th>Monto del pago</th>
       </tr>
     </thead>
     <tbody>
       {{#each fila}}
       <tr>
-        <td class="rif-column">{{rif}}</td>
-        <td>{{nombreproveedor}}</td>
+        <td>{{proveedor}}</td>
+        <td>{{codigopago}}</td>
         <td>{{fecha}}</td>
-        <td>{{pago}}</td>
-        <td class="codigo-column">{{codigo}}</td>
+        <td>{{monto}}</td>
       </tr>
       {{/each}}
     </tbody>

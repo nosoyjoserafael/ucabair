@@ -52,6 +52,24 @@ const get16 = async (req, res, next) => {
   }
 };
 
+const get17 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM get_reporte17()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte17');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const get18 = async (req, res, next) => {
   try {
     const resultFila = await pool.query('SELECT * FROM get_reporte18()');
@@ -70,10 +88,27 @@ const get18 = async (req, res, next) => {
   }
 };
 
+const get20 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM get_reporte20()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte20');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const get21 = async (req, res, next) => {
   try {
     const resultFila = await pool.query('SELECT * FROM get_reporte21()');
-
     const data = {
       logoUrl : logo,
       formatDate: new Date().toLocaleDateString(),
@@ -89,4 +124,4 @@ const get21 = async (req, res, next) => {
   }
 };
 
-module.exports = { get15, get16, get18, get21 };
+module.exports = { get15, get16, get17, get18, get20, get21 };
