@@ -32,6 +32,7 @@ const empleado_dataRoutes = require('./routes/empleado-Routes');
 const rol_dataRoutes = require('./routes/rol-Routes');
 const compra_dataRoutes = require('./routes/compra-Routes');
 const prueba_dataRoutes = require('./routes/prueba-Routes');
+const tipo_materialRoutes = require('./routes/tipo_material-Routes');
 
 // Middleware para habilitar CORS
 app.use(cors());
@@ -52,6 +53,7 @@ app.use('/empleado', empleado_dataRoutes);
 app.use('/rol', rol_dataRoutes);
 app.use('/compra', compra_dataRoutes);
 app.use('/prueba', prueba_dataRoutes);
+app.use('/tipomaterial', tipo_materialRoutes);
 
 // Middleware para manejar errores
 app.use(errorHandler);
@@ -59,6 +61,7 @@ app.use(errorHandler);
 jsreportReady.then(() => { //Para que jsreport se inicialice antes de que el servidor empiece a escuchar
 
   module.exports = { jsreport, jsreportReady };
+  
   const reporte_dataRoutes = require('./routes/reporte-Routes');
   app.use('/reporte', reporte_dataRoutes);
 

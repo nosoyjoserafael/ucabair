@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Reporte16</title>
+  <title>Reporte15</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,23 +49,23 @@
     <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
     <div class="date">Fecha: {{formatDate}}</div>
   </header>
-  <div class="report-title">Ingresos al inventario por solicitudes a proveedores</div>
+  <div class="report-title">Materiales ofrecidos por los proveedores</div>
   <table id="reporte">
     <thead>
       <tr>
+        <th>Nombre del Proveedor</th>
         <th>Nombre del Material</th>
         <th>Cantidad</th>
-        <th>Nombre del Proveedor</th>
-        <th>ID de la Compra</th>
+        <th>Costo</th>
       </tr>
     </thead>
     <tbody>
       {{#each fila}}
       <tr>
+        <td>{{proveedor}}</td>
         <td>{{material}}</td>
         <td>{{cantidad}}</td>
-        <td>{{proveedor}}</td>
-        <td>{{cod_compra}}</td>
+        <td>{{costo}}</td>
       </tr>
       {{/each}}
     </tbody>

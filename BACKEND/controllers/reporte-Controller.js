@@ -16,6 +16,24 @@ async function generatePdf(data, template) {
   return report.content;
 }
 
+const get15 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM get_reporte15()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte15');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const get16 = async (req, res, next) => {
   try {
     const resultFila = await pool.query('SELECT * FROM get_reporte16()');
@@ -52,4 +70,22 @@ const get18 = async (req, res, next) => {
   }
 };
 
-module.exports = { get16, get18 };
+const get21 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM get_reporte21()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte21');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { get15, get16, get18, get21 };

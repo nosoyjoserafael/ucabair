@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { get16, get18 } = require('../controllers/reporte-Controller');
+const { get15, get16, get18 } = require('../controllers/reporte-Controller');
 
-// router.get('/15', get15);
+router.get('/15', get15);
 router.get('/16', get16);
 // router.get('/17', get17);
 router.get('/18', get18);
