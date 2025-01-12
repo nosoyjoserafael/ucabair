@@ -3,9 +3,7 @@
     "recipe": "chrome-pdf",
     "shortid": "UqPxepbDT",
     "engine": "handlebars",
-    "data": {
-        "shortid": "ku72NkH1l"
-    },
+    "data": null,
     "chrome": {
         "printBackground": true
     },
@@ -13,7 +11,7 @@
         "$$date": 1736116116989
     },
     "modificationDate": {
-        "$$date": 1736116821057
+        "$$date": 1736723380271
     },
     "_id": "9VpM2p0lhKLSj0QA",
     "$entitySet": "templates"

@@ -55,23 +55,25 @@
     <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
     <div class="date">Fecha: {{formatDate}}</div>
   </header>
-  <div class="report-title">Empleados con proyectos asignados</div>
+  <div class="report-title">Empleados con sus proyectos asignados</div>
   <table id="reporte">
     <thead>
       <tr>
-        <th>Cedula</th>
         <th>Nombre y Apellido</th>
-        <th>Cargo</th>
-        <th>Nombre del Proyecto</th>
+        <th>ID del Proyecto</th>
+        <th>ID Pieza - Nombre de su prueba</th>
+        <th>ID Material - Nombre de su prueba</th>
+        <th>ID Avion - Nombre de su prueba</th>
       </tr>
     </thead>
     <tbody>
       {{#each fila}}
       <tr>
-        <td>{{cedula}}</td>
-        <td>{{nombre}}</td>
-        <td>{{cargo}}</td>
-        <td>{{proyecto}}</td>
+        <td>{{nombreempleado}} {{apellidoempleado}}</td>
+        <td>{{idconstruccion}}</td>
+        <td>{{idpieza}} - {{nombrepruebapieza}}</td>
+        <td>{{idmaterial}} - {{nombrepruebamaterial}}</td>
+        <td>{{idavion}} - {{nombrepruebaavion}}</td>
       </tr>
       {{/each}}
     </tbody>

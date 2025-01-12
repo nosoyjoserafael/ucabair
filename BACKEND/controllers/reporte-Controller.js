@@ -73,6 +73,7 @@ const get18 = async (req, res, next) => {
 const get21 = async (req, res, next) => {
   try {
     const resultFila = await pool.query('SELECT * FROM get_reporte21()');
+
     const data = {
       logoUrl : logo,
       formatDate: new Date().toLocaleDateString(),
