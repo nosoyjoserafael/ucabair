@@ -1,4 +1,4 @@
--- Crear la secuencia para te_cod
+-- Crear la secuencia para asignacion_cod
 CREATE SEQUENCE asignacion_seq
     START WITH 1
     INCREMENT BY 1
@@ -6,8 +6,8 @@ CREATE SEQUENCE asignacion_seq
     NO MAXVALUE
     CACHE 1;
 
--- Crear la tabla trabajo_equipo
-CREATE TABLE trabajo_equipo (
+-- Crear la tabla asignacion
+CREATE TABLE asignacion (
     asig_cod INTEGER NOT NULL DEFAULT nextval('asignacion_seq'),
     fk_horario INTEGER, 
     fk_personal INTEGER,

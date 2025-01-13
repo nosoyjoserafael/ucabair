@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const entityName = 'asistencia'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/modelo'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/asistencia'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -33,42 +33,54 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayEntities() {
-       // fetch(entityEndpoint)
-         //   .then(response => response.json())
-           // .then(data => {
+        if (!localStorage.getItem('token').includes('admin')) {
+            fetch(entityEndpoint)
+            .then(response => response.json())
+            .then(data => {
                 entityTableBody.innerHTML = '';
-                const data = [
-                    { id: 1, name: 'Entidad 1' },
-                    { id: 2, name: 'Entidad 2' },
-                    { id: 3, name: 'Entidad 3' }
-                ]
-                data.forEach(entity => {
+                const dataValues = Object.values(data);
+                dataValues.forEach(entity => {
                     const row = document.createElement('tr');
                     
                     //Se reemplazan las columnas por los atributos de la entidad
                     row.innerHTML = `
                     <td>${entity.id}</td>
                     <td>${entity.name}</td>                
+                    <td>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </td>
                     `;
-
-                    //Se agregan los eventos a los botones de editar y eliminar
-                    if(localStorage.getItem('token').includes('admin')){
-                        row.innerHTML += `
-                        <td>
-                            <button class="edit-btn">Editar</button>
-                            <button class="delete-btn">Eliminar</button>
-                        </td>
-                        `;
-                        const editButton = row.querySelector('.edit-btn');
-                        const deleteButton = row.querySelector('.delete-btn');
-                        editButton.addEventListener('click', () => modifyEntity(entity.id));
-                        deleteButton.addEventListener('click', () => deleteEntity(entity.id));
-                    }
-
+                    const editButton = row.querySelector('.edit-btn');
+                    const deleteButton = row.querySelector('.delete-btn');
+                    editButton.addEventListener('click', () => modifyEntity(entity.id));
+                    deleteButton.addEventListener('click', () => deleteEntity(entity.id));
+    
                     entityTableBody.appendChild(row);
-               // });
-            //});
+                });
             });
+        }
+        else if(localStorage.getItem('token').includes('empleado')){
+            fetch(`${entityEndpoint}/${localStorage.getItem('id')}`)
+            .then(response => response.json())
+            .then(data => {
+                entityTableBody.innerHTML = '';
+                const dataValues = Object.values(data);                
+                dataValues.forEach(entity => {
+                    const row = document.createElement('tr');
+                    
+                    //Se reemplazan las columnas por los atributos de la entidad
+                    row.innerHTML = `
+                    <td>${entity.id}</td>
+                    <td>${entity.name}</td>                                    
+                    `;  
+                    
+    
+                    entityTableBody.appendChild(row);
+                });
+            });
+        }
+        
     }
 
     function addEntity() { 
@@ -77,8 +89,40 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+
+        if(localStorage.getItem('token').includes('admin')){
+            const selectEmleado = document.createElement('select');
+            selectEmleado.name = 'empleados';
+            selectEmleado.id = 'empleados';
+            selectEmleado.innerHTML = `<option value="">Seleccione un empleado</option>`;
+            fetch(entityEndpoint)
+            .then(response => response.json())
+            .then(data => {
+                const dataValues = Object.values(data);
+                dataValues.forEach(entity => {
+                    const option = document.createElement('option');
+                    option.value = entity.id;
+                    option.textContent = entity.name;
+                    selectEmleado.appendChild(option);
+                }); 
+            }); 
+            overlayForm.insertBefore(selectEmleado, submitButton);
+        }
+        //falta poner el la parte del usuario del empleado
+        let usuario = 'usuario1';
+            
+
+        const inp1 = document.createElement('input');
+        inp1.type = 'date';
+        inp1.name = 'fecha';
+        inp1.id = 'fecha';
+        inp1.placeholder = 'Fecha';
+        overlayForm.insertBefore(inp1, submitButton);
+        
         overlayForm.reset();
+
+        overlayForm.addEventListener('submit', function(event) {
+        });
 
         /*fetch(entityEndpoint, {
         method: 'POST',
