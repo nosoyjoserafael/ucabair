@@ -4118,6 +4118,30 @@ insert into public.construccion ("cons_fecha_ini","fk_avion") values ('05-07-202
 insert into public.construccion ("cons_fecha_ini","fk_avion") values ('03-03-2024',3);
 insert into public.construccion ("cons_fecha_ini","fk_avion") values ('09-04-2024',4);
 
+--insertar despues de construccion
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 1', 1);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 2', 2);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 3', 3);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 4', 4);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 5', 1);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 6', 2);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 7', 3);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 8', 4);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 9', 1);
+insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 10', 2);
+
+--insertar despues de equipo y construccion
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01',  'Montaje de alas', 1);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Instalación de motores', 2);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Montaje de fuselaje', 3);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Instalación de sistemas eléctricos', 4);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Pintura y acabado', 5);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Pruebas de vuelo', 6);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Montaje de tren de aterrizaje', 7);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Instalación de sistemas hidráulicos', 8);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Montaje de cabina', 9);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Control de calidad', 10);
+
 --detalle_compra
 insert into public.detalle_compra (detcomp_cantidad, fk_compra, fk_material) values (300, 1, 1);
 insert into public.detalle_compra (detcomp_cantidad, fk_compra, fk_material) values (300, 2, 2);
