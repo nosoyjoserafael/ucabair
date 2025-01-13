@@ -54,31 +54,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }        
 
-    function addInputsToFormData(addOrModify) {        
-        //Aqui se agregan los inputs del formulario al 
-        // overLayForm segun sea necesario        
-
-        //Ejemplo
-        const inp1 = document.createElement('input');
-        inp1.type = 'text';
-        inp1.name = 'inp1';
-        inp1.value = 'valor1';        
-
-        //...Y asi sucesivamente
-
-        //El insertBefore es para agregar siempre 
-        // el input antes del boton de submit
-        overlayForm.insertBefore(inp1, submitButton);        
-    }
-
-
     function addEntity() { 
         overlay.classList.add('visible');
         overlayTitle.textContent = `Agregar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+        
+        const inp1 = document.createElement('input');
+        inp1.type = 'text';
+        inp1.name = 'nombre';
+        inp1.id = 'nombre';
+        inp1.placeholder = 'Nombre del rol';
+        
+        overlayForm.insertBefore(inp1, submitButton);
+
+
         overlayForm.reset();
 
         /*fetch(entityEndpoint, {

@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             Modelo: '../pages/crud-modelo.html',
             Materiales: '../pages/crud-material.html',
             Roles: '../pages/crud-rol.html',
-            Pruebas: '../pages/crud-tipo-prueba.html'
+            Pruebas: '../pages/crud-tipo-prueba.html',
+            asistencia: '../pages/crud-asistencia.html',
         };
         
         const urlsKeys = Object.keys(cruds);
@@ -79,6 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });        
     }
     else{
-        document.getElementById('overlay').remove();
+        document.getElementById('gestion-a').remove();
     }
 });
