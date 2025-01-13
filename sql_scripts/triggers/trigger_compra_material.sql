@@ -1,6 +1,7 @@
 CREATE OR REPLACE FUNCTION compra_materiales_proveedor(
     p_tipo_material_cod INTEGER,
-    p_cantidad INTEGER
+    p_cantidad INTEGER,
+    p_proveedor_cod INTEGER DEFAULT NULL
 ) RETURNS INTEGER AS $$
 DECLARE
     v_costo_unitario NUMERIC;
@@ -18,17 +19,24 @@ BEGIN
     v_monto_total := p_cantidad * v_costo_unitario;
 
     -- Insertar la compra
-    INSERT INTO compra (compr_preciotot, fk_proveedor)
-    VALUES (v_monto_total, (SELECT prove_cod
-							FROM proveedor
-                            WHERE prove_cod in (SELECT fk_proveedor
-                                                FROM pro_mat
-                                                WHERE fk_tmat = p_tipo_material_cod AND
-                                                fk_proveedor = prove_cod AND
-                                                promat_cantidad >= p_cantidad)
-							ORDER BY random()
-							LIMIT 1))
-    RETURNING compr_cod, fk_proveedor INTO v_id_compra, v_prove_cod;
+
+    IF p_proveedor_cod IS NOT NULL THEN
+        INSERT INTO compra (compr_preciotot, fk_proveedor)
+        VALUES (v_monto_total, p_proveedor_cod)
+        RETURNING compr_cod, fk_proveedor INTO v_id_compra, v_prove_cod;
+    ELSE
+        INSERT INTO compra (compr_preciotot, fk_proveedor)
+        VALUES (v_monto_total, (SELECT prove_cod
+                                FROM proveedor
+                                WHERE prove_cod in (SELECT fk_proveedor
+                                                    FROM pro_mat
+                                                    WHERE fk_tmat = p_tipo_material_cod AND
+                                                    fk_proveedor = prove_cod AND
+                                                    promat_cantidad >= p_cantidad)
+                                ORDER BY random()
+                                LIMIT 1))
+        RETURNING compr_cod, fk_proveedor INTO v_id_compra, v_prove_cod;
+    END IF;
 
     -- Actualizar la cantidad de material en el proveedor
     UPDATE pro_mat
