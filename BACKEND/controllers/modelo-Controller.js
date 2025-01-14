@@ -18,7 +18,7 @@ const getCarac = async (req, res, next) => {
       if (!modelos[row.mod_cod]) {
         modelos[row.mod_cod] = {};
       }
-      modelos[row.mod_cod][row.carac_nombre] = row.mod_carac_cantidad;
+      modelos[row.mod_cod][row.carac_nombre] = row.mod_carac_cantidad + " " + row.carac_unidad_medida;
     });
 
     res.json(modelos);
@@ -33,8 +33,6 @@ const postModelo = async (req, res, next) => {
       Nombre, Cap_tripulacion, Cap_pasajero, Longitud, Envergadura, Altura, Flecha_alar, Peso_vacio, Peso_max_despegue, Peso_max_aterrizaje, Velocidad_crucero, Velocidad_max, Capacidad_max_combustible, Motor
     } = req.body;
     
-    console.log(req.body);
-
     const client = await pool.connect();
     try {
       await client.query('BEGIN');
@@ -47,6 +45,33 @@ const postModelo = async (req, res, next) => {
 
       await client.query('COMMIT');
       res.status(201).send({ message: 'Modelo creado exitosamente' });
+    } catch (error) {
+      await client.query('ROLLBACK');
+      next(error);
+    } finally {
+      client.release();
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
+const postCompra = async (req, res, next) => {
+  try {
+    const {
+      modelo
+    } = req.body;
+    
+    const client = await pool.connect();
+    try {
+      await client.query('BEGIN');
+
+      await client.query(`
+        SELECT compra_avion($1)
+      `, [ modelo ]);
+
+      await client.query('COMMIT');
+      res.status(200).send({ message: 'Modelo comprado y registrado exitosamente' });
     } catch (error) {
       await client.query('ROLLBACK');
       next(error);
@@ -117,4 +142,4 @@ const deleteModelo = async (req, res, next) => {
 };
 
 
-module.exports = { getModelo, getCarac, putModelo, postModelo, deleteModelo };
+module.exports = { getModelo, getCarac, putModelo, postModelo, postCompra, deleteModelo };

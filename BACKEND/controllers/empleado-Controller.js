@@ -9,6 +9,16 @@ const getEmpleado = async (req, res, next) => {
   }
 };
 
+const getNomina = async (req, res, next) => {
+  const { idPersonal, fechaInicio, fechaFin } = req.params;
+  try {
+    const result = await pool.query('SELECT * FROM calcular_nomina($1, $2, $3)', [idPersonal, fechaInicio, fechaFin]);
+    res.json(result.rows);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const postEmpleado = async (req, res, next) => {
   try {
     const { Per_nombre, Per_ci, Per_Per_apellido, Per_Per_experiencia, fk_lugar, Per_dir, Per_fechaini } = req.body;
@@ -51,4 +61,4 @@ const deleteEmpleado = async (req, res, next) => {
   }
 };
 
-module.exports = { getEmpleado, postEmpleado, putEmpleado, deleteEmpleado };
+module.exports = { getEmpleado, getNomina, postEmpleado, putEmpleado, deleteEmpleado };

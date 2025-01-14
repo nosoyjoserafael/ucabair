@@ -33,6 +33,7 @@ const rol_dataRoutes = require('./routes/rol-Routes');
 const compra_dataRoutes = require('./routes/compra-Routes');
 const prueba_dataRoutes = require('./routes/prueba-Routes');
 const tipo_materialRoutes = require('./routes/tipo_material-Routes');
+const asistenciaRoutes = require('./routes/asistencia-Routes');
 
 // Middleware para habilitar CORS
 app.use(cors());
@@ -54,6 +55,7 @@ app.use('/rol', rol_dataRoutes);
 app.use('/compra', compra_dataRoutes);
 app.use('/prueba', prueba_dataRoutes);
 app.use('/tipomaterial', tipo_materialRoutes);
+app.use('/asistencia', asistenciaRoutes);
 
 // Middleware para manejar errores
 app.use(errorHandler);
