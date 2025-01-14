@@ -44,7 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             entityTableBody.innerHTML = '';   
-            const usuariosEmpleados = getUsuariosDeEmpleados();     
+            const usuariosEmpleados = getUsuariosDeEmpleados();
+            const calcularNominaBtn = document.querySelector('#calcular-nominas-btn');
+            calcularNominaBtn.addEventListener('click', () => {
+                              
+            });
+
+
             data.forEach(entity => {
                 const row = document.createElement('tr');
                 let usuario = usuariosEmpleados.find(usuario => usuario.per_cod === entity.Per_cod);
@@ -61,10 +67,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${entity.Per_Per_experiencia}</td>
                 <td>${usuario}</td>
                 <td>
+                    <button class="calcular-nomina-btn">Calcular nomina particular</button>
                     <button class="edit-btn">Editar</button>
                     <button class="delete-btn">Eliminar</button>
                 </td>
                 `;
+                const calcularNominaParticularButton = row.querySelector('.calcular-nomina-btn');
+                
+                //cambiar a que se haga el calculo de la nomina con el per_cod
+                calcularNominaParticularButton.addEventListener('click', () => calcularNomina([usuario]));
+                
+                calcularNominaParticularButton.addEventListener('click', () => calcularNomina());
                 const editButton = row.querySelector('.edit-btn');
                 const deleteButton = row.querySelector('.delete-btn');
                 editButton.addEventListener('click', () => modifyEntity(entity));
@@ -325,6 +338,78 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error:', error);
             });
         });
+    }
+
+    function calcularNomina(entities){
+        overlay.classList.add('visible');
+        overlayTitle.textContent = `Calcular nómina(s)`;
+        overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
+        overlayForm.appendChild(submitButton)
+        overlayFormAction.textContent = `Calcular`;
+
+        const inp1 = document.createElement('input');
+        inp1.type = 'date';
+        inp1.id = 'fecha-inicio';
+        inp1.name = 'fecha-inicio';
+        inp1.required = true;
+        inp1.placeholder = 'Fecha de inicio';
+        const inp2 = document.createElement('input');
+        inp2.type = 'date';
+        inp2.id = 'fecha-fin';
+        inp2.name = 'fecha-fin';
+        inp2.required = true;
+        inp2.placeholder = 'Fecha de fin';
+
+        overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fechaInicio = inp1.value;
+            const fechaFin = inp2.value;
+            const empleados = entities; 
+
+            const nominaTable = document.createElement('table');
+            const nominaTHead = document.createElement('thead');
+            const nominaTBody = document.createElement('tbody');
+
+            nominaTHead.innerHTML = `
+            <tr>
+                <th>ID</th>
+                <th>Total Nomina</th>
+                <th>Asistencias</th>
+                <th>Sueldo base</th>
+                <th>Sueldo horas extras</th>
+                <th>Horas extra realizadas</th>
+            </tr>
+            `;
+            nominaTable.appendChild(nominaTHead);
+            nominaTable.appendChild(nominaTBody);
+            overlayForm.appendChild(nominaTable);
+
+            empleados.forEach(empleado => {
+                fetch(`${entityEndpoint}/nomina/${empleado}/${fechaInicio}/${fechaFin}`)
+                .then(response => response.json())
+                .then(data => {
+                    const dataValues = Object.values(data);
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${dataValues.per_cod}</td>
+                        <td>${dataValues.total_nomina}</td>
+                        <td>${dataValues.asistencias}</td>
+                        <td>${dataValues.sueldo_base}</td>
+                        <td>${dataValues.sueldo_hora_extra}</td>
+                        <td>${dataValues.horas_extra_realizadas}</td>
+                    `;
+                    nominaTBody.appendChild(row);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            });
+            console.log(nominas);
+        });
+
     }
 
 });
