@@ -13,22 +13,30 @@ document.addEventListener('DOMContentLoaded', async function() {
     const submitButton = overlayForm.querySelector('button[type="submit"]');
     const overlayTitle = document.getElementById('overlay-title');
     const addEntityButton = document.getElementById('add-entity-btn');
+    const reportsBtn = document.getElementById('reports-btn');
+    const mostUsedWingsBtn = document.getElementById('most-used-wings-btn');
     const overlayFormAction = document.getElementById('overlay-form-action');
     
-    if(!localStorage.getItem('token').includes('admin') || !localStorage.getItem('token').includes('empleado')) {
+    if(localStorage.getItem('token').includes('admin') || localStorage.getItem('token').includes('empleado')) {        
         console.log('El usuario tiene permisos para gestionar la entidad');
+    }
+    else{
+        console.log('El usuario no tiene permisos para gestionar la entidad');
         addEntityButton.remove();        
-        document.getElementById('reports-btn').remove();
+        reportsBtn.remove();
+        mostUsedWingsBtn.remove();
     }
 
     displayEntities();
     
     const caracterisitcas = await obtenerCaracteristicas();
     
-
     addEntityButton.addEventListener('click', () => addEntity());
-    document.getElementById('reports-btn').addEventListener('click', async () => {
+    reportsBtn.addEventListener('click', async () => {
         await dowloadReports();        
+    });
+    mostUsedWingsBtn.addEventListener('click', async () => {
+        mostUsedWings();
     });
 
     addEntityButton.addEventListener('click', () => addEntity());
@@ -49,18 +57,16 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const row = document.createElement('tr');
                 
                 //Se reemplazan las columnas por los atributos de la entidad
+                if(localStorage.getItem('token').includes('admin') || localStorage.getItem('token').includes('empleado')){
                 row.innerHTML = `
                     <td>${entity.cod}</td>
                     <td>${entity.nombre}</td>
                     <td>
-                        <button class="buy-btn">Comprar</button>
-                `;
-                if(localStorage.getItem('token').includes('admin') || localStorage.getItem('token').includes('empleado')){
-                    row.innerHTML += `                                
-                        <button class="buy-btn">Comprar</button>
                         <button class="caracteristhics-btn">Ver Características</button>
+                        <button class="buy-btn">Comprar</button>                               
                         <button class="edit-btn">Editar</button>
                         <button class="delete-btn">Eliminar</button>
+                    </td>
                     `;
                     const editButton = row.querySelector('.edit-btn');
                     const deleteButton = row.querySelector('.delete-btn');
@@ -68,12 +74,24 @@ document.addEventListener('DOMContentLoaded', async function() {
                     caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity));
                     editButton.addEventListener('click', () => modifyEntity(entity));
                     deleteButton.addEventListener('click', () => deleteEntity(entity.nombre));
+                    const buyButton = row.querySelector('.buy-btn');
+                    buyButton.addEventListener('click', () => buyEntity(entity.cod));
                 }
-                row.innerHTML += `
+                else{
+                    row.innerHTML = `
+                    <td>${entity.cod}</td>
+                    <td>${entity.nombre}</td>
+                    <td>
+                        <button class="caracteristhics-btn">Ver Características</button>
+                        <button class="buy-btn">Comprar</button>                               
                     </td>
-                `;
-                const buyButton = row.querySelector('.buy-btn');
-                buyButton.addEventListener('click', () => buyEntity(entity.cod));
+                    `;
+                    const caracteristhicsButton = row.querySelector('.caracteristhics-btn');
+                    caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity));
+                    const buyButton = row.querySelector('.buy-btn');
+                    buyButton.addEventListener('click', () => buyEntity(entity.cod));
+                }
+
                 entityTableBody.appendChild(row);
                 
             });
@@ -377,6 +395,48 @@ document.addEventListener('DOMContentLoaded', async function() {
         .catch((error) => {
             console.error('Error:', error);
         });
+    }
+
+    async function mostUsedWings(){
+        overlay.classList.add('visible');
+        overlayTitle.textContent = `Alas  más utilizadas entre aviones`;
+        overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
+        overlayForm.appendChild(submitButton)
+        overlayFormAction.textContent = `Ok`;                            
+
+        const nominaTable = document.createElement('table');
+        const nominaTHead = document.createElement('thead');
+        const nominaTBody = document.createElement('tbody');
+
+        nominaTHead.innerHTML = `
+        <tr>
+            <th>ID</th>
+            <th>Nombre de tipo de ala</th>
+            <th>Numero de modelos que la usan</th>
+        </tr>
+        `;
+        nominaTable.appendChild(nominaTHead);
+        nominaTable.appendChild(nominaTBody);
+        overlayForm.appendChild(nominaTable);
+        
+        fetch(`${entityEndpoint}/alas`)
+        .then(response => response.json())
+        .then(data => {
+            const dataValues = Object.values(data);        
+            dataValues.forEach(ala => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${ala.tipo_pieza_ala_id}</td>
+                    <td>${ala.nombre_ala}</td>
+                    <td>${ala.n_modelos_con_ala}</td>
+                `;
+                nominaTBody.appendChild(row);
+            });
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+        
     }
 
 });
