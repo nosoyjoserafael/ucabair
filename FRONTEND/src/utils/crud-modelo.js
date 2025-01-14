@@ -14,10 +14,17 @@ document.addEventListener('DOMContentLoaded', async function() {
     const overlayTitle = document.getElementById('overlay-title');
     const addEntityButton = document.getElementById('add-entity-btn');
     const overlayFormAction = document.getElementById('overlay-form-action');
+    
+    if(!localStorage.getItem('token').includes('admin') || !localStorage.getItem('token').includes('empleado')) {
+        console.log('El usuario tiene permisos para gestionar la entidad');
+        addEntityButton.remove();        
+        document.getElementById('reports-btn').remove();
+    }
 
     displayEntities();
+    
     const caracterisitcas = await obtenerCaracteristicas();
-    console.log(caracterisitcas);
+    
 
     addEntityButton.addEventListener('click', () => addEntity());
     document.getElementById('reports-btn').addEventListener('click', async () => {
@@ -43,21 +50,32 @@ document.addEventListener('DOMContentLoaded', async function() {
                 
                 //Se reemplazan las columnas por los atributos de la entidad
                 row.innerHTML = `
-                <td>${entity.cod}</td>
-                <td>${entity.nombre}</td>                
-                <td>
-                    <button class="caracteristhics-btn">Ver Características</button>
-                    <button class="edit-btn">Editar</button>
-                    <button class="delete-btn">Eliminar</button>
-                </td>
+                    <td>${entity.cod}</td>
+                    <td>${entity.nombre}</td>
+                    <td>
+                        <button class="buy-btn">Comprar</button>
                 `;
-                const editButton = row.querySelector('.edit-btn');
-                const deleteButton = row.querySelector('.delete-btn');
-                const caracteristhicsButton = row.querySelector('.caracteristhics-btn');
-                caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity));
-                editButton.addEventListener('click', () => modifyEntity(entity));
-                deleteButton.addEventListener('click', () => deleteEntity(entity.nombre));
+                if(localStorage.getItem('token').includes('admin') || localStorage.getItem('token').includes('empleado')){
+                    row.innerHTML += `                                
+                        <button class="buy-btn">Comprar</button>
+                        <button class="caracteristhics-btn">Ver Características</button>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    `;
+                    const editButton = row.querySelector('.edit-btn');
+                    const deleteButton = row.querySelector('.delete-btn');
+                    const caracteristhicsButton = row.querySelector('.caracteristhics-btn');
+                    caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity));
+                    editButton.addEventListener('click', () => modifyEntity(entity));
+                    deleteButton.addEventListener('click', () => deleteEntity(entity.nombre));
+                }
+                row.innerHTML += `
+                    </td>
+                `;
+                const buyButton = row.querySelector('.buy-btn');
+                buyButton.addEventListener('click', () => buyEntity(entity.cod));
                 entityTableBody.appendChild(row);
+                
             });
         })
         .catch(error => console.error('Error:', error));        
@@ -322,6 +340,26 @@ document.addEventListener('DOMContentLoaded', async function() {
             console.error('Error:', error);
             return [];
         }
+    }
+
+    function buyEntity(entityId) {
+        fetch(`${entityEndpoint}/comprar`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                modelo: entityId
+            })            
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            window.location.reload();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     async function dowloadReports(){
