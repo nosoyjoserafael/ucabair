@@ -4119,16 +4119,16 @@ insert into public.construccion ("cons_fecha_ini","fk_avion") values ('03-03-202
 insert into public.construccion ("cons_fecha_ini","fk_avion") values ('09-04-2024',4);
 
 --insertar despues de construccion
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 1', 1);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 2', 2);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 3', 3);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 4', 4);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 5', 1);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 6', 2);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 7', 3);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 8', 4);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 9', 1);
-insert into public."Equipo" ("Equi_nombre", fk_construccion) values ('Equipo 10', 2);
+insert into public."Equipo" (fk_construccion) values (1);
+insert into public."Equipo" (fk_construccion) values (2);
+insert into public."Equipo" (fk_construccion) values (3);
+insert into public."Equipo" (fk_construccion) values (4);
+insert into public."Equipo" (fk_construccion) values (1);
+insert into public."Equipo" (fk_construccion) values (2);
+insert into public."Equipo" (fk_construccion) values (3);
+insert into public."Equipo" (fk_construccion) values (4);
+insert into public."Equipo" (fk_construccion) values (1);
+insert into public."Equipo" (fk_construccion) values (2);
 
 --insertar despues de equipo y construccion
 INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01',  'Montaje de alas', 1);
