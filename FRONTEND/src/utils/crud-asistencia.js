@@ -18,8 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     displayEntities();
 
     if (!localStorage.getItem('token').includes('admin')) {
+        const idHeader = document.querySelector('#entity-table th:first-child');
+        const nameHeader = document.querySelector('#entity-table th:nth-child(2)');
         const actionsHeader = document.querySelector('#entity-table th:last-child');
         if (actionsHeader) {
+            idHeader.remove();
+            nameHeader.remove();
             actionsHeader.remove();
         }
     }
@@ -33,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayEntities() {
-        if (!localStorage.getItem('token').includes('admin')) {
+        if (localStorage.getItem('token').includes('admin')) {
             fetch(entityEndpoint)
             .then(response => response.json())
             .then(data => {
@@ -44,8 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     //Se reemplazan las columnas por los atributos de la entidad
                     row.innerHTML = `
-                    <td>${entity.id}</td>
-                    <td>${entity.name}</td>                
+                    <td>${entity.fk_personal}</td>
+                    <td>${entity.nombre_personal}</td> 
+                    <td>${entity.asis_fecha_asistida.split('T')[0]}</td>
+                    <td>${entity.asis_hora_asistida}</td>
+                    <td>${entity.asis_hora_salida}</td>                 
                     <td>
                         <button class="edit-btn">Editar</button>
                         <button class="delete-btn">Eliminar</button>
@@ -53,15 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                     const editButton = row.querySelector('.edit-btn');
                     const deleteButton = row.querySelector('.delete-btn');
-                    editButton.addEventListener('click', () => modifyEntity(entity.id));
-                    deleteButton.addEventListener('click', () => deleteEntity(entity.id));
+                    editButton.addEventListener('click', () => modifyEntity(entity));
+                    deleteButton.addEventListener('click', () => deleteEntity(entity.asis_cod));
     
                     entityTableBody.appendChild(row);
                 });
             });
         }
         else if(localStorage.getItem('token').includes('empleado')){
-            fetch(`${entityEndpoint}/${localStorage.getItem('id')}`)
+            fetch(`${entityEndpoint}/particular/${localStorage.getItem('id')}`)
             .then(response => response.json())
             .then(data => {
                 entityTableBody.innerHTML = '';
@@ -71,11 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     //Se reemplazan las columnas por los atributos de la entidad
                     row.innerHTML = `
-                    <td>${entity.id}</td>
-                    <td>${entity.name}</td>                                    
+                    <td>${entity.asis_fecha_asistida.split('T')[0]}</td>
+                    <td>${entity.asis_hora_entrada}</td>
+                    <td>${entity.asis_hora_salida}</td>                                                        
                     `;  
                     
-    
                     entityTableBody.appendChild(row);
                 });
             });
@@ -88,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayTitle.textContent = `Agregar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
-        overlayFormAction.textContent = `Guardar`;
+        overlayFormAction.textContent = `Guardar`;        
+        const selectEmleado = document.createElement('select');
 
         if(localStorage.getItem('token').includes('admin')){
-            const selectEmleado = document.createElement('select');
             selectEmleado.name = 'empleados';
             selectEmleado.id = 'empleados';
             selectEmleado.innerHTML = `<option value="">Seleccione un empleado</option>`;
@@ -99,69 +106,139 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 const dataValues = Object.values(data);
-                dataValues.forEach(entity => {
+                const uniqueEntities = dataValues.filter((entity, index, self) =>
+                    index === self.findIndex((e) => e.fk_personal === entity.fk_personal)
+                );
+                uniqueEntities.forEach(entity => {
                     const option = document.createElement('option');
-                    option.value = entity.id;
-                    option.textContent = entity.name;
+                    option.value = entity.fk_personal;
+                    option.textContent = entity.nombre_personal;
                     selectEmleado.appendChild(option);
                 }); 
             }); 
             overlayForm.insertBefore(selectEmleado, submitButton);
         }
-        //falta poner el la parte del usuario del empleado
-        let usuario = 'usuario1';
+        else{
+            selectEmleado.remove();
+        }
             
-
         const inp1 = document.createElement('input');
         inp1.type = 'date';
         inp1.name = 'fecha';
         inp1.id = 'fecha';
+        inp1.required = true;
         inp1.placeholder = 'Fecha';
-        overlayForm.insertBefore(inp1, submitButton);
         
-        overlayForm.reset();
+        inp1.required = true;
+        const inp2 = document.createElement('input');
+        inp2.type = 'time';
+        inp2.name = 'horaEntrada';
+        inp2.id = 'horaEntrada';
+        inp2.placeholder = 'Hora de Entrada';
+        inp2.required = true;
+        inp2.step = 1;
 
-        overlayForm.addEventListener('submit', function(event) {
-        });
+        const inp3 = document.createElement('input');
+        inp3.type = 'time';
+        inp3.name = 'horaSalida';
+        inp3.id = 'horaSalida';
+        inp3.placeholder = 'Hora de Salida';
+        inp3.required = true;
+        inp3.step = 1;
+        
+        overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+        overlayForm.insertBefore(inp3, submitButton);    
 
-        /*fetch(entityEndpoint, {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-        name: entityName,
-        })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            displayEntities();
+        overlayForm.addEventListener('submit', function(event) {            
+            event.preventDefault();        
+
+            fetch(entityEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    fecha: inp1.value,
+                    horaEntrada: inp2.value,
+                    horaSalida: inp3.value,
+                    usuario: null,
+                    per_cod: selectEmleado.value
+                })
             })
-        .catch((error) => {
-            console.error('Error:', error);
-        }
-        );*/
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch(error => console.error('Error:', error));                                
+        });
+        
     }
 
-    function modifyEntity(entityId) {
+    function modifyEntity(entity) {
         overlay.classList.add('visible');
         overlayTitle.textContent = `Editar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
-        overlayForm.reset();
+        
+        const inp1 = document.createElement('input');
+        inp1.type = 'date';
+        inp1.name = 'fecha';
+        inp1.id = 'fecha';
+        inp1.value = entity.asis_fecha_asistida.split('T')[0];
+        inp1.required = true;
+        inp1.placeholder = 'Fecha';
+        
+        inp1.required = true;
+        const inp2 = document.createElement('input');
+        inp2.type = 'time';
+        inp2.name = 'horaEntrada';
+        inp2.id = 'horaEntrada';
+        inp2.placeholder = 'Hora de Entrada';
+        inp2.value = entity.asis_hora_asistida;
+        inp2.required = true;
+        inp2.step = 1;
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'PUT'
-        })
+        const inp3 = document.createElement('input');
+        inp3.type = 'time';
+        inp3.name = 'horaSalida';
+        inp3.id = 'horaSalida';
+        inp3.placeholder = 'Hora de Salida';
+        inp3.value = entity.asis_hora_salida;
+        inp3.required = true;
+        inp3.step = 1;
+        
+        overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+        overlayForm.insertBefore(inp3, submitButton);               
+
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(`${entityEndpoint}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ass_cod: entity.asis_cod,
+                    fecha: inp1.value,
+                    horaEntrada: inp2.value,
+                    horaSalida: inp3.value,
+                })
+            })
             .then(response => response.json())
             .then(data => {
-                overlayForm.id.value = data.id;
-                overlayForm.name.value = data.name;
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-        */
+        });
+        
     }
 
     function deleteEntity(entityId) {
@@ -171,14 +248,26 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Si`;
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'DELETE'
-        })
+        overlayForm.addEventListener('submit', (event)=>{
+            event.preventDefault()
+            fetch(`${entityEndpoint}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ass_cod: entityId              
+                })
+            })
             .then(response => response.json())
             .then(data => {
-                displayEntities();
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-        */
+        });
     }
 
 });

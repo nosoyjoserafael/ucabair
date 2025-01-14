@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     //const token = localStorage.getItem('token');
-    const token = 'empleado'; //solo para pruebas
+    const token = 'admin'; //solo para pruebas
 
     localStorage.setItem('token', token); //solo para pruebas
+    localStorage.setItem('id', 93); //solo para pruebas
 
     const storedToken = localStorage.getItem('token'); //solo para pruebas
 
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //const payload = JSON.parse(atob(storedToken.split('.')[1]));
 
     // Verificar si el usuario tiene el rol necesario
-    if(storedToken.includes("empleado")){
+    if(storedToken.includes("empleado") || storedToken.includes("admin")) {
         document.getElementById('gestion-a').addEventListener('click', () => {
             overlay.classList.add('visible');
             adjustIframeSize(true);
