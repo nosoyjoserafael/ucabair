@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil del Usuario</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/perfil-usuario.css">
 </head>
-<body>
+<body data-roles="*">
     <iframe src="../components/navbar.html" frameborder="0" style="width: 100%; height: auto;"></iframe>
     <header>
         <h1>Perfil del Usuario</h1>
@@ -16,25 +16,26 @@
             <h2>Datos del Usuario</h2>
             <div class="user-info">
                 <label for="user-name">Nombre:</label>
-                <span id="user-name">Juan Pérez</span>
+                <span id="user-name"></span>
             </div>
             <div class="user-info">
-                <label for="user-id">Cédula:</label>
-                <span id="user-id">12345678</span>
+                <label for="user-ci">Cédula:</label>
+                <span id="user-ci"></span>
             </div>
             <div class="user-info">
                 <label for="user-start-date">Fecha de Inicio:</label>
-                <span id="user-start-date">01/01/2020</span>
+                <span id="user-start-date"></span>
             </div>
             <div class="user-info">
                 <label for="user-residence">Lugar de Residencia:</label>
-                <span id="user-residence">Caracas</span>
+                <span id="user-residence"></span>
             </div>
             <div class="user-info">
                 <label for="user-address">Dirección:</label>
-                <span id="user-address">Av. Principal, Edificio 123, Apto 4B</span>
+                <span id="user-address"></span>
             </div>
         </section>
     </main>   
 </body>
+<script src="../utils/perfil-usuario.js"></script>
 </html>

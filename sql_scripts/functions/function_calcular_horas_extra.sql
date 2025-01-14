@@ -1,5 +1,7 @@
 CREATE OR REPLACE FUNCTION calcular_horas_extra(
-    p_per_cod INTEGER
+    p_per_cod INTEGER,
+    p_fecha_desde DATE,
+    p_fecha_hasta DATE
 )
 RETURNS TABLE(
     per_cod INTEGER,
@@ -33,6 +35,7 @@ BEGIN
         JOIN asignacion asig ON asis.fk_asignacion = asig.asig_cod
         JOIN "Personal" per ON asig.fk_personal = per."Per_cod"
         WHERE per."Per_cod" = p_per_cod
+        AND asis.asis_fecha_asistida BETWEEN p_fecha_desde AND p_fecha_hasta
     LOOP
         IF v_hora_salida > v_hora_salida_horario THEN
             v_horas_extra := v_hora_salida - v_hora_salida_horario;

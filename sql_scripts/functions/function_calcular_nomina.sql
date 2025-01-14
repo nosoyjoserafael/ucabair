@@ -24,7 +24,7 @@ BEGIN
         RAISE EXCEPTION 'Error, el codigo del personal no existe';
     END IF;
 
-    SELECT horas_extra from calcular_horas_extra(p_per_cod) INTO v_horas_extra;
+    SELECT horas_extra from calcular_horas_extra(p_per_cod, p_fecha_inicio, p_fecha_fin) INTO v_horas_extra;
 
     -- Obtener el sueldo base y el sueldo por hora extra
     select pc.per_car_sueldo_base, car.car_sueldo_hora_extra

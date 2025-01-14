@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const overlay = document.getElementById('generic-overlay');
     const overlayMatrix = document.querySelector('.overlay-matrix');
+    const profile = document.getElementById('perfil');
+
+    profile.addEventListener('click', () => {
+        window.top.location.href = '../pages/perfil-usuario.html';
+    });
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
@@ -23,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
         overlayMatrix.innerHTML = '';
         const cruds = {
             Proveedores: '../pages/crud-proveedor.html', 
-            Empleados: '../pages/crud-empleado.html', 
+            Empleados: '../pages/crud-personal.html', 
             Modelo: '../pages/crud-modelo.html',
             Materiales: '../pages/crud-material.html',
             Roles: '../pages/crud-rol.html',
             Pruebas: '../pages/crud-tipo-prueba.html',
-            asistencia: '../pages/crud-asistencia.html',
+            Asistencia: '../pages/crud-asistencia.html',
         };
         
         const urlsKeys = Object.keys(cruds);
