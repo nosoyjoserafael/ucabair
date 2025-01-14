@@ -25,33 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function getUsuariosDeEmpleados(){
-        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/usuario')
+    async function getUsuariosDeEmpleados(){
+        let usuarios = await fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/usuario')
         .then(async (response) => {
-            const data = await response.json();
-            const dataKeys = Object.keys(data[0]);
-            const usuariosEmpleados = data.filter(usuario => usuario.tipo_persona === 'personal');
-            return usuariosEmpleados;
+            const data = await response.json();            
+            return data;
         })
         .catch((error) => {
             console.error('Error:', error);
         });
-
+        usuarios = usuarios.filter(usuario => usuario.tipo_persona === 'personal');
+        return usuarios;
     }
 
     function displayEntities() {
         fetch(entityEndpoint)
         .then(response => response.json())
-        .then(data => {
+        .then(async (data) => {
             entityTableBody.innerHTML = '';   
-            const usuariosEmpleados = getUsuariosDeEmpleados();
-            const calcularNominaBtn = document.querySelector('#calcular-nominas-btn');
-            calcularNominaBtn.addEventListener('click', () => {
-                              
-            });
+            const usuariosEmpleados = await getUsuariosDeEmpleados();
+            const calcularNominaBtn = document.querySelector('#calcular-nominas-btn');            
+            const codigosEmpleados = [];
+            const dataValues = Object.values(data);
 
-
-            data.forEach(entity => {
+            dataValues.forEach(entity => {
                 const row = document.createElement('tr');
                 let usuario = usuariosEmpleados.find(usuario => usuario.per_cod === entity.Per_cod);
                 if (usuario === undefined) {
@@ -61,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 //Se reemplazan las columnas por los atributos de la entidad
                 row.innerHTML = `
                 <td>${entity.Per_cod}</td>
-                <td>${entity.Per_Per_nombre}</td>
-                <td>${entity.Per_apellido}</td>
+                <td>${entity.Per_nombre}</td>
+                <td>${entity.Per_Per_apellido}</td>
                 <td>${entity.Per_ci}</td>
                 <td>${entity.Per_Per_experiencia}</td>
-                <td>${usuario}</td>
+                <td>${usuario.user_nombre}</td>
                 <td>
                     <button class="calcular-nomina-btn">Calcular nomina particular</button>
                     <button class="edit-btn">Editar</button>
@@ -73,17 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 </td>
                 `;
                 const calcularNominaParticularButton = row.querySelector('.calcular-nomina-btn');
-                
-                //cambiar a que se haga el calculo de la nomina con el per_cod
-                calcularNominaParticularButton.addEventListener('click', () => calcularNomina([usuario]));
-                
-                calcularNominaParticularButton.addEventListener('click', () => calcularNomina());
                 const editButton = row.querySelector('.edit-btn');
                 const deleteButton = row.querySelector('.delete-btn');
+                calcularNominaParticularButton.addEventListener('click', () => calcularNomina([entity.Per_cod]));                
                 editButton.addEventListener('click', () => modifyEntity(entity));
                 deleteButton.addEventListener('click', () => deleteEntity(entity.Per_cod));
                 entityTableBody.appendChild(row);
+                codigosEmpleados.push(entity.Per_cod);
             });
+
+            calcularNominaBtn.addEventListener('click', () => {
+                calcularNomina(codigosEmpleados);       
+            });
+
         });
     }
 
@@ -341,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function calcularNomina(entities){
+
         overlay.classList.add('visible');
         overlayTitle.textContent = `Calcular nómina(s)`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
@@ -348,24 +348,25 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayFormAction.textContent = `Calcular`;
 
         const inp1 = document.createElement('input');
-        inp1.type = 'date';
+        inp1.type = 'text';
         inp1.id = 'fecha-inicio';
         inp1.name = 'fecha-inicio';
         inp1.required = true;
-        inp1.placeholder = 'Fecha de inicio';
+        inp1.placeholder = 'Fecha de inicio (MM-DD-YYYY)';
         const inp2 = document.createElement('input');
-        inp2.type = 'date';
+        inp2.type = 'text';
         inp2.id = 'fecha-fin';
         inp2.name = 'fecha-fin';
         inp2.required = true;
-        inp2.placeholder = 'Fecha de fin';
+        inp2.placeholder = 'Fecha de fin (MM-DD-YYYY)';
 
         overlayForm.insertBefore(inp1, submitButton);
         overlayForm.insertBefore(inp2, submitButton);
 
         overlayForm.addEventListener('submit', function(event) {
+            overlayForm.innerHTML = '';
             event.preventDefault();
-            const fechaInicio = inp1.value;
+            const fechaInicio = inp1.value;         
             const fechaFin = inp2.value;
             const empleados = entities; 
 
@@ -392,22 +393,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.json())
                 .then(data => {
                     const dataValues = Object.values(data);
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${dataValues.per_cod}</td>
-                        <td>${dataValues.total_nomina}</td>
-                        <td>${dataValues.asistencias}</td>
-                        <td>${dataValues.sueldo_base}</td>
-                        <td>${dataValues.sueldo_hora_extra}</td>
-                        <td>${dataValues.horas_extra_realizadas}</td>
-                    `;
-                    nominaTBody.appendChild(row);
+                
+                    dataValues.forEach(personal => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${personal.per_cod}</td>
+                            <td>${personal.total_nomina}</td>
+                            <td>${personal.asistencias}</td>
+                            <td>${personal.sueldo_base}</td>
+                            <td>${personal.sueldo_hora_extra}</td>
+                            <td>${personal.horas_extra_realizadas}</td>
+                        `;
+                        nominaTBody.appendChild(row);
+                    });
                 })
                 .catch((error) => {
                     console.error('Error:', error);
                 });
             });
-            console.log(nominas);
         });
 
     }
