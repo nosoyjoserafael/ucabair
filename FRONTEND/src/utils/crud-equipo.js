@@ -32,13 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
             entityTableBody.innerHTML = '';            
             data.forEach(entity => {
                 const row = document.createElement('tr');
+
+                let tReal = entity.tiempo_real;
+                if(tReal == null){
+                    tReal = "No asignado";
+                }
                 
                 //Se reemplazan las columnas por los atributos de la entidad
                 row.innerHTML = `
                 <td>${entity.equi_cod}</td>
                 <td>${entity.trabajo}</td>    
                 <td>${entity.tiempo_estim}</td>
-                <td>${entity.tiempo_real}</td>
+                <td>${tReal}</td>
                 <td>
                     <button class="edit-btn">Editar</button>
                     <button class="delete-btn">Eliminar</button>
@@ -47,29 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const editButton = row.querySelector('.edit-btn');
                 const deleteButton = row.querySelector('.delete-btn');
                 editButton.addEventListener('click', () => modifyEntity(entity));
-                deleteButton.addEventListener('click', () => deleteEntity(entity));
+                deleteButton.addEventListener('click', () => deleteEntity(entity.equi_cod));
                 entityTableBody.appendChild(row);
             });
         });
     }
-
-    function addInputsToFormData() {        
-        //Aqui se agregan los inputs del formulario al 
-        // overLayForm segun sea necesario        
-
-        //Ejemplo
-        const inp1 = document.createElement('input');
-        inp1.type = 'text';
-        inp1.name = 'inp1';
-        inp1.value = 'valor1';        
-
-        //...Y asi sucesivamente
-
-        //El insertBefore es para agregar siempre 
-        // el input antes del boton de submit
-        overlayForm.insertBefore(inp1, submitButton);        
-    }
-
 
     function addEntity() { 
         overlay.classList.add('visible');
@@ -77,47 +64,135 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+        
+        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/empleado')
+            .then(response => response.json())
+            .then(data => {
+                let personal = Object.values(data);
+
+                const employeesContainer = document.createElement('div');
+                employeesContainer.id = 'employees';
+
+                const addEmployeeButton = document.createElement('button');
+                addEmployeeButton.textContent = 'Agregar';
+                addEmployeeButton.addEventListener('click', () => {
+                    const employeeDiv = document.createElement('div');
+                    employeeDiv.classList.add('employees-id');
+
+                    const employeeInput = document.createElement('input');
+                    employeeInput.type = 'number';
+                    employeeInput.required = true;
+                    employeeInput.min = Math.min(...personal.map(emp => emp.id));
+                    employeeInput.max = Math.max(...personal.map(emp => emp.id));
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = '-';
+                    removeButton.addEventListener('click', () => {
+                        employeesContainer.removeChild(employeeDiv);
+                    });
+
+                    employeeDiv.appendChild(employeeInput);
+                    employeeDiv.appendChild(removeButton);
+                    employeesContainer.appendChild(employeeDiv);
+                });
+
+                overlayForm.insertBefore(employeesContainer, submitButton);
+                overlayForm.insertBefore(addEmployeeButton, submitButton);
+            })
+            .catch(error => console.error('Error obteniendo empleados:', error));
+
+        const fechaEstim = document.createElement('input');
+        fechaEstim.type = 'date';
+        fechaEstim.name = 'fecha_estim';
+        fechaEstim.required = true;
+        overlayForm.insertBefore(fechaEstim, submitButton);
+        const fechaReal = document.createElement('input');
+        fechaReal.type = 'date';
+        fechaReal.name = 'fecha_real';
+        fechaReal.required = true;
+        overlayForm.insertBefore(fechaReal, submitButton);
+
         overlayForm.reset();
 
-        /*fetch(entityEndpoint, {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-        name: entityName,
-        })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            displayEntities();
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const employees = Array.from(overlayForm.querySelectorAll('.employees-id input')).map(input => input.value);
+
+            fetch(entityEndpoint, {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    personal_cods: employees,
+                    fecha_estim: fechaEstim.value,
+                    fecha_real: fechaReal.value
+                })
             })
-        .catch((error) => {
-            console.error('Error:', error);
-        }
-        );*/
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            }
+            );
+        });
     }
 
-    function modifyEntity(entityId) {
+    function modifyEntity(entity) {
         overlay.classList.add('visible');
         overlayTitle.textContent = `Editar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
-        addInputsToFormData();
+        
+        const nombreTrabajo = document.createElement('input');
+        nombreTrabajo.type = 'text';
+        nombreTrabajo.name = 'nombre_trabajo';
+        nombreTrabajo.required = true;
+        nombreTrabajo.value = entity.trabajo;
+        const fechaEstim = document.createElement('input');
+        fechaEstim.type = 'date';
+        fechaEstim.name = 'fecha_estim';
+        fechaEstim.required = true;
+        fechaEstim.value = entity.fecha_estim;
+        const fechaReal = document.createElement('input');
+        fechaReal.type = 'date';
+        fechaReal.name = 'fecha_real';
+        fechaReal.required = true;
+        fechaReal.value = entity.fecha_real;    
+        
+        overlayForm.insertBefore(nombreTrabajo, submitButton);
+        overlayForm.insertBefore(fechaEstim, submitButton);
+        overlayForm.insertBefore(fechaReal, submitButton);
         overlayForm.reset();
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'PUT'
-        })
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(`${entityEndpoint}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nombre_trabajo: nombreTrabajo.value,
+                    fecha_estim: fechaEstim.value,
+                    fecha_real: fechaReal.value
+                })
+            })
             .then(response => response.json())
             .then(data => {
-                overlayForm.id.value = data.id;
-                overlayForm.name.value = data.name;
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
             });
-        */
+        });
     }
 
     function deleteEntity(entityId) {
@@ -127,14 +202,25 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Si`;
 
-        /*fetch(`${entityEndpoint}/${entityId}`, {
-            method: 'DELETE'
-        })
+        overlayForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            fetch(`${entityEndpoint}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({equi_cod: entityId})
+            })
             .then(response => response.json())
             .then(data => {
-                displayEntities();
+                alert(data.message);
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
             });
-        */
+        });
     }
 
 });
