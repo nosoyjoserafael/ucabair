@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('generic-overlay');
     const overlayMatrix = document.querySelector('.overlay-matrix');
     const profile = document.getElementById('perfil');
+    const singoutBtn = document.getElementById("singout");
 
     profile.addEventListener('click', () => {
         window.top.location.href = '../pages/perfil-usuario.html';
@@ -20,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.classList.remove('visible');
             adjustIframeSize(false);
         }
+    });
+
+    singoutBtn.addEventListener('click', () => {
+        singout();
     });
 
     function addURLsEmployee() {        
@@ -74,6 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 iframe.style.zIndex = '';
             }
         }
+    }
+
+    function singout(){
+        localStorage.clear();
+        alert('Sesión cerrada');
+        window.top.location.href = '../pages/login.html';
     }
 
     // Decodificar el token para obtener la información del usuario (aun no está integrado)
