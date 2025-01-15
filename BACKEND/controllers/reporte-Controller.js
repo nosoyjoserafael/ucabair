@@ -124,4 +124,22 @@ const get21 = async (req, res, next) => {
   }
 };
 
-module.exports = { get15, get16, get17, get18, get20, get21 };
+const get6 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM mejores_10_clientes()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte6');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { get15, get16, get17, get18, get20, get21, get6 };
