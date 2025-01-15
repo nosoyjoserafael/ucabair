@@ -12,7 +12,7 @@
         <form id="form-pago">
             <h2>Monto total: <span id="monto-total"></span> <span id="moneda"></span></h2>
             <div>
-                <select id="tasa-cambio">
+                <select id="tasa-cambio" name="tasa-cambio" required="true">
                     <option>Seleccione una moneda a la que desea convertir el monto</option>
                     <option value="0">BS</option>
                     <option value="1">USD</option>
@@ -29,7 +29,7 @@
                 </select>
             </div>
             <div>
-                <select id="metodo-pago">
+                <select id="metodo-pago" required="true" name="metodo-pago">
                     <option value="0">Seleccione un metodo de pago</option>
                     <option value="1">Pago movil</option>
                     <option value="2">Tarjeta de crédito</option>
@@ -39,12 +39,12 @@
                     <option value="6">Cheque</option>                
                 </select>
                 <div class="metodo-pago" style="display: none;">
-                    <input type="number" placeholder="Número de cuenta" min="100000000" max="999999999" required="true">                
+                    <input type="number" name="n-cuenta" placeholder="Número de cuenta" min="100000000" max="999999999">                
                 </div>
                 <div class="metodo-pago" style="display: none;">
-                    <input type="number" placeholder="CVV" min="1000" max="9999" required="true">
-                    <input type="date" placeholder="Fecha de vencimiento" required="true">
-                    <select name="banco" required="true">
+                    <input type="number" name="cvv" placeholder="CVV" min="1000" max="9999">
+                    <input type="date" name="f-vencimiento" placeholder="Fecha de vencimiento">
+                    <select name="banco">
                         <option>Seleccione un banco</option>
                         <option value="Banco de venezuela">Banco de Venezuela</option>
                         <option value="Banesco">Banesco</option>
@@ -67,9 +67,9 @@
                     </select>
                 </div>
                 <div class="metodo-pago" style="display: none;">
-                    <input type="number" placeholder="Número de cuenta" min="100000000" max="999999999" required="true">
-                    <input type="date" placeholder="Fecha de vencimiento" required="true">
-                    <select name="banco" required="true">
+                    <input type="number" name="n-cuenta" placeholder="Número de cuenta" min="100000000" max="999999999">
+                    <input type="date" name="f-vencimiento" placeholder="Fecha de vencimiento">
+                    <select name="banco">
                         <option>Seleccione un banco</option>
                         <option value="Banco de venezuela">Banco de Venezuela</option>
                         <option value="Banesco">Banesco</option>
@@ -92,11 +92,11 @@
                     </select>
                 </div>
                 <div class="metodo-pago" style="display: none;">
-                    <input type="number" placeholder="Denominacion de los billetes con los que pagará" min="100" max="1000" required="true">
+                    <input type="number" name="denominacion" placeholder="Denominacion de los billetes con los que pagará" min="100" max="1000">
                 </div>
                 <div class="metodo-pago" style="display: none;">
-                    <input type="date" placeholder="Fecha de transferencia" required="true">
-                    <select name="banco" required="true">
+                    <input type="date" name="f-transferencia" placeholder="Fecha de transferencia">
+                    <select name="banco">
                         <option>Seleccione un banco</option>
                         <option value="Banco de venezuela">Banco de Venezuela</option>
                         <option value="Banesco">Banesco</option>
@@ -119,8 +119,8 @@
                     </select>
                 </div>
                 <div class="metodo-pago" style="display: none;">
-                    <input type="number" placeholder="Número de cheque" min="100000000" max="999999999" required="true">
-                    <select name="banco" required="true">
+                    <input type="number" name="n-cheque" placeholder="Número de cheque" min="100000000" max="999999999">
+                    <select name="banco">
                         <option>Seleccione un banco</option>
                         <option value="Banco de venezuela">Banco de Venezuela</option>
                         <option value="Banesco">Banesco</option>
@@ -142,7 +142,7 @@
                         <option value="Banco Internacional de Desarrollo">Banco Internacional de Desarrollo</option>
                     </select>
                 </div>
-                <button id="submit-btn">Efectuar pago</button>
+                <button id="submit-btn" type="submit">Efectuar pago</button>
             </div>
         </form>
     </main>    

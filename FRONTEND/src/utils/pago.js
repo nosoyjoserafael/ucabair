@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     const entityEndpoint = "https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/pago";
 
-    // Obtener los parámetros de la URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const entityId = urlParams.get('entityId');
-    const price = urlParams.get('price');
+    //definir valores
+    const clienteId = localStorage.getItem('id');
+    const entityId = localStorage.getItem('avionId');
+    const price = Math.floor(Math.random() * (99999999 - 100000 + 1)) + 100000;
 
     const form = document.getElementById('form-pago'); 
     const montoTotalSpan = document.getElementById('monto-total');
@@ -23,8 +23,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         const metodoPago = this.value;
         const metodoPagoDivs = document.querySelectorAll('.metodo-pago');                   
         for(let i = 0; i < metodoPagoDivs.length; i++) {
-            if(i+1 == metodoPago) 
+            if(i+1 == metodoPago) {
                 metodoPagoDivs[i].style.display = 'block';
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    efectuarCompra(metodoPago,metodoPagoDivs[i]);
+                });
+            }
              else
                 metodoPagoDivs[i].style.display = 'none';        
         }
@@ -55,25 +61,47 @@ document.addEventListener('DOMContentLoaded', async function() {
         return Object(data).values;
     }
 
-    /*
-    Pago del avion
+    function efectuarCompra(metodoPago,metodoPagoCampos){
 
-    fetch(`${entityEndpoint}/comprar`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            modelo: entityId
-        })            
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        window.location.reload();
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });*/
+        const valoresCampos = [];
+        const inputs = metodoPagoCampos.querySelectorAll('input, select');
+        inputs.forEach(input => {
+            valoresCampos.push({ name: input.name, value: input.value });
+        });
+        console.log(valoresCampos);
+        console.log(`
+            codigo de metodo de pago: ${metodoPago},\n
+            Campos: ${valoresCampos.values()},\n
+            Monto total: ${montoTotalSpan.textContent},\n
+            Codigo de tasa de cambio: ${selectMetodoPago.value},\n
+            Codigo del avion: aqui va lo que retorna comprar_avion(),\n
+            Codigo de cliente: 1,\n
+            `
+        );
 
+        fetch(`${entityEndpoint}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "Codigo de metodo de pago": metodoPago,
+                "Campos": valoresCampos,
+                "Monto total": montoTotalSpan.textContent,
+                "Codigo de tasa de cambio": selectMetodoPago.value,
+                "Codigo del avion": entityId,
+                "Codigo de cliente": clienteId
+            })
+        })    
+        .then(response => response.json())
+        .then(data => {
+            alert('Compra realizada con exito');
+            window.location.reload();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+    }
+    
 })
