@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayEntities() {       
         entityTableBody.innerHTML = '';
         const data = [
+            {"Equipo más eficiente": 7},
             { 'Materiales ofrecidos por los proveedores': 15},
             { 'Ingresos al inventario por solicitudes a proveedores': 16},
             { 'Pagos realizados a proveedores': 17},

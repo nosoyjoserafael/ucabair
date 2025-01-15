@@ -37,11 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(tReal == null){
                     tReal = "No asignado";
                 }
-                
                 //Se reemplazan las columnas por los atributos de la entidad
                 row.innerHTML = `
                 <td>${entity.equi_cod}</td>
-                <td>${entity.trabajo}</td>    
+                <td>${entity.nombre_trabajo}</td>    
                 <td>${entity.tiempo_estim}</td>
                 <td>${tReal}</td>
                 <td>
@@ -58,23 +57,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function addEntity() { 
+    async function addEntity() { 
         overlay.classList.add('visible');
         overlayTitle.textContent = `Agregar ${entityName}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
+        const construcciones = await getAvionesEnConstruccion();
+        console.log(construcciones);
         
         fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/empleado')
             .then(response => response.json())
             .then(data => {
                 let personal = Object.values(data);
+                console.log(personal);
 
                 const employeesContainer = document.createElement('div');
                 employeesContainer.id = 'employees';
 
                 const addEmployeeButton = document.createElement('button');
-                addEmployeeButton.textContent = 'Agregar';
+                addEmployeeButton.textContent = 'Agregar empleado';
+                addEmployeeButton.style.marginBottom = '1rem';
                 addEmployeeButton.addEventListener('click', () => {
                     const employeeDiv = document.createElement('div');
                     employeeDiv.classList.add('employees-id');
@@ -82,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     const employeeInput = document.createElement('input');
                     employeeInput.type = 'number';
                     employeeInput.required = true;
-                    employeeInput.min = Math.min(...personal.map(emp => emp.id));
-                    employeeInput.max = Math.max(...personal.map(emp => emp.id));
+                    employeeInput.min = Math.min(...personal.map(emp => emp.Per_cod));
+                    employeeInput.max = Math.max(...personal.map(emp => emp.Per_cod));
 
                     const removeButton = document.createElement('button');
                     removeButton.textContent = '-';
@@ -106,11 +109,19 @@ document.addEventListener('DOMContentLoaded', function() {
         fechaEstim.name = 'fecha_estim';
         fechaEstim.required = true;
         overlayForm.insertBefore(fechaEstim, submitButton);
-        const fechaReal = document.createElement('input');
-        fechaReal.type = 'date';
-        fechaReal.name = 'fecha_real';
-        fechaReal.required = true;
-        overlayForm.insertBefore(fechaReal, submitButton);
+        const nombreTrabajo = document.createElement('input');
+        nombreTrabajo.type = 'text';
+        nombreTrabajo.name = 'nombre_trabajo';
+        nombreTrabajo.required = true;
+        nombreTrabajo.placeholder = 'Nombre del trabajo';
+        overlayForm.insertBefore(nombreTrabajo, submitButton);
+        const idContruccion = document.createElement('input');
+        idContruccion.type = 'number';
+        idContruccion.name = 'id_construccion';
+        idContruccion.required = true;
+        idContruccion.min = Math.min(...construcciones.map(construccion => construccion.cod_construccion));
+        idContruccion.max = Math.max(...construcciones.map(construccion => construccion.cod_construccion));
+        overlayForm.insertBefore(idContruccion, submitButton);
 
         overlayForm.reset();
 
@@ -125,9 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    personal_cods: employees,
-                    fecha_estim: fechaEstim.value,
-                    fecha_real: fechaReal.value
+                    empleados: employees,
+                    nombre: nombreTrabajo.value,
+                    timestim: fechaEstim.value,
+                    construccionCod: idContruccion.value
                 })
             })
             .then(response => response.json())
@@ -152,17 +164,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const nombreTrabajo = document.createElement('input');
         nombreTrabajo.type = 'text';
         nombreTrabajo.name = 'nombre_trabajo';
-        nombreTrabajo.required = true;
+        nombreTrabajo.placeholder = 'Nombre del trabajo';
         nombreTrabajo.value = entity.trabajo;
         const fechaEstim = document.createElement('input');
         fechaEstim.type = 'date';
         fechaEstim.name = 'fecha_estim';
-        fechaEstim.required = true;
         fechaEstim.value = entity.fecha_estim;
         const fechaReal = document.createElement('input');
         fechaReal.type = 'date';
         fechaReal.name = 'fecha_real';
-        fechaReal.required = true;
         fechaReal.value = entity.fecha_real;    
         
         overlayForm.insertBefore(nombreTrabajo, submitButton);
@@ -171,6 +181,21 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.reset();
 
         overlayForm.addEventListener('submit', function(event) {
+
+            let inpNombre = nombreTrabajo.value;
+            let inpFechaEstim = fechaEstim.value;
+            let inpFechaReal = fechaReal.value;
+
+            if (inpNombre == "") {
+                inpNombre = null;
+            }
+            if (inpFechaEstim == "") {
+                inpFechaEstim = null;
+            }
+            if (inpFechaReal == "") {
+                inpFechaReal = null;
+            }            
+
             event.preventDefault();
 
             fetch(`${entityEndpoint}`, {
@@ -179,9 +204,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    nombre_trabajo: nombreTrabajo.value,
-                    fecha_estim: fechaEstim.value,
-                    fecha_real: fechaReal.value
+                    equipoCod: entity.equi_cod,
+                    trabajoCod: entity.te_cod,
+                    nombre: inpNombre,
+                    timestim: inpFechaEstim,
+                    timereal: inpFechaReal
                 })
             })
             .then(response => response.json())
@@ -210,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({equi_cod: entityId})
+                body: JSON.stringify({equipoCod: entityId})
             })
             .then(response => response.json())
             .then(data => {
@@ -221,6 +248,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error:', error);
             });
         });
+    }
+
+    async function getAvionesEnConstruccion(){
+        const response = await fetch(`https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/modelo/construccion`);
+        const data = await response.json();        
+        return data;
     }
 
 });

@@ -361,11 +361,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     function buyEntity(entityId) {        
-        const price = Math.floor(Math.random() * (99999999 - 100000 + 1)) + 100000;
-        const url = new URL('pago.html', window.location.origin);
-        url.searchParams.append('entityId', entityId);
-        url.searchParams.append('price', price);
-        window.location.href = url.toString();
+        localStorage.setItem('avionId', entityId);
+        window.location.href = "./pago.html";
     }
 
     async function dowloadReports(){
