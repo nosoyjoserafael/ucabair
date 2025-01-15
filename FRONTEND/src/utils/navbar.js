@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
             Roles: '../pages/crud-rol.html',
             Pruebas: '../pages/crud-tipo-prueba.html',
             Asistencia: '../pages/crud-asistencia.html',
+            Equipos: '../pages/crud-equipo.html',
+            Reportes: '../pages/reportes.html'                        
         };
         
         const urlsKeys = Object.keys(cruds);
