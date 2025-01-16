@@ -4967,3 +4967,18 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Tprueba_Tpieza"
     OWNER to grupo_rsm;
+
+--Para reiniciar todas las secuencias en 1
+
+DO $$
+DECLARE
+    seq RECORD;
+BEGIN
+    FOR seq IN
+        SELECT sequence_name
+        FROM information_schema.sequences
+        WHERE sequence_schema = 'public'
+    LOOP
+        EXECUTE 'ALTER SEQUENCE ' || seq.sequence_name || ' RESTART WITH 1';
+    END LOOP;
+END $$;
