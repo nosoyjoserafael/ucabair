@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                     const editButton = row.querySelector('.edit-btn');
                     const deleteButton = row.querySelector('.delete-btn');
                     const caracteristhicsButton = row.querySelector('.caracteristhics-btn');
-                    caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity));
-                    editButton.addEventListener('click', () => modifyEntity(entity));
+                    caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity.nombre));
+                    editButton.addEventListener('click', () => modifyEntity(entity.nombre));
                     deleteButton.addEventListener('click', () => deleteEntity(entity.nombre));
                     const buyButton = row.querySelector('.buy-btn');
                     buyButton.addEventListener('click', () => buyEntity(entity.cod));
@@ -101,23 +101,23 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     function verCaracteristicas(entity) {
         overlay.classList.add('visible');
-        overlayTitle.textContent = `Características del ${entityName} ${entity.nombre}`;
+        overlayTitle.textContent = `Características del ${entityName} ${entity}`;
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Cerrar`;
+                
+        let keys = Object.keys(caracterisitcas[entity]);
+        let values = Object.values(caracterisitcas[entity]);
 
-        const caracModelo = caracterisitcas[entity.cod-1];
-        const dataKeys = Object.keys(caracModelo);
-        const dataValues = Object.values(caracModelo);      
+        for (let i = 0; i < keys.length; i++) {
 
-        for (let i = 0; i < dataKeys.length; i++) {
             const label = document.createElement('label');
-            label.textContent = `${dataKeys[i]}`;
-            label.htmlFor = dataKeys[i];
+            label.textContent = `${keys[i]}`;
+            label.htmlFor = keys[i];
             const input = document.createElement('input');
             input.type = 'text';
-            input.name = dataKeys[i];
-            input.value = dataValues[i];
+            input.name = keys[i];
+            input.value = values[i];
             input.disabled = true;
             overlayForm.insertBefore(label, submitButton);
             overlayForm.insertBefore(input, submitButton);
@@ -264,9 +264,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;
 
-        const caracModelo = caracterisitcas[entity.cod-1];
+        const caracModelo = caracterisitcas[entity];
         const dataKeys = Object.keys(caracModelo);
-        const dataValues = Object.values(caracModelo);
 
         const selectCaracteristicas = document.createElement('select');
         selectCaracteristicas.name = 'Caracteristicas';
@@ -289,9 +288,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         overlayForm.reset();
         
         overlayForm.addEventListener('submit', function(event) {
-            console.log(entity.nombre);
-            console.log(selectCaracteristicas.value);
-            console.log(inp1.value);
+
             event.preventDefault();
 
             fetch(`${entityEndpoint}`, {
@@ -300,7 +297,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    Nombre: entity.nombre,
+                    Nombre: entity,
                     caracteristica: selectCaracteristicas.value,
                     valor: inp1.value
                 })
@@ -352,8 +349,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            const caracteristhicsValues = Object.values(data);
-            return caracteristhicsValues;
+            return data;
         } catch (error) {
             console.error('Error:', error);
             return [];
