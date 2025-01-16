@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.getElementById('entity-name-list').textContent = entityName;
     document.getElementById('entity-name-overlay').textContent = entityName;
 
+    document.getElementById('entity-table').DataTable()
     const entityTableBody = document.querySelector('#entity-table tbody');
     const overlay = document.getElementById('generic-overlay');
     const overlayForm = document.getElementById('overlay-form');
