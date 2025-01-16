@@ -96,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.innerHTML = ''; //Limpiar el formulario antes de agregar los inputs
         overlayForm.appendChild(submitButton)
         overlayFormAction.textContent = `Guardar`;        
-        const selectEmleado = document.createElement('select');
+        const selectEmpleado = document.createElement('select');
 
         if(localStorage.getItem('token').includes('admin')){
-            selectEmleado.name = 'empleados';
-            selectEmleado.id = 'empleados';
-            selectEmleado.innerHTML = `<option value="">Seleccione un empleado</option>`;
+            selectEmpleado.name = 'empleados';
+            selectEmpleado.id = 'empleados';
+            selectEmpleado.innerHTML = `<option value="">Seleccione un empleado</option>`;
             fetch(entityEndpoint)
             .then(response => response.json())
             .then(data => {
@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     const option = document.createElement('option');
                     option.value = entity.fk_personal;
                     option.textContent = entity.nombre_personal;
-                    selectEmleado.appendChild(option);
+                    selectEmpleado.appendChild(option);
                 }); 
             }); 
-            overlayForm.insertBefore(selectEmleado, submitButton);
+            overlayForm.insertBefore(selectEmpleado, submitButton);
         }
         else{
-            selectEmleado.remove();
+            selectEmpleado.remove();
         }
             
         const inp1 = document.createElement('input');
@@ -151,7 +151,16 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.insertBefore(inp3, submitButton);    
 
         overlayForm.addEventListener('submit', function(event) {            
-            event.preventDefault();        
+            event.preventDefault();  
+
+            let per_cod;
+            
+            if(localStorage.getItem('token').includes('empleado')){
+                per_cod = localStorage.getItem('id');
+            }
+            else{
+                per_cod = selectEmpleado.value;
+            }
 
             fetch(entityEndpoint, {
                 method: 'POST',
@@ -163,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     horaEntrada: inp2.value,
                     horaSalida: inp3.value,
                     usuario: null,
-                    per_cod: selectEmleado.value
+                    per_cod: per_cod
                 })
             })
             .then(response => response.json())
