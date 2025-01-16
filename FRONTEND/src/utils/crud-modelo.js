@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 row.innerHTML = `
                     <td>${entity.cod}</td>
                     <td>${entity.nombre}</td>
+                    <td>${entity.costo}</td>
                     <td>
                         <button class="caracteristhics-btn">Ver Características</button>
                         <button class="buy-btn">Comprar</button>                               
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     row.innerHTML = `
                     <td>${entity.cod}</td>
                     <td>${entity.nombre}</td>
+                    <td>${entity.costo}</td>
                     <td>
                         <button class="caracteristhics-btn">Ver Características</button>
                         <button class="buy-btn">Comprar</button>                               
