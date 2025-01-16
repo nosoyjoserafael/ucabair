@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.getElementById('entity-name-list').textContent = entityName;
     document.getElementById('entity-name-overlay').textContent = entityName;
 
-    document.getElementById('entity-table').DataTable()
+    //document.getElementById('entity-table').DataTable()
     const entityTableBody = document.querySelector('#entity-table tbody');
     const overlay = document.getElementById('generic-overlay');
     const overlayForm = document.getElementById('overlay-form');
@@ -205,6 +205,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         inp14.required = true;
         inp14.name = 'Cantidad de motores';
         inp14.placeholder = 'Cantidad de motores';
+        const inp15 = document.createElement('input');
+        inp15.type = 'number';
+        inp15.required = true;
+        inp15.name = 'Precio';
+        inp15.placeholder = 'Precio';
+        const inp16 = document.createElement('input');
+        inp16.type = 'text';
+        inp16.required = true;
+        inp16.name = 'Descripcion';
+        inp16.placeholder = 'Descripcion';
     
         overlayForm.insertBefore(inp1, submitButton);
         overlayForm.insertBefore(inp2, submitButton);
@@ -220,6 +230,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         overlayForm.insertBefore(inp12, submitButton);
         overlayForm.insertBefore(inp13, submitButton);
         overlayForm.insertBefore(inp14, submitButton);
+        overlayForm.insertBefore(inp15, submitButton);
+        overlayForm.insertBefore(inp16, submitButton);
 
         overlayForm.reset();
 
@@ -245,7 +257,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                     Velocidad_crucero: inp11.value, 
                     Velocidad_max: inp12.value, 
                     Capacidad_max_combustible: inp13.value, 
-                    Motor: inp14.value
+                    Motor: inp14.value,
+                    Precio: inp15.value,
+                    Descripcion: inp16.value
                 })
             })
             .then(response => response.json())
