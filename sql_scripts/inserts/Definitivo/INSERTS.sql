@@ -2314,7 +2314,7 @@ insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Mag
 insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Kevlar', 'Kg');
 
 --tipo_pieza
-    --Fuselaje
+        --Fuselaje
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Puerta', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Suelo', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Bano', '');
@@ -2324,39 +2324,48 @@ insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Kev
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de Fuselaje', '');
 
     --Alas
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala recta', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala trapezoidal', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala elíptica', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala flecha', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala invertida', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala doble flecha', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala variable', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala delta', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala delta con canard', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala delta con timones', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala doble delta', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Ala ojival', '');
+
+    --Aleron, slat, spoiler y flap
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Aleron', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Slat', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Spoiler', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Slot', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Tanque de combustible', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Flap', '');
 
-    --Cola
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Antena', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Actuador de control', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Estabilizador', '');
+    --Instrumentos de Control
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Indicador de Velocidad Aérea', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Altímetro', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Variómetro', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Indicador de actitud', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Coordinador de Giro y Viaje', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Indicador de direccion', '');
 
-    --Tren aterrizaje
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Tren Principal', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Rueda', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Amortiguador', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Luces de posicion', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de aterrizaje', '');
-
-    --Potencia
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Motor', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de Potencia', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Turbina', '');
-    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Helice', '');
-
-    --Avionica
+    --Elementos internos de cabina
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Panel de instrumento', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'GPS', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Radio', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Autopiloto', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Radar', '');
     insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Sistema de cabina', '');
+
+    --Grupo Motopropulsor
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Bloque del motor', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Cilindro', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Piston', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Biela', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Valvula', '');
+    insert into public.tipo_pieza( "tp_nombre","tp_descripcion") values ( 'Carburador', '');
 
 --tipo_prueba
 insert into tipo_prueba (tprueba_nombre, tprueba_duracion_estim) values ('prueba sistemas de aviónica', 42);
@@ -3702,6 +3711,80 @@ insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tp
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-08-03', 30, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-09-20', 31, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-16', 32, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-17', 33, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-18', 34, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-19', 35, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-20', 36, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-21', 37, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-22', 38, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-23', 39, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-24', 40, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-25', 41, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-26', 42, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-27', 43, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-28', 44, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-29', 45, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-30', 46, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-31', 47, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-01', 48, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-02', 49, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-03', 50, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-04', 51, 20, null);
+
+
+--pieza_sede
+    --Fuselaje
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 1, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 2, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 3, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 4, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 5, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 6, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 7, 3);
+
+    --Alas
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 8, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 9, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 10, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 11, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 12, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 13, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 14, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 15, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 16, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 17, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 18, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 19, 2);
+
+    --Aleron, slat, spoiler y flap
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 20, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 21, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 22, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 23, 2);
+
+    --Instrumentos de Control
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 24, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 25, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 26, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 27, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 28, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 29, 5);
+
+    --Elementos internos de cabina
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 30, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 31, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 32, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 33, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 34, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 35, 4);
+
+    --Grupo Motopropulsor
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 36, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 37, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 38, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 39, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 40, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 41, 1);
 
 --pro_mat
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (290, 86, 31, 6);
