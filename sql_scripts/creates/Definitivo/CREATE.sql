@@ -110,9 +110,6 @@ CREATE SEQUENCE IF NOT EXISTS public.caracteristica_carac_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.caracteristica_carac_cod_seq
-    OWNED BY public.caracteristica.carac_cod;
-
-ALTER SEQUENCE public.caracteristica_carac_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.cliente_seq
@@ -139,9 +136,6 @@ CREATE SEQUENCE IF NOT EXISTS public.compra_compr_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.compra_compr_cod_seq
-    OWNED BY public.compra.compr_cod;
 
 ALTER SEQUENCE public.compra_compr_cod_seq
     OWNER TO grupo_rsm;
@@ -186,9 +180,6 @@ CREATE SEQUENCE IF NOT EXISTS public.detalle_compra_detcomp_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.detalle_compra_detcomp_cod_seq
-    OWNED BY public.detalle_compra.detcomp_cod;
-
-ALTER SEQUENCE public.detalle_compra_detcomp_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.equi_cod_seq
@@ -215,9 +206,6 @@ CREATE SEQUENCE IF NOT EXISTS public.equi_per_equiper_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.equi_per_equiper_cod_seq
-    OWNED BY public.equi_per.equiper_cod;
 
 ALTER SEQUENCE public.equi_per_equiper_cod_seq
     OWNER TO grupo_rsm;
@@ -248,9 +236,6 @@ CREATE SEQUENCE IF NOT EXISTS public.estatus_estat_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.estatus_estat_cod_seq
-    OWNED BY public.estatus.estat_cod;
-
-ALTER SEQUENCE public.estatus_estat_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.horario_seq
@@ -277,9 +262,6 @@ CREATE SEQUENCE IF NOT EXISTS public.lugar_lu_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.lugar_lu_cod_seq
-    OWNED BY public.lugar.lu_cod;
 
 ALTER SEQUENCE public.lugar_lu_cod_seq
     OWNER TO grupo_rsm;
@@ -338,9 +320,6 @@ CREATE SEQUENCE IF NOT EXISTS public.material_mat_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.material_mat_cod_seq
-    OWNED BY public.material.mat_cod;
-
-ALTER SEQUENCE public.material_mat_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.metodo_pago_metpago_cod_seq
@@ -353,9 +332,6 @@ CREATE SEQUENCE IF NOT EXISTS public.metodo_pago_metpago_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.metodo_pago_metpago_cod_seq
-    OWNED BY public.metodo_pago.metpago_cod;
 
 ALTER SEQUENCE public.metodo_pago_metpago_cod_seq
     OWNER TO grupo_rsm;
@@ -400,9 +376,6 @@ CREATE SEQUENCE IF NOT EXISTS public.pago_pago_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.pago_pago_cod_seq
-    OWNED BY public.pago.pago_cod;
-
-ALTER SEQUENCE public.pago_pago_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.pedido_pedi_cod_seq
@@ -415,9 +388,6 @@ CREATE SEQUENCE IF NOT EXISTS public.pedido_pedi_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.pedido_pedi_cod_seq
-    OWNED BY public.pedido.pedi_cod;
 
 ALTER SEQUENCE public.pedido_pedi_cod_seq
     OWNER TO grupo_rsm;
@@ -504,9 +474,6 @@ CREATE SEQUENCE IF NOT EXISTS public.privilegio_priv_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.privilegio_priv_cod_seq
-    OWNED BY public.privilegio.priv_cod;
-
-ALTER SEQUENCE public.privilegio_priv_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.proveedor_prove_cod_seq
@@ -519,9 +486,6 @@ CREATE SEQUENCE IF NOT EXISTS public.proveedor_prove_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.proveedor_prove_cod_seq
-    OWNED BY public.proveedor.prove_cod;
 
 ALTER SEQUENCE public.proveedor_prove_cod_seq
     OWNER TO grupo_rsm;
@@ -566,9 +530,6 @@ CREATE SEQUENCE IF NOT EXISTS public.rol_rol_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.rol_rol_cod_seq
-    OWNED BY public.rol.rol_cod;
-
-ALTER SEQUENCE public.rol_rol_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.sede_sed_cod_seq
@@ -581,9 +542,6 @@ CREATE SEQUENCE IF NOT EXISTS public.sede_sed_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.sede_sed_cod_seq
-    OWNED BY public.sede.sed_cod;
 
 ALTER SEQUENCE public.sede_sed_cod_seq
     OWNER TO grupo_rsm;
@@ -600,9 +558,6 @@ CREATE SEQUENCE IF NOT EXISTS public.solicitud_sede_solsed_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.solicitud_sede_solsed_cod_seq
-    OWNED BY public.solicitud_sede.solsed_cod;
-
-ALTER SEQUENCE public.solicitud_sede_solsed_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.tasa_cambio_tdc_cod_seq
@@ -615,9 +570,6 @@ CREATE SEQUENCE IF NOT EXISTS public.tasa_cambio_tdc_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.tasa_cambio_tdc_cod_seq
-    OWNED BY public.tasa_cambio.tdc_cod;
 
 ALTER SEQUENCE public.tasa_cambio_tdc_cod_seq
     OWNER TO grupo_rsm;
@@ -662,9 +614,6 @@ CREATE SEQUENCE IF NOT EXISTS public.tipo_material_tipo_mat_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.tipo_material_tipo_mat_cod_seq
-    OWNED BY public.tipo_material.tipo_mat_cod;
-
-ALTER SEQUENCE public.tipo_material_tipo_mat_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.tipo_pieza_seq
@@ -691,9 +640,6 @@ CREATE SEQUENCE IF NOT EXISTS public.tipo_prueba_tprueba_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.tipo_prueba_tprueba_cod_seq
-    OWNED BY public.tipo_prueba.tprueba_cod;
 
 ALTER SEQUENCE public.tipo_prueba_tprueba_cod_seq
     OWNER TO grupo_rsm;
@@ -808,9 +754,6 @@ CREATE SEQUENCE IF NOT EXISTS public.venta_ven_cod_seq
     CACHE 1;
 
 ALTER SEQUENCE public.venta_ven_cod_seq
-    OWNED BY public.venta.ven_cod;
-
-ALTER SEQUENCE public.venta_ven_cod_seq
     OWNER TO grupo_rsm;
 
 -- SEQUENCE: public.zona_zon_cod_seq
@@ -823,10 +766,7 @@ CREATE SEQUENCE IF NOT EXISTS public.zona_zon_cod_seq
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
-
-ALTER SEQUENCE public.zona_zon_cod_seq
-    OWNED BY public.zona.zon_cod;
-
+    
 ALTER SEQUENCE public.zona_zon_cod_seq
     OWNER TO grupo_rsm;
 
