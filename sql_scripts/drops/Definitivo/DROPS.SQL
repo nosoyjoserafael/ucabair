@@ -1,4 +1,4 @@
--- se debe hacer drop en el orden inverso al que se crean las tablas/procedimientos/funciones/triggers
+-- se debe hacer drop en el orden inverso al que se crean las tablas/procedimientos/funciones/triggers/secuencias
 
 --Drops de triggers
 DROP TRIGGER IF EXISTS calcular_tiempo_estimado ON tipo_prueba;
@@ -150,3 +150,59 @@ DROP TABLE IF EXISTS horario;
 DROP TABLE IF EXISTS estatus;
 DROP TABLE IF EXISTS cargo;
 DROP TABLE IF EXISTS caracteristica;
+
+--Drops de secuencias
+DROP SEQUENCE IF EXISTS "zona_zon_cod_seq";
+DROP SEQUENCE IF EXISTS "venta_ven_cod_seq";
+DROP SEQUENCE IF EXISTS "usuario_seq";
+DROP SEQUENCE IF EXISTS "user_cod_seq";
+DROP SEQUENCE IF EXISTS "tppru_cod_seq";
+DROP SEQUENCE IF EXISTS "tppieza_cod_seq";
+DROP SEQUENCE IF EXISTS "tpmaq_cod_seq";
+DROP SEQUENCE IF EXISTS "tlf_seq";
+DROP SEQUENCE IF EXISTS "titulo_seq";
+DROP SEQUENCE IF EXISTS "tipo_prueba_tprueba_cod_seq";
+DROP SEQUENCE IF EXISTS "tipo_pieza_seq";
+DROP SEQUENCE IF EXISTS "tipo_material_tipo_mat_cod_seq";
+DROP SEQUENCE IF EXISTS "tipo_maquinaria_seq";
+DROP SEQUENCE IF EXISTS "te_seq";
+DROP SEQUENCE IF EXISTS "tasa_cambio_tdc_cod_seq";
+DROP SEQUENCE IF EXISTS "solicitud_sede_solsed_cod_seq";
+DROP SEQUENCE IF EXISTS "sede_sed_cod_seq";
+DROP SEQUENCE IF EXISTS "rol_rol_cod_seq";
+DROP SEQUENCE IF EXISTS "prueba_cod_seq";
+DROP SEQUENCE IF EXISTS "pru_cod_seq";
+DROP SEQUENCE IF EXISTS "proveedor_prove_cod_seq";
+DROP SEQUENCE IF EXISTS "privilegio_priv_cod_seq";
+DROP SEQUENCE IF EXISTS "pieza_seq";
+DROP SEQUENCE IF EXISTS "pie_cod_seq";
+DROP SEQUENCE IF EXISTS "persona_cod_seq";
+DROP SEQUENCE IF EXISTS "per_cod_seq";
+DROP SEQUENCE IF EXISTS "pedido_pedi_cod_seq";
+DROP SEQUENCE IF EXISTS "pago_pago_cod_seq";
+DROP SEQUENCE IF EXISTS "modelo_seq";
+DROP SEQUENCE IF EXISTS "mod_cod_seq";
+DROP SEQUENCE IF EXISTS "metodo_pago_metpago_cod_seq";
+DROP SEQUENCE IF EXISTS "material_mat_cod_seq";
+DROP SEQUENCE IF EXISTS "maquinaria_seq";
+DROP SEQUENCE IF EXISTS "maqcons_cod_seq";
+DROP SEQUENCE IF EXISTS "maq_cod_seq";
+DROP SEQUENCE IF EXISTS "lugar_lu_cod_seq";
+DROP SEQUENCE IF EXISTS "horario_seq";
+DROP SEQUENCE IF EXISTS "estatus_estat_cod_seq";
+DROP SEQUENCE IF EXISTS "equipo_seq";
+DROP SEQUENCE IF EXISTS "equi_per_equiper_cod_seq";
+DROP SEQUENCE IF EXISTS "equi_cod_seq";
+DROP SEQUENCE IF EXISTS "detalle_compra_detcomp_cod_seq";
+DROP SEQUENCE IF EXISTS "correo_seq";
+DROP SEQUENCE IF EXISTS "cons_cod_seq";
+DROP SEQUENCE IF EXISTS "compra_compr_cod_seq";
+DROP SEQUENCE IF EXISTS "cliente_seq";
+DROP SEQUENCE IF EXISTS "caracteristica_carac_cod_seq";
+DROP SEQUENCE IF EXISTS "carac_cod_seq";
+DROP SEQUENCE IF EXISTS "car_cod_sec";
+DROP SEQUENCE IF EXISTS "beneficiario_seq";
+DROP SEQUENCE IF EXISTS "avion_seq";
+DROP SEQUENCE IF EXISTS "asistencia_seq";
+DROP SEQUENCE IF EXISTS "asignacion_seq";
+DROP SEQUENCE IF EXISTS "area_seq";
