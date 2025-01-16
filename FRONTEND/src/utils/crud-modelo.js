@@ -298,9 +298,20 @@ document.addEventListener('DOMContentLoaded', async function() {
         const inp1 = document.createElement('input');
         inp1.type = 'number';
         inp1.required = true;
+        const inp2 = document.createElement('input');
+        inp2.type = 'number';
+        inp2.required = true;
+        inp2.name = 'Precio';
+        inp2.placeholder = 'Precio';
+        const inp3 = document.createElement('input');
+        inp3.type = 'text';
+        inp3.required = true;
+        inp3.name = 'Descripcion';
 
         overlayForm.insertBefore(selectCaracteristicas, submitButton);
         overlayForm.insertBefore(inp1, submitButton);
+        overlayForm.insertBefore(inp2, submitButton);
+        overlayForm.insertBefore(inp3, submitButton);
                     
         overlayForm.reset();
         
@@ -316,7 +327,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                 body: JSON.stringify({
                     Nombre: entity,
                     caracteristica: selectCaracteristicas.value,
-                    valor: inp1.value
+                    valor: inp1.value,
+                    Precio: inp2.value,
+                    Descripcion: inp3.value
                 })
             })
             .then(response => response.json())
