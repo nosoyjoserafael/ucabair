@@ -3157,6 +3157,69 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.lugar
     OWNER to grupo_rsm;
 
+-- Table: public.sede
+
+-- DROP TABLE IF EXISTS public.sede;
+
+CREATE TABLE IF NOT EXISTS public.sede
+(
+    sed_cod integer NOT NULL DEFAULT nextval('sede_sed_cod_seq'::regclass),
+    sed_nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    fk_lugar integer,
+    CONSTRAINT sede_pkey PRIMARY KEY (sed_cod),
+    CONSTRAINT sede_fk_lugar_fkey FOREIGN KEY (fk_lugar)
+        REFERENCES public.lugar (lu_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.sede
+    OWNER to grupo_rsm;
+
+-- Table: public.zona
+
+-- DROP TABLE IF EXISTS public.zona;
+
+CREATE TABLE IF NOT EXISTS public.zona
+(
+    zon_cod integer NOT NULL DEFAULT nextval('zona_zon_cod_seq'::regclass),
+    zon_nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    fk_sede integer,
+    CONSTRAINT zona_pkey PRIMARY KEY (zon_cod),
+    CONSTRAINT zona_fk_sede_fkey FOREIGN KEY (fk_sede)
+        REFERENCES public.sede (sed_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.zona
+    OWNER to grupo_rsm;
+
+-- Table: public.area
+
+-- DROP TABLE IF EXISTS public.area;
+
+CREATE TABLE IF NOT EXISTS public.area
+(
+    ar_cod integer NOT NULL DEFAULT nextval('area_seq'::regclass),
+    ar_nombre character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    fk_zona integer,
+    CONSTRAINT area_pkey PRIMARY KEY (ar_cod),
+    CONSTRAINT area_fk_zona_fkey FOREIGN KEY (fk_zona)
+        REFERENCES public.zona (zon_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.area
+    OWNER to grupo_rsm;
+
 -- Table: public.modelo
 
 -- DROP TABLE IF EXISTS public.modelo;
@@ -3372,27 +3435,6 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.rol_priv
     OWNER to grupo_rsm;
 
--- Table: public.sede
-
--- DROP TABLE IF EXISTS public.sede;
-
-CREATE TABLE IF NOT EXISTS public.sede
-(
-    sed_cod integer NOT NULL DEFAULT nextval('sede_sed_cod_seq'::regclass),
-    sed_nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    fk_lugar integer,
-    CONSTRAINT sede_pkey PRIMARY KEY (sed_cod),
-    CONSTRAINT sede_fk_lugar_fkey FOREIGN KEY (fk_lugar)
-        REFERENCES public.lugar (lu_cod) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.sede
-    OWNER to grupo_rsm;
-
 -- Table: public.tasa_cambio
 
 -- DROP TABLE IF EXISTS public.tasa_cambio;
@@ -3591,48 +3633,6 @@ CREATE TABLE IF NOT EXISTS public.usuario
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.usuario
-    OWNER to grupo_rsm;
-
--- Table: public.zona
-
--- DROP TABLE IF EXISTS public.zona;
-
-CREATE TABLE IF NOT EXISTS public.zona
-(
-    zon_cod integer NOT NULL DEFAULT nextval('zona_zon_cod_seq'::regclass),
-    zon_nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    fk_sede integer,
-    CONSTRAINT zona_pkey PRIMARY KEY (zon_cod),
-    CONSTRAINT zona_fk_sede_fkey FOREIGN KEY (fk_sede)
-        REFERENCES public.sede (sed_cod) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.zona
-    OWNER to grupo_rsm;
-
--- Table: public.area
-
--- DROP TABLE IF EXISTS public.area;
-
-CREATE TABLE IF NOT EXISTS public.area
-(
-    ar_cod integer NOT NULL DEFAULT nextval('area_seq'::regclass),
-    ar_nombre character varying(30) COLLATE pg_catalog."default" NOT NULL,
-    fk_zona integer,
-    CONSTRAINT area_pkey PRIMARY KEY (ar_cod),
-    CONSTRAINT area_fk_zona_fkey FOREIGN KEY (fk_zona)
-        REFERENCES public.zona (zon_cod) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.area
     OWNER to grupo_rsm;
 
 -- Table: public.asignacion
@@ -4053,6 +4053,55 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.cheque
     OWNER to grupo_rsm;
 
+-- Table: public.pedido
+
+-- DROP TABLE IF EXISTS public.pedido;
+
+CREATE TABLE IF NOT EXISTS public.pedido
+(
+    pedi_cod integer NOT NULL DEFAULT nextval('pedido_pedi_cod_seq'::regclass),
+    pedi_fecha timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    fk_avion integer,
+    fk_cliente integer,
+    CONSTRAINT pedido_pkey PRIMARY KEY (pedi_cod),
+    CONSTRAINT pedido_fk_avion_fkey FOREIGN KEY (fk_avion)
+        REFERENCES public.avion (avion_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT pedido_fk_cliente_fkey FOREIGN KEY (fk_cliente)
+        REFERENCES public.cliente (cli_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.pedido
+    OWNER to grupo_rsm;
+
+-- Table: public.venta
+
+-- DROP TABLE IF EXISTS public.venta;
+
+CREATE TABLE IF NOT EXISTS public.venta
+(
+    ven_cod integer NOT NULL DEFAULT nextval('venta_ven_cod_seq'::regclass),
+    ven_monto numeric(15,2) NOT NULL,
+    ven_cantidad numeric(16,0) NOT NULL,
+    ven_fecha timestamp without time zone NOT NULL,
+    fk_pedido integer,
+    CONSTRAINT venta_pkey PRIMARY KEY (ven_cod),
+    CONSTRAINT venta_fk_pedido_fkey FOREIGN KEY (fk_pedido)
+        REFERENCES public.pedido (pedi_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.venta
+    OWNER to grupo_rsm;
+
 -- Table: public.pago
 
 -- DROP TABLE IF EXISTS public.pago;
@@ -4119,32 +4168,6 @@ CREATE TABLE IF NOT EXISTS public.pago
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.pago
-    OWNER to grupo_rsm;
-
--- Table: public.pedido
-
--- DROP TABLE IF EXISTS public.pedido;
-
-CREATE TABLE IF NOT EXISTS public.pedido
-(
-    pedi_cod integer NOT NULL DEFAULT nextval('pedido_pedi_cod_seq'::regclass),
-    pedi_fecha timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-    fk_avion integer,
-    fk_cliente integer,
-    CONSTRAINT pedido_pkey PRIMARY KEY (pedi_cod),
-    CONSTRAINT pedido_fk_avion_fkey FOREIGN KEY (fk_avion)
-        REFERENCES public.avion (avion_cod) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION,
-    CONSTRAINT pedido_fk_cliente_fkey FOREIGN KEY (fk_cliente)
-        REFERENCES public.cliente (cli_cod) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.pedido
     OWNER to grupo_rsm;
 
 -- Table: public.per_car
@@ -4401,29 +4424,6 @@ CREATE TABLE IF NOT EXISTS public.tipo_pie_pru
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.tipo_pie_pru
-    OWNER to grupo_rsm;
-
--- Table: public.venta
-
--- DROP TABLE IF EXISTS public.venta;
-
-CREATE TABLE IF NOT EXISTS public.venta
-(
-    ven_cod integer NOT NULL DEFAULT nextval('venta_ven_cod_seq'::regclass),
-    ven_monto numeric(15,2) NOT NULL,
-    ven_cantidad numeric(16,0) NOT NULL,
-    ven_fecha timestamp without time zone NOT NULL,
-    fk_pedido integer,
-    CONSTRAINT venta_pkey PRIMARY KEY (ven_cod),
-    CONSTRAINT venta_fk_pedido_fkey FOREIGN KEY (fk_pedido)
-        REFERENCES public.pedido (pedi_cod) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.venta
     OWNER to grupo_rsm;
 
 -- Table: public.avi_pru
@@ -4896,3 +4896,74 @@ CREATE OR REPLACE VIEW public.todas_las_personas
 ALTER TABLE public.todas_las_personas
     OWNER TO grupo_rsm;
 
+-- Table: public.Tprueba_Modelo
+
+-- DROP TABLE IF EXISTS public."Tprueba_Modelo";
+
+CREATE TABLE IF NOT EXISTS public."Tprueba_Modelo"
+(
+    "fk_tipoPrueba" integer NOT NULL,
+    fk_modelo integer NOT NULL,
+    CONSTRAINT "Tprueba_Modelo_pkey" PRIMARY KEY ("fk_tipoPrueba", fk_modelo),
+    CONSTRAINT "Tprueba_Modelo_fk_modelo_fkey" FOREIGN KEY (fk_modelo)
+        REFERENCES public.modelo (mod_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT "Tprueba_Modelo_fk_tipoPrueba_fkey" FOREIGN KEY ("fk_tipoPrueba")
+        REFERENCES public.tipo_prueba (tprueba_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Tprueba_Modelo"
+    OWNER to grupo_rsm;
+
+-- Table: public.Tprueba_Tmaterial
+
+-- DROP TABLE IF EXISTS public."Tprueba_Tmaterial";
+
+CREATE TABLE IF NOT EXISTS public."Tprueba_Tmaterial"
+(
+    "fk_tipoPrueba" integer NOT NULL,
+    "fk_tipoMaterial" integer NOT NULL,
+    CONSTRAINT "Tprueba_Tmaterial_pkey" PRIMARY KEY ("fk_tipoPrueba", "fk_tipoMaterial"),
+    CONSTRAINT "Tprueba_Tmaterial_fk_tipoMaterial_fkey" FOREIGN KEY ("fk_tipoMaterial")
+        REFERENCES public.tipo_material (tipo_mat_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT "Tprueba_Tmaterial_fk_tipoPrueba_fkey" FOREIGN KEY ("fk_tipoPrueba")
+        REFERENCES public.tipo_prueba (tprueba_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Tprueba_Tmaterial"
+    OWNER to grupo_rsm;
+
+-- Table: public.Tprueba_Tpieza
+
+-- DROP TABLE IF EXISTS public."Tprueba_Tpieza";
+
+CREATE TABLE IF NOT EXISTS public."Tprueba_Tpieza"
+(
+    "fk_tipoPrueba" integer NOT NULL,
+    "fk_tipoPieza" integer NOT NULL,
+    CONSTRAINT "Tprueba_Tpieza_pkey" PRIMARY KEY ("fk_tipoPrueba", "fk_tipoPieza"),
+    CONSTRAINT "Tprueba_Tpieza_fk_tipoPieza_fkey" FOREIGN KEY ("fk_tipoPieza")
+        REFERENCES public.tipo_pieza (tp_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT "Tprueba_Tpieza_fk_tipoPrueba_fkey" FOREIGN KEY ("fk_tipoPrueba")
+        REFERENCES public.tipo_prueba (tprueba_cod) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Tprueba_Tpieza"
+    OWNER to grupo_rsm;
