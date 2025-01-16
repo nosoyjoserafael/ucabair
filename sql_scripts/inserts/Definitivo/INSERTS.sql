@@ -2010,7 +2010,48 @@ INSERT INTO public.lugar ( fk_lugar,lu_nombre,lu_tipo) VALUES
 (360, 'Santa Rosalía','parroquia'),
 (360, 'Santa Teresa','parroquia'),
 (360, 'Sucre (Catia)','parroquia'),
-(360, '23 de enero','parroquia'); 
+(360, '23 de enero','parroquia');
+
+--sede
+insert into public.Sede ("sed_nombre", fk_lugar) values ('La Guaira', 1350);
+insert into public.Sede ("sed_nombre", fk_lugar) values ('Maracay', 61);
+insert into public.Sede ("sed_nombre", fk_lugar) values ('Colon', 343);
+insert into public.Sede ("sed_nombre", fk_lugar) values ('Valencia', 115);
+insert into public.Sede ("sed_nombre", fk_lugar) values ('Guatire', 1019);
+
+--zona
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona A1', 1);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona A2', 1);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona B1', 2);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona B2', 2);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona C1', 3);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona C2', 3);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona D1', 4);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona D2', 4);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona E1', 5);
+insert into public.zona ("zon_nombre", fk_sede) values ('Zona E2', 5);
+
+--area
+insert into public.area ("ar_nombre", fk_zona) values ( '1', 1);
+insert into public.area ("ar_nombre", fk_zona) values ( '2', 1);
+insert into public.area ("ar_nombre", fk_zona) values ( '3', 2);
+insert into public.area ("ar_nombre", fk_zona) values ( '4', 2);
+insert into public.area ("ar_nombre", fk_zona) values ( '5', 3);
+insert into public.area ("ar_nombre", fk_zona) values ( '6', 3);
+insert into public.area ("ar_nombre", fk_zona) values ( '7', 4);
+insert into public.area ("ar_nombre", fk_zona) values ( '8', 4);
+insert into public.area ("ar_nombre", fk_zona) values ( '9', 5);
+insert into public.area ("ar_nombre", fk_zona) values ( '10', 5);
+insert into public.area ("ar_nombre", fk_zona) values ( '11', 6);
+insert into public.area ("ar_nombre", fk_zona) values ( '12', 6);
+insert into public.area ("ar_nombre", fk_zona) values ( '13', 7);
+insert into public.area ("ar_nombre", fk_zona) values ( '14', 7);
+insert into public.area ("ar_nombre", fk_zona) values ( '15', 8);
+insert into public.area ("ar_nombre", fk_zona) values ( '16', 8);
+insert into public.area ("ar_nombre", fk_zona) values ( '17', 9);
+insert into public.area ("ar_nombre", fk_zona) values ( '18', 9);
+insert into public.area ("ar_nombre", fk_zona) values ( '19', 10);
+insert into public.area ("ar_nombre", fk_zona) values ( '20', 10);
 
 --Modelo
 insert into modelo (mod_nombre, mod_descripcion) values ('AU-80', 'Fue diseñado para rutas transcontinentales y normalmente necesitaba una parada para repostar cuando se utilizaba para la ruta del Atlántico Norte.');
@@ -2258,13 +2299,6 @@ insert into rol_priv (fk_rol,fk_priv) values (3, 5);
 insert into rol_priv (fk_rol,fk_priv) values (4, 5);
 insert into rol_priv (fk_rol,fk_priv) values (4, 8);
 
---sede
-insert into public.Sede ("sed_nombre", fk_lugar) values ('La Guaira', 1350);
-insert into public.Sede ("sed_nombre", fk_lugar) values ('Maracay', 61);
-insert into public.Sede ("sed_nombre", fk_lugar) values ('Colon', 343);
-insert into public.Sede ("sed_nombre", fk_lugar) values ('Valencia', 115);
-insert into public.Sede ("sed_nombre", fk_lugar) values ('Guatire', 1019);
-
 --tasa_cambio
 insert into tasa_cambio (tdc_mon_origen, tdc_mon_destino, tdc_valor, tdc_fecha_vigencia, tdc_fecha_vencimiento) values ('USD', 'Bs', 55, '2025-01-01', '2025-12-31');
 insert into tasa_cambio (tdc_mon_origen, tdc_mon_destino, tdc_valor, tdc_fecha_vigencia, tdc_fecha_vencimiento) values ('EUR', 'Bs', 60, '2025-01-01', '2025-12-31');
@@ -2463,40 +2497,6 @@ insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usu
 insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usuario38', 'contraseña38', 2, 130);
 insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usuario39', 'contraseña39', 2, 131);
 insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usuario40', 'contraseña40', 2, 132);
-
---zona
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona A1', 1);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona A2', 1);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona B1', 2);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona B2', 2);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona C1', 3);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona C2', 3);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona D1', 4);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona D2', 4);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona E1', 5);
-insert into public.zona ("zon_nombre", fk_sede) values ('Zona E2', 5);
-
---area
-insert into public.area ("ar_nombre", fk_zona) values ( '1', 1);
-insert into public.area ("ar_nombre", fk_zona) values ( '2', 1);
-insert into public.area ("ar_nombre", fk_zona) values ( '3', 2);
-insert into public.area ("ar_nombre", fk_zona) values ( '4', 2);
-insert into public.area ("ar_nombre", fk_zona) values ( '5', 3);
-insert into public.area ("ar_nombre", fk_zona) values ( '6', 3);
-insert into public.area ("ar_nombre", fk_zona) values ( '7', 4);
-insert into public.area ("ar_nombre", fk_zona) values ( '8', 4);
-insert into public.area ("ar_nombre", fk_zona) values ( '9', 5);
-insert into public.area ("ar_nombre", fk_zona) values ( '10', 5);
-insert into public.area ("ar_nombre", fk_zona) values ( '11', 6);
-insert into public.area ("ar_nombre", fk_zona) values ( '12', 6);
-insert into public.area ("ar_nombre", fk_zona) values ( '13', 7);
-insert into public.area ("ar_nombre", fk_zona) values ( '14', 7);
-insert into public.area ("ar_nombre", fk_zona) values ( '15', 8);
-insert into public.area ("ar_nombre", fk_zona) values ( '16', 8);
-insert into public.area ("ar_nombre", fk_zona) values ( '17', 9);
-insert into public.area ("ar_nombre", fk_zona) values ( '18', 9);
-insert into public.area ("ar_nombre", fk_zona) values ( '19', 10);
-insert into public.area ("ar_nombre", fk_zona) values ( '20', 10);
 
 --insertar despues de personal y horario
 insert into asignacion (fk_personal, fk_horario) values (93, 1);
@@ -3076,16 +3076,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (1, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 5, 2);
@@ -3128,16 +3119,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (2, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 5, 2);
@@ -3180,16 +3162,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (3, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 5, 2);
@@ -3232,16 +3205,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (4, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 5, 2);
@@ -3284,16 +3248,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (5, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 5, 2);
@@ -3336,16 +3291,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (6, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 5, 2);
@@ -3388,16 +3334,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (7, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 5, 2);
@@ -3440,16 +3377,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (8, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 5, 2);
@@ -3492,16 +3420,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (9, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 5, 2);
@@ -3544,16 +3463,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (10, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 5, 2);
@@ -3596,16 +3506,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (11, 1, 51);
+
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 5, 2);
@@ -3648,16 +3549,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (12, 1, 51);
+
 
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 4, 1);
@@ -3701,16 +3593,6 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (13, 1, 51);
 
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 4, 1);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 5, 2);
@@ -3753,16 +3635,7 @@ insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) value
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 39);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 40);
     insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 41);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 42);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 43);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 44);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 45);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 46);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 47);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 48);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 49);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 50);
-    insert into public."Mod_Tpie" ("fk_modelo", "cantidad", "fk_TPieza") values (14, 1, 51);
+
 
 --Metodos de pago
     --pago_movil
@@ -3986,16 +3859,6 @@ insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tp
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-23', 39, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-24', 40, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-25', 41, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-26', 42, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-27', 43, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-28', 44, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-29', 45, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-30', 46, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-31', 47, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-01', 48, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-02', 49, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-03', 50, 20, null);
-insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-04', 51, 20, null);
 
 
 --pieza_sede
@@ -4062,23 +3925,18 @@ insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) value
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (260, 50, 16, 1);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (281, 87, 40, 2);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (270, 51, 10, 6);
-insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (261, 52, 11, 11);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (272, 40, 6, 2);
-insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (280, 90, 3, 11);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (262, 8, 44, 8);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (291, 94, 38, 10);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (255, 71, 10, 5);
-insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (260, 86, 25, 11);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (290, 51, 19, 8);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (288, 73, 8, 4);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (266, 22, 26, 3);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (297, 50, 17, 7);
-insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (290, 98, 16, 11);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (300, 94, 22, 4);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (276, 44, 20, 9);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (250, 56, 37, 10);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (282, 15, 42, 2);
-insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (272, 27, 30, 11);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (276, 27, 2, 8);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (276, 65, 43, 5);
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (260, 15, 19, 10);
@@ -4880,16 +4738,6 @@ insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 38);
 insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 39);
 insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 40);
 insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 41);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 42);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 43);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 44);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 45);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 46);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 47);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 48);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 49);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 50);
-insert into public."Cons_Pi" (fk_construccion, fk_pieza) values (1, 51);
 
 --per_pru
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TPiezaPru1", "fk_TPiezaPru2") values (1, '01-01-2024', 93, 1, 1);
@@ -4901,7 +4749,6 @@ insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TPiezaPru1",
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TPiezaPru1", "fk_TPiezaPru2") values (1, '01-01-2024', 99, 3, 1);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TPiezaPru1", "fk_TPiezaPru2") values (1, '01-01-2024', 100, 3, 2);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TPiezaPru1", "fk_TPiezaPru2") values (1, '01-01-2024', 101, 3, 3);
-insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TPiezaPru1", "fk_TPiezaPru2") values (1, '01-01-2024', 102, 4, 4);
 
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TMaterialPru1", "fk_TMaterialPru2") values (1, '01-01-2024', 103, 1, 1);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TMaterialPru1", "fk_TMaterialPru2") values (1, '01-01-2024', 104, 2, 2);
@@ -4919,7 +4766,6 @@ insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1",
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 115, 1, 3);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 116, 1, 4);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 117, 1, 5);
-insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 118, 1, 6);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 119, 2, 7);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 120, 2, 8);
 insert into per_pru (fk_prueba, per_pru_fecha_ini, fk_personal, "fk_TAvionPru1", "fk_TAvionPru2") values (1, '01-01-2024', 121, 2, 9);
