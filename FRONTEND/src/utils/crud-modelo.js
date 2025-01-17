@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 row.innerHTML = `
                     <td>${entity.cod}</td>
                     <td>${entity.nombre}</td>
-                    <td>${entity.costo}</td>
+                    <td>${entity.costo} Bs.</td>
                     <td>
                         <button class="caracteristhics-btn">Ver Características</button>
                         <button class="buy-btn">Comprar</button>                               
@@ -78,13 +78,13 @@ document.addEventListener('DOMContentLoaded', async function() {
                     editButton.addEventListener('click', () => modifyEntity(entity.nombre));
                     deleteButton.addEventListener('click', () => deleteEntity(entity.nombre));
                     const buyButton = row.querySelector('.buy-btn');
-                    buyButton.addEventListener('click', () => buyEntity(entity.cod));
+                    buyButton.addEventListener('click', () => buyEntity(entity));
                 }
                 else{
                     row.innerHTML = `
                     <td>${entity.cod}</td>
                     <td>${entity.nombre}</td>
-                    <td>${entity.costo}</td>
+                    <td>${entity.costo} Bs.</td>
                     <td>
                         <button class="caracteristhics-btn">Ver Características</button>
                         <button class="buy-btn">Comprar</button>                               
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     const caracteristhicsButton = row.querySelector('.caracteristhics-btn');
                     caracteristhicsButton.addEventListener('click', () => verCaracteristicas(entity));
                     const buyButton = row.querySelector('.buy-btn');
-                    buyButton.addEventListener('click', () => buyEntity(entity.cod));
+                    buyButton.addEventListener('click', () => buyEntity(entity));
                 }
 
                 entityTableBody.appendChild(row);
@@ -388,8 +388,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
-    function buyEntity(entityId) {        
-        localStorage.setItem('avionId', entityId);
+    function buyEntity(entity) {                
+        localStorage.setItem('avionId', entity.cod);    
+        localStorage.setItem('avionPrecio', entity.costo);
         window.location.href = "./pago.html";
     }
 
