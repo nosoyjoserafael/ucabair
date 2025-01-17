@@ -2700,6 +2700,38 @@ $BODY$;
 ALTER FUNCTION public.get_usuarios_personas()
     OWNER TO grupo_rsm;
 
+-- FUNCTION: public.inventario_detallado_por_mes()
+
+-- DROP FUNCTION IF EXISTS public.inventario_detallado_por_mes();
+
+CREATE OR REPLACE FUNCTION public.inventario_detallado_por_mes(
+	)
+    RETURNS TABLE(sede_inventario character varying, mes_inventario timestamp without time zone, material_nombre character varying, material_cantidad_inventario integer) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        s.sed_nombre, mat.mat_fecha_in, tmat.tipo_mat_nombre, mat.mat_cantidad
+    FROM material mat
+        JOIN tipo_material tmat ON mat."fk_TMaterial" = tmat.tipo_mat_cod
+        JOIN sede s ON mat.fk_sede = s.sed_cod
+    GROUP BY
+        s.sed_nombre, mat.mat_fecha_in, tmat.tipo_mat_nombre, mat.mat_cantidad
+    ORDER BY
+        1, 2 ASC
+    ;
+END;
+$BODY$;
+
+ALTER FUNCTION public.inventario_detallado_por_mes()
+    OWNER TO grupo_rsm;
+
+
 -- FUNCTION: public.mejores_10_clientes()
 
 -- DROP FUNCTION IF EXISTS public.mejores_10_clientes();
@@ -2795,6 +2827,48 @@ $BODY$;
 
 ALTER FUNCTION public.post_modelo(text, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, numeric, text)
     OWNER TO grupo_rsm;
+
+-- FUNCTION: public.promedio_produccion_sede()
+
+-- DROP FUNCTION IF EXISTS public.promedio_produccion_sede();
+
+CREATE OR REPLACE FUNCTION public.promedio_produccion_sede(
+	)
+    RETURNS TABLE(sede_nombre character varying, mes_produccion text, promedio_produccion bigint) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        s.sed_nombre,
+        TO_CHAR(ps.pie_sede_fecha_ini, 'YYYY-MM') AS mes_inicio,
+        COUNT(ps.pie_sed_cod) / COUNT(DISTINCT TO_CHAR(ps.pie_sede_fecha_ini, 'YYYY-MM')) AS promedio_produccion
+    FROM 
+        pieza_sede ps 
+    JOIN
+        sede s ON ps.fk_sede = s.sed_cod
+    JOIN 
+        pieza p ON ps.fk_pieza = p.pie_cod
+    JOIN
+        tipo_pieza tp ON p.fk_tpieza = tp.tp_cod
+    WHERE
+        ps.pie_sede_fecha_fin IS NOT NULL
+        AND TO_CHAR(ps.pie_sede_fecha_ini, 'YYYY-MM') = TO_CHAR(ps.pie_sede_fecha_fin, 'YYYY-MM')
+    GROUP BY
+        s.sed_nombre, TO_CHAR(ps.pie_sede_fecha_ini, 'YYYY-MM')
+    ORDER BY
+        s.sed_nombre, mes_inicio ASC
+    ;
+END;
+$BODY$;
+
+ALTER FUNCTION public.promedio_produccion_sede()
+    OWNER TO grupo_rsm;
+
 
 -- FUNCTION: public.put_UserRol(character varying, integer)
 
@@ -2968,6 +3042,42 @@ $BODY$;
 
 ALTER FUNCTION public.solicitar_material(integer, numeric, integer, integer)
     OWNER TO grupo_rsm;
+
+-- FUNCTION: public.ubicacion_estatus_piezas()
+
+-- DROP FUNCTION IF EXISTS public.ubicacion_estatus_piezas();
+
+CREATE OR REPLACE FUNCTION public.ubicacion_estatus_piezas(
+	)
+    RETURNS TABLE(pieza_nombre character varying, pieza_estado character varying, pieza_ubicacion character varying) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        tp.tp_nombre, e.estat_nombre, s.sed_nombre
+    FROM pieza_sede ps 
+        JOIN
+            sede s ON ps.fk_sede = s.sed_cod
+        JOIN 
+            pieza p ON ps.fk_pieza = p.pie_cod
+        JOIN
+            est_pie ep ON p.pie_cod = ep.fk_pie
+        JOIN
+            estatus e ON ep.fk_estatus = e.estat_cod
+        JOIN
+            tipo_pieza tp ON p.fk_tpieza = tp.tp_cod
+    ;
+END;
+$BODY$;
+
+ALTER FUNCTION public.ubicacion_estatus_piezas()
+    OWNER TO grupo_rsm;
+
 
 -- FUNCTION: public.validar_usuario(text, text)
 
