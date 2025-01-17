@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('token', data.token) ;        
             const payload = JSON.parse(atob(data.token.split('.')[1]));
             alert(`Inicio de sesión exitoso. \nBienvenido ${payload.username}`);  
-            window.location.href = '/compra-avion';
+            window.location.href = '../pages/crud-rol.html';
         })
         .catch((error) => {
             console.error('Error:', error);

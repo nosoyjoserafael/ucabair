@@ -161,6 +161,22 @@
     .navbar .navbar-menu .navbar-nav > li.active a {
     color: rgb(236, 150, 255);
     }
+
+    .navbar-nav button {
+        background-color: #de5637;
+        color: white;
+        border: none;
+        margin-left: 20px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .navbar-nav button:hover {
+        background-color: #d1482e;
+    }
+
     .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
     list-style: none;
     position: absolute;
@@ -295,22 +311,11 @@
                 <img src="../../public/assets/imgs/ucabair-logo.png" alt="logo" id="navbar-logo">
             </a>
             <ul class="navbar-nav">
-                <li class="active"><a href="/home">Home</a></li>
-                <li class="navbar-dropdown">
-                    <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
-                        Categories <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown" id="my-dropdown-id">
-                        <li><a href="#">Category 1</a></li>
-                        <li class="separator"></li>
-                        <li><a href="#">Category 2</a></li>
-                        <li class="separator"></li>
-                        <li><a href="#">Category 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">About</a></li>
+                <li class=""><a href="#" id="home">Home</a></li>   
+                <li class=""><a href="#" id="comprar">Comprar</a></li>             
                 <li><a href="#" id="gestion-a">Gestión</a></li>
-                <li><a href="#">Signin</a></li>
+                <li><a href="#" id="perfil">Perfil</a></li>
+                <li><button id="singout">Singout</button></li>
 
                 <div class="overlay" id="generic-overlay">
                     <div class="overlay-content">

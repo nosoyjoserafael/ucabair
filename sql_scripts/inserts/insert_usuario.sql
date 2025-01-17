@@ -1,3 +1,4 @@
+--insertar despues de rol y personal
 insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usuario1', 'contraseña1', 2, 93);
 insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usuario2', 'contraseña2', 2, 94);
 insert into usuario (user_nombre, user_seguro, fk_rol, fk_personal) values ('usuario3', 'contraseña3', 2, 95);

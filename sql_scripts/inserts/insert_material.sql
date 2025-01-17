@@ -1,4 +1,4 @@
--- se debe insertar primero sede para evitar conflictos
+-- se debe insertar primero sede y tipo_material para evitar conflictos
 insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (1, 300, '2020-01-01', 1);
 insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (2, 300, '2023-02-01', 2);
 insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (3, 300, '2023-03-01', 3);

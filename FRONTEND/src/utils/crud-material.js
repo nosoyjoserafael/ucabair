@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const entityName = 'empleados'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = '/entidad'; // Reemplazar con la URL del endpoint de la entidad
+    const entityName = 'materiales'; // Reemplaza con el nombre de la entidad
+    const entityEndpoint = '/materiales'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -139,6 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayEntities();
             });
         */
-    }
+    }    
 
 });
