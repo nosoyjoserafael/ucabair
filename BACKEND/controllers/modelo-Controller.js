@@ -11,17 +11,19 @@ const getModelo = async (req, res, next) => {
 
 const getCarac = async (req, res, next) => {
   try {
-    const result = await pool.query(` SELECT * FROM get_carac() `);
-
-    const modelos = {};
-    result.rows.forEach(row => {
-      if (!modelos[row.mod_cod]) {
-        modelos[row.mod_cod] = {};
-      }
-      modelos[row.mod_cod][row.carac_nombre] = row.mod_carac_cantidad + " " + row.carac_unidad_medida;
-    });
+    const result = await pool.query(` SELECT * FROM get_carac_procesada() `);
+    const modelos = result.rows[0].get_carac_procesada;
 
     res.json(modelos);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const getConstruccion = async (req, res, next) => {
+  try {
+    const result = await pool.query('SELECT * FROM get_aviones_construccion()');
+    res.json(result.rows);
   } catch (err) {
     next(err);
   }
@@ -142,4 +144,4 @@ const deleteModelo = async (req, res, next) => {
 };
 
 
-module.exports = { getModelo, getCarac, putModelo, postModelo, postCompra, deleteModelo };
+module.exports = { getModelo, getCarac, getConstruccion, putModelo, postModelo, postCompra, deleteModelo };

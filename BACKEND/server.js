@@ -34,6 +34,7 @@ const compra_dataRoutes = require('./routes/compra-Routes');
 const prueba_dataRoutes = require('./routes/prueba-Routes');
 const tipo_materialRoutes = require('./routes/tipo_material-Routes');
 const asistenciaRoutes = require('./routes/asistencia-Routes');
+const equipo_dataRoutes = require('./routes/equipo-Routes');
 
 // Middleware para habilitar CORS
 app.use(cors());
@@ -56,6 +57,7 @@ app.use('/compra', compra_dataRoutes);
 app.use('/prueba', prueba_dataRoutes);
 app.use('/tipomaterial', tipo_materialRoutes);
 app.use('/asistencia', asistenciaRoutes);
+app.use('/equipo', equipo_dataRoutes);
 
 // Middleware para manejar errores
 app.use(errorHandler);

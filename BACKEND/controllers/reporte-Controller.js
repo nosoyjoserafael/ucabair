@@ -124,6 +124,24 @@ const get21 = async (req, res, next) => {
   }
 };
 
+const get5 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query(' SELECT * FROM ubicacion_estatus_piezas() ');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'ubicacionEstatusPiezas');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const get6 = async (req, res, next) => {
   try {
     const resultFila = await pool.query('SELECT * FROM mejores_10_clientes()');
@@ -142,4 +160,156 @@ const get6 = async (req, res, next) => {
   }
 };
 
-module.exports = { get15, get16, get17, get18, get20, get21, get6 };
+const get7 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM equipo_mas_eficiente()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte7');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const get8 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM ala_mas_usada()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'alaMasUsada');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const get9 = async (req, res, next) => {
+  try {
+    //const resultFila = await pool.query(` SELECT * FROM caracteristicas_modelos() `);
+    //console.log(resultFila.rows);
+    
+    let modelos = await pool.query(` SELECT * FROM caracteristicas_modelos(testeo()) `);
+    let carac = modelos.rows;
+    let columnas = [];
+    
+    for (let i = 0; i < carac.length; i++){
+
+      let nuevoObjeto = {};
+
+      for (let key in carac[i].resultado) {
+        if (carac[i].resultado.hasOwnProperty(key)) {
+          let nuevaKey = key.lastIndexOf('') !== -1 ? key.substring(0, key.lastIndexOf('')) : key;
+
+          nuevoObjeto[nuevaKey] = carac[i].resultado[key];
+
+          if (i==0)columnas.push({columna : nuevaKey});
+        }
+      }
+      carac[i].resultado = nuevoObjeto;
+    }
+
+    console.log(carac);
+    console.log(columnas);
+
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila : carac,
+      columna : columnas
+    };
+
+    const pdfBuffer = await generatePdf(data, 'caracteristicasModelos');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const get10 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM mejores_10_clientes()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'reporte5');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const get11 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM inventario_detallado_por_mes()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'invetarioDetalladoPorMes');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const get12 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM aviones_mas_rentables()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'avionesMasRentables');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const get13 = async (req, res, next) => {
+  try {
+    const resultFila = await pool.query('SELECT * FROM promedio_produccion_sede()');
+    const data = {
+      logoUrl : logo,
+      formatDate: new Date().toLocaleDateString(),
+      fila: resultFila.rows
+    };
+
+    const pdfBuffer = await generatePdf(data, 'promedioProduccionSede');
+
+    res.contentType('application/pdf');
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { get15, get16, get17, get18, get20, get21, get5, get6, get7, get8, get9, get11, get12, get13 };
