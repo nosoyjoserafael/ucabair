@@ -198,10 +198,7 @@ const get8 = async (req, res, next) => {
 
 const get9 = async (req, res, next) => {
   try {
-    //const resultFila = await pool.query(` SELECT * FROM caracteristicas_modelos() `);
-    //console.log(resultFila.rows);
-    
-    let modelos = await pool.query(` SELECT * FROM caracteristicas_modelos(testeo()) `);
+    let modelos = await pool.query(` SELECT * FROM caracteristicas_modelos_reporte(testeo()) `);
     let carac = modelos.rows;
     let columnas = [];
     
