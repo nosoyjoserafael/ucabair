@@ -71,6 +71,10 @@ document.addEventListener('DOMContentLoaded', async function() {
             valoresCampos.push({ name: input.name, value: input.value });
         });
 
+        let selectedTasaDeCambio = selectTasaDeCambio.value;
+        if(selectedTasaDeCambio == 0)
+            selectedTasaDeCambio = 1;
+
         fetch(`${entityEndpoint}`, {
             method: 'POST',
             headers: {
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 cod: metodoPago,
                 valores: valoresCampos,
                 montoTotal: montoTotalSpan.textContent,
-                codTasaDeCambio: selectMetodoPago.value,
+                codTasaDeCambio: selectedTasaDeCambio,
                 modelo: entityId,
                 codCliente: clienteId
             })
