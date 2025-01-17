@@ -7,10 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.getElementById('entity-name-list').textContent = entityName;
     document.getElementById('entity-name-overlay').textContent = entityName;
 
-    // Inicializar DataTables
-    $(document).ready(function() {
-        $('#entity-table').DataTable();
-    });
+
 
     const entityTableBody = document.querySelector('#entity-table tbody');
     const overlay = document.getElementById('generic-overlay');
@@ -102,6 +99,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 entityTableBody.appendChild(row);
                 
             });
+            $('#entity-table').DataTable();
         })
         .catch(error => console.error('Error:', error));        
     }
