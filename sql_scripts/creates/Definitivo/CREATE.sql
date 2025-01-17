@@ -1774,6 +1774,55 @@ $BODY$;
 ALTER FUNCTION public.caracteristicas_modelos()
     OWNER TO grupo_rsm;
 
+-- FUNCTION: public.caracteristicas_modelos(text[])
+
+-- DROP FUNCTION IF EXISTS public.caracteristicas_modelos(text[]);
+
+CREATE OR REPLACE FUNCTION public.caracteristicas_modelos(
+	models text[])
+    RETURNS TABLE(resultado jsonb) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+DECLARE
+    query text;
+    model text;
+BEGIN
+    
+    query := 'SELECT jsonb_build_object(''caracteristica'', c.carac_nombre';
+
+    FOREACH model IN ARRAY models
+    LOOP
+        query := query || ', ' || quote_literal(model || '_caracteristica') || ', COALESCE(' || quote_ident('M' || model) || '.mod_carac_cantidad, '''')';
+    END LOOP;
+
+    query := query || ') FROM public."caracteristica" c';
+
+    FOREACH model IN ARRAY models
+    LOOP
+        query := query || ' LEFT JOIN (SELECT c.carac_nombre, ' ||
+                          'COALESCE(mc.mod_carac_cantidad::text, '''') || ' || 
+                          ''' '' || COALESCE(c.carac_unidad_medida, '''') AS mod_carac_cantidad ' ||
+                          'FROM public."caracteristica" c ' ||
+                          'JOIN public."mod_carac" mc ON mc.fk_carac = c.carac_cod ' ||
+                          'JOIN public."modelo" m ON m.mod_cod = mc.fk_modelo ' ||
+                          'WHERE m.mod_nombre = ' || quote_literal(model) || ') AS ' || quote_ident('M' || model) || ' ' ||
+                          'ON lower(c.carac_nombre) = lower(' || quote_ident('M' || model) || '.carac_nombre)';
+    END LOOP;
+
+    query := query || ' ORDER BY c.carac_nombre';
+
+    RETURN QUERY EXECUTE query;
+END;
+$BODY$;
+
+ALTER FUNCTION public.caracteristicas_modelos(text[])
+    OWNER TO grupo_rsm;
+
+
 -- FUNCTION: public.compra_avion(integer)
 
 -- DROP FUNCTION IF EXISTS public.compra_avion(integer);
@@ -3097,6 +3146,30 @@ $BODY$;
 
 ALTER FUNCTION public.solicitar_material(integer, numeric, integer, integer)
     OWNER TO grupo_rsm;
+
+-- FUNCTION: public.testeo()
+
+-- DROP FUNCTION IF EXISTS public.testeo();
+
+CREATE OR REPLACE FUNCTION public.testeo(
+	)
+    RETURNS text[]
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
+DECLARE
+    modelos TEXT[];
+BEGIN
+    SELECT array_agg(replace(M.mod_nombre, '"', '''')) INTO modelos
+    FROM modelo M;
+    RETURN modelos;
+END;
+$BODY$;
+
+ALTER FUNCTION public.testeo()
+    OWNER TO grupo_rsm;
+
 
 -- FUNCTION: public.ubicacion_estatus_piezas()
 
