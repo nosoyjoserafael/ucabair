@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const storedToken = localStorage.getItem('token');
+    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/perfil';
+
+    const storedTokenRole = localStorage.getItem('token');
+    const storedTokenId = localStorage.getItem('id');
 
     const userDataSection = document.getElementById('user-profile');
 
     const userName = document.getElementById('user-name');
     const userCI = document.getElementById('user-ci');
     const userStartDate = document.getElementById('user-start-date');
-    const userResidence = document.getElementById('user-residence');
-    const userAddress = document.getElementById('user-address');
-
+    let userResidence;
+    let userAddress;
+    if(storedTokenRole !== 'proveedor'){
+        userResidence = document.getElementById('user-residence');
+        userAddress = document.getElementById('user-address');
+    }
     const additionalsNames = ["Correo Electrónico","Teléfono"];
     const additionals = ["email","phone"];
     for (let i = 0; i < additionals.length; i++) {
@@ -23,6 +29,54 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(label);
         container.appendChild(userAdditional);
         userDataSection.appendChild(container);
+    }   
+
+    const estados = [
+        "Amazonas",
+        "Anzoátegui",
+        "Apure",
+        "Aragua",
+        "Barinas",
+        "Bolívar",
+        "Carabobo",
+        "Cojedes",
+        "Delta Amacuro",
+        "Falcón",
+        "Guárico",
+        "Lara",
+        "Mérida",
+        "Miranda",
+        "Monagas",
+        "Nueva Esparta",
+        "Portuguesa",
+        "Sucre",
+        "Táchira",
+        "Trujillo",
+        "Vargas",
+        "Yaracuy",
+        "Zulia",
+        "Distrito Capital",
+        "Dependencias Federales"
+    ]
+
+    getUsuario();
+    
+    function getUsuario(){
+        fetch(`${entityEndpoint}/${storedTokenRole}/${storedTokenId}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            userName.textContent = `${data[0].nombre}`;
+            userCI.textContent = data[0].cedula;
+            userStartDate.textContent = data[0].cons_fecha_ini;
+            if(localStorage.getItem('token') !== 'proveedor'){
+                userResidence.textContent = estados[data[0].lugar_de_residencia-1] !== null ? estados[data[0].lugar_de_residencia-1] : 'No especificado';
+                userAddress.textContent = data[0].direccion !== null ? data[0].direccion : 'No especificado';
+            }
+            const userAdditional1 = document.querySelector(`span[name="user-${additionals[0]}"]`);
+            userAdditional1.textContent = data.cor_alias+data.cor_dominio !== null ? data[additionals[0]] : 'No especificado';
+        })
+        .catch(error => console.error(error));        
     }
 
 
