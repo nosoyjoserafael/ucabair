@@ -21,7 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayEntities() {       
         entityTableBody.innerHTML = '';
         const data = [
+            { 'Ubicacion y estatus de Piezas': 5},
+            { 'Mejores 10 clientes': 6},
             {"Equipo más eficiente": 7},
+            { 'Ala más usada': 8},
+            { 'Modelos de avion con sus caracteristicas': 9},
+            { 'Productos que no cumplieron con las pruebas de calidad': 10},
+            { 'Inventario detallado por mes': 11},
+            { 'Aviones más rentables': 12},
+            { 'Promedio de produccion mensual por sede': 13},
             { 'Materiales ofrecidos por los proveedores': 15},
             { 'Ingresos al inventario por solicitudes a proveedores': 16},
             { 'Pagos realizados a proveedores': 17},
