@@ -242,14 +242,14 @@ const get9 = async (req, res, next) => {
 
 const get10 = async (req, res, next) => {
   try {
-    const resultFila = await pool.query('SELECT * FROM mejores_10_clientes()');
+    const resultFila = await pool.query('SELECT * FROM get_rechazados()');
     const data = {
       logoUrl : logo,
       formatDate: new Date().toLocaleDateString(),
       fila: resultFila.rows
     };
 
-    const pdfBuffer = await generatePdf(data, 'reporte5');
+    const pdfBuffer = await generatePdf(data, 'getRechazados');
 
     res.contentType('application/pdf');
     res.send(pdfBuffer);
@@ -312,4 +312,4 @@ const get13 = async (req, res, next) => {
   }
 };
 
-module.exports = { get15, get16, get17, get18, get20, get21, get5, get6, get7, get8, get9, get11, get12, get13 };
+module.exports = { get15, get16, get17, get18, get20, get21, get5, get6, get7, get8, get9, get10, get11, get12, get13 };
