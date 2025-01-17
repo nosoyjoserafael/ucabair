@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //const token = localStorage.getItem('token');
+    
     const token = 'empleado'; //solo para pruebas
 
     localStorage.setItem('token', token); //solo para pruebas

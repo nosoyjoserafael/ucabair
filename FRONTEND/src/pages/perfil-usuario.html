@@ -6,7 +6,7 @@
     <title>Perfil del Usuario</title>
     <link rel="stylesheet" href="../css/perfil-usuario.css">
 </head>
-<body data-roles="*">
+<body data-roles="cliente, empleado, admin, proveedor">
     <iframe src="../components/navbar.html" frameborder="0" style="width: 100%; height: auto;"></iframe>
     <header>
         <h1>Perfil del Usuario</h1>
@@ -38,4 +38,5 @@
     </main>   
 </body>
 <script src="../utils/perfil-usuario.js"></script>
+<script src="../utils/verificarToken.js"></script>
 </html>
