@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             downloadButton.addEventListener('click', () => dowloadReport(dataKey,dataValue));
             entityTableBody.appendChild(row);
         });
+        $('#entity-table').DataTable();
     }
 
     async function dowloadReport(nombre,id){

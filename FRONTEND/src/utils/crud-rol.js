@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     editButton.addEventListener('click', () => modifyEntity(entity.user_nombre));
                     entityTableBody.appendChild(row);
             });
-        });
+            $('#entity-table').DataTable();
+        })
+        .catch(error => console.error(error));
     }        
 
     function addEntity() { 

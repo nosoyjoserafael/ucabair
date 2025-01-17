@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
                     entityTableBody.appendChild(row);
                 });
-            });
+                $('#entity-table').DataTable();
+            })
+            .catch(error => console.error('Error:', error));
         }
         else if(localStorage.getItem('token').includes('empleado')){
             fetch(`${entityEndpoint}/particular/${localStorage.getItem('id')}`)
@@ -85,7 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     entityTableBody.appendChild(row);
                 });
-            });
+                $('#entity-table').DataTable();
+            })
+            .catch(error => console.error('Error:', error));
         }
         
     }

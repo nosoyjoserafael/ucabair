@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 deleteButton.addEventListener('click', () => deleteEntity(entity.prove_cod));
                 entityTableBody.appendChild(row);
             });            
-        });
+            $('#entity-table').DataTable();
+        })
+        .catch(error => console.error('Error:', error));
     }
 
     function addEntity() { 

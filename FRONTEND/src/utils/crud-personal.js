@@ -83,7 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 calcularNomina(codigosEmpleados);       
             });
 
-        });
+            $('#entity-table').DataTable();
+
+        })
+        .catch(error => console.error('Error:', error));
     }
 
     function addEntity() { 
