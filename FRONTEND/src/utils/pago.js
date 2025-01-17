@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', async function() {
 
-    const entityEndpoint = "https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/pago";
+    const entityEndpoint = "https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/compra";
 
     //definir valores
-    const clienteId = localStorage.getItem('id');
+    const clienteId = localStorage.getItem('idCliente');
     const entityId = localStorage.getItem('avionId');
-    const price = Math.floor(Math.random() * (99999999 - 100000 + 1)) + 100000;
+    const price = localStorage.getItem('avionPrecio');
 
     const form = document.getElementById('form-pago'); 
     const montoTotalSpan = document.getElementById('monto-total');
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     const selectMetodoPago = document.getElementById('metodo-pago');
     const selectTasaDeCambio = document.getElementById('tasa-cambio');
 
-    //const tasasDeCambio = await getTasasDeCambio();
+    const tasasDeCambio = await getTasasDeCambio();
 
     selectMetodoPago.addEventListener('change', function() {
         const metodoPago = this.value;
         const metodoPagoDivs = document.querySelectorAll('.metodo-pago');                   
         for(let i = 0; i < metodoPagoDivs.length; i++) {
             if(i+1 == metodoPago) {
-                metodoPagoDivs[i].style.display = 'block';
+                metodoPagoDivs[i].style.display = 'block';                
 
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
@@ -40,25 +40,27 @@ document.addEventListener('DOMContentLoaded', async function() {
         const tasaDeCambio = this.value;
         let montoTotal = Number(price);
 
-        if(tasaDeCambio === 0){
-            montoTotal.textContent = montoTotal;
+        if(tasaDeCambio == 0){
+            montoTotalSpan.textContent = montoTotal;
             monedaSpan.textContent = "BS";            
         }
-        for(let i = 0; i < tasasDeCambio.length; i++) {
-            if(tasasDeCambio[i].tdc_cod == tasaDeCambio) {
-                montoTotal = montoTotal/tasasDeCambio[i].tdc_valor;
-                montoTotalSpan.textContent = montoTotal;
-                monedaSpan.textContent = tasasDeCambio[i].tdc_mon_origen;
-                break;
+        else{
+            for(let i = 0; i < tasasDeCambio.length; i++) {
+                if(tasasDeCambio[i].tdc_cod == tasaDeCambio) {
+                    montoTotal = montoTotal/tasasDeCambio[i].tdc_valor;
+                    montoTotalSpan.textContent = montoTotal;
+                    monedaSpan.textContent = tasasDeCambio[i].tdc_mon_origen;
+                    break;
+                }
             }
         }
-
     });
 
     async function getTasasDeCambio(){
-        const response = await fetch(`${entityEndpoint}/tasa-cambio`);
-        const data = await response.json();        
-        return Object(data).values;
+        const response = await fetch(`${entityEndpoint}`);
+        const data = await response.json();     
+
+        return data;
     }
 
     function efectuarCompra(metodoPago,metodoPagoCampos){
@@ -68,16 +70,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         inputs.forEach(input => {
             valoresCampos.push({ name: input.name, value: input.value });
         });
-        console.log(valoresCampos);
-        console.log(`
-            codigo de metodo de pago: ${metodoPago},\n
-            Campos: ${valoresCampos.values()},\n
-            Monto total: ${montoTotalSpan.textContent},\n
-            Codigo de tasa de cambio: ${selectMetodoPago.value},\n
-            Codigo del avion: aqui va lo que retorna comprar_avion(),\n
-            Codigo de cliente: 1,\n
-            `
-        );
 
         fetch(`${entityEndpoint}`, {
             method: 'POST',
@@ -85,17 +77,17 @@ document.addEventListener('DOMContentLoaded', async function() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "Codigo de metodo de pago": metodoPago,
-                "Campos": valoresCampos,
-                "Monto total": montoTotalSpan.textContent,
-                "Codigo de tasa de cambio": selectMetodoPago.value,
-                "Codigo del avion": entityId,
-                "Codigo de cliente": clienteId
+                cod: metodoPago,
+                valores: valoresCampos,
+                montoTotal: montoTotalSpan.textContent,
+                codTasaDeCambio: selectMetodoPago.value,
+                modelo: entityId,
+                codCliente: clienteId
             })
         })    
         .then(response => response.json())
         .then(data => {
-            alert('Compra realizada con exito');
+            alert(data.message);
             window.location.reload();
         })
         .catch((error) => {

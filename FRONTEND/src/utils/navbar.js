@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = 'admin'; //solo para pruebas
 
     localStorage.setItem('token', token); //solo para pruebas
-    localStorage.setItem('id', 93); //solo para pruebas
+    localStorage.setItem('idPersona', 93); //solo para pruebas
+    localStorage.setItem('idCliente', 1); //solo para pruebas
 
     const storedToken = localStorage.getItem('token'); //solo para pruebas
 
@@ -11,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlayMatrix = document.querySelector('.overlay-matrix');
     const profile = document.getElementById('perfil');
     const singoutBtn = document.getElementById("singout");
-    const compraElement = document.getElementById('comprar');    
+    const compraElement = document.getElementById('comprar');  
+    const homeElement = document.getElementById('home');  
 
     profile.addEventListener('click', () => {
         window.top.location.href = '../pages/perfil-usuario.html';
@@ -30,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     compraElement.addEventListener('click', () => {
         window.top.location.href = '../pages/crud-modelo.html';
+    });
+
+    homeElement.addEventListener('click', () => {
+        window.top.location.href = '../pages/home.html';
     });
 
     function addURLsEmployee() {        
