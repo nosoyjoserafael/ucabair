@@ -2721,7 +2721,7 @@ BEGIN
         JOIN tipo_material tmat ON mat."fk_TMaterial" = tmat.tipo_mat_cod
         JOIN sede s ON mat.fk_sede = s.sed_cod
     WHERE
-        mat.mat_fecha_in IS NOT NULL
+        mat.mat_fecha_in IS NOT NULL AND mat.mat_fecha_out IS NULL
     GROUP BY
         s.sed_nombre, mat.mat_fecha_in, tmat.tipo_mat_nombre, mat.mat_cantidad
     ORDER BY
