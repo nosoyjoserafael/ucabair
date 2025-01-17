@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         })    
         .then(response => response.json())
         .then(data => {
-            alert(data.message);
+            alert('Pago efectuado exitosamente');
             window.location.reload();
         })
         .catch((error) => {
