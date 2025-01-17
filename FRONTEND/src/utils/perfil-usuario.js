@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         label.textContent = `${additionalsNames[i]}:`;
         label.htmlFor = `user-${additionals[i]}`;
         const userAdditional = document.createElement(`span`);
-        userAdditional.name = `user-${additionals[i]}`;
+        userAdditional.id = `user-${additionals[i]}`;
         container.appendChild(label);
         container.appendChild(userAdditional);
         userDataSection.appendChild(container);
@@ -73,8 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 userResidence.textContent = estados[data[0].lugar_de_residencia-1] !== null ? estados[data[0].lugar_de_residencia-1] : 'No especificado';
                 userAddress.textContent = data[0].direccion !== null ? data[0].direccion : 'No especificado';
             }
-            const userAdditional1 = document.querySelector(`span[name="user-${additionals[0]}"]`);
-            userAdditional1.textContent = data.cor_alias+data.cor_dominio !== null ? data[additionals[0]] : 'No especificado';
+            const userAdditional1 = document.getElementById('user-email');
+            if(data.cor_alias === null && data.cor_dominio === null)
+                userAdditional1.textContent = 'No especificado';
+            else
+                userAdditional1.textContent = data.cor_alias+'@'+data.cor_dominio;
+            const userAdditional2 = document.getElementById('user-phone');
+            if(data.tlf_cod_area === null && data.tlf_numero === null)
+                userAdditional2.textContent = 'No especificado';
+            else
+                userAdditional2.textContent = '+'+data.cor_alias+' '+data.cor_dominio;
         })
         .catch(error => console.error(error));        
     }
