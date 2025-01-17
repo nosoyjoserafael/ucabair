@@ -1774,11 +1774,11 @@ $BODY$;
 ALTER FUNCTION public.caracteristicas_modelos()
     OWNER TO grupo_rsm;
 
--- FUNCTION: public.caracteristicas_modelos(text[])
+-- FUNCTION: public.caracteristicas_modelos_reporte(text[])
 
--- DROP FUNCTION IF EXISTS public.caracteristicas_modelos(text[]);
+-- DROP FUNCTION IF EXISTS public.caracteristicas_modelos_reporte(text[]);
 
-CREATE OR REPLACE FUNCTION public.caracteristicas_modelos(
+CREATE OR REPLACE FUNCTION public.caracteristicas_modelos_reporte(
 	models text[])
     RETURNS TABLE(resultado jsonb) 
     LANGUAGE 'plpgsql'
@@ -1819,7 +1819,7 @@ BEGIN
 END;
 $BODY$;
 
-ALTER FUNCTION public.caracteristicas_modelos(text[])
+ALTER FUNCTION public.caracteristicas_modelos_reporte(text[])
     OWNER TO grupo_rsm;
 
 

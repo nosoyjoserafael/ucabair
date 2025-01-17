@@ -2054,20 +2054,20 @@ insert into public.area ("ar_nombre", fk_zona) values ( '19', 10);
 insert into public.area ("ar_nombre", fk_zona) values ( '20', 10);
 
 --Modelo
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-80', 'Fue diseñado para rutas transcontinentales y normalmente necesitaba una parada para repostar cuando se utilizaba para la ruta del Atlántico Norte.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-801', 'Es una aeronave trimotor comercial de tamaño medio');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802A', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802B', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802C', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802D', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802E', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-802F', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-747Plus', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-747Platinum', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-747Gold', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-747Silver', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.');
-insert into modelo (mod_nombre, mod_descripcion) values ('AU-747SilverB', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.');
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-80', 'Fue diseñado para rutas transcontinentales y normalmente necesitaba una parada para repostar cuando se utilizaba para la ruta del Atlántico Norte.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-801', 'Es una aeronave trimotor comercial de tamaño medio', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802A', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802B', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802C', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802D', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802E', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-802F', 'Es un avión de reacción de pasajeros de fuselaje estrecho de corto a medio alcance y se desarrolló como una versión derivada de los AU-80 y AU-801, de menor coste, menor tamaño y bimotor.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-747Plus', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-747Platinum', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-747Gold', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-747Silver', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.', 932149);
+insert into modelo (mod_nombre, mod_descripcion, mod_costo) values ('AU-747SilverB', 'Es un avión comercial transcontinental de fuselaje ancho conocido por su impresionante tamaño, está entre los aviones más reconocibles del mundo.', 932149);
 
 --Natural
 insert into "Natural" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Nat_apellido", "Per_Nat_estado_civil") values ('Sofía', '2022-05-23', 30744123, 1, 'Calle Miranda', 'Rodríguez', 'Casado');
@@ -2796,8 +2796,8 @@ insert into public.correo (cor_alias, cor_dominio, fk_persona, fk_proveedor) val
 insert into public.correo (cor_alias, cor_dominio, fk_persona, fk_proveedor) values ('elena', 'yahoo.com', null, 46);
 
 --est_avion
-insert into public.est_avion (fk_estatus, fk_avion) values (8,1);
-insert into public.est_avion (fk_estatus, fk_avion) values (8,2);
+insert into public.est_avion (fk_estatus, fk_avion) values (1,1);
+insert into public.est_avion (fk_estatus, fk_avion) values (1,2);
 insert into public.est_avion (fk_estatus, fk_avion) values (8,3);
 insert into public.est_avion (fk_estatus, fk_avion) values (6,4);
 
@@ -3854,6 +3854,25 @@ insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tp
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-23', 39, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-24', 40, 20, null);
 insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-25', 41, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-01', 1, 25, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-07-01', 2, 30, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-08-01', 3, 35, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-09-01', 4, 40, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-10-01', 5, 45, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-11-01', 6, 50, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-12-01', 7, 20, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-01-01', 8, 15, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-02-01', 9, 10, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-03-01', 10, 5, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-04-01', 11, 1, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-05-01', 12, 2, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-06-01', 13, 3, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-07-01', 14, 4, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-08-01', 15, 6, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-09-01', 16, 7, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-10-01', 17, 8, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-11-01', 18, 9, null);
+insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tpieza", "pie_cantidad", "pie_fecha_out") values (nextval('pie_cod_seq'), null, '2024-12-01', 19, 11, null);
 
 
 --pieza_sede
@@ -3909,6 +3928,27 @@ insert into public."pieza" ("pie_cod", "pie_descripcion", "pie_fecha_in", "fk_tp
     insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 39, 1);
     insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 40, 1);
     insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 41, 1);
+
+    --genericos
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 42, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 43, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 44, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 45, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 46, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 47, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 48, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 49, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 50, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 51, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 52, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 53, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 54, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 55, 4);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 56, 5);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 57, 1);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 58, 2);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 59, 3);
+    insert into pieza_sede (pie_sede_fecha_ini, pie_sede_fecha_fin, fk_pieza, fk_sede) values ('2025-01-01', '2025-01-06', 60, 4);
 
 --pro_mat
 insert into pro_mat (promat_cantidad, promat_costo, fk_proveedor, fk_tmat) values (290, 86, 31, 6);
@@ -4315,8 +4355,8 @@ insert into public."Av_Pi" ("fk_Avion", "fk_Pieza") values (4, 31);
 insert into public."Av_Pi" ("fk_Avion", "fk_Pieza") values (4, 32);
 
 --construccion
-insert into public.construccion ("cons_fecha_ini","fk_avion") values ('08-06-2024',1);
-insert into public.construccion ("cons_fecha_ini","fk_avion") values ('05-07-2024',2);
+insert into public.construccion ("cons_fecha_ini", "cons_fecha_fin","fk_avion") values ('08-06-2024', '08-07-2024',1);
+insert into public.construccion ("cons_fecha_ini", "cons_fecha_fin","fk_avion") values ('05-07-2024', '08-07-2024',2);
 insert into public.construccion ("cons_fecha_ini","fk_avion") values ('03-03-2024',3);
 insert into public.construccion ("cons_fecha_ini","fk_avion") values ('09-04-2024',4);
 
@@ -4333,16 +4373,17 @@ insert into public."Equipo" (fk_construccion) values (1);
 insert into public."Equipo" (fk_construccion) values (2);
 
 --insertar despues de equipo y construccion
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01',  'Montaje de alas', 1);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Instalación de motores', 2);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Montaje de fuselaje', 3);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Instalación de sistemas eléctricos', 4);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Pintura y acabado', 5);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Pruebas de vuelo', 6);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Montaje de tren de aterrizaje', 7);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Instalación de sistemas hidráulicos', 8);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Montaje de cabina', 9);
-INSERT INTO trabajo_equipo (te_tiempo_estim, te_nombre_trabajo, fk_equipo) VALUES ('2020-01-01',  'Control de calidad', 10);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-01-12', 'Montaje de alas', 1);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-01-12', 'Montaje de alas', 1);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2026-01-12', 'Instalación de motores', 2);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Montaje de fuselaje', 3);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Instalación de sistemas eléctricos', 4);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Pintura y acabado', 5);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Pruebas de vuelo', 6);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Montaje de tren de aterrizaje', 7);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Instalación de sistemas hidráulicos', 8);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Montaje de cabina', 9);
+INSERT INTO trabajo_equipo (te_tiempo_estim, te_tiempo_real, te_nombre_trabajo, fk_equipo) VALUES ('2026-01-01', '2025-02-01', 'Control de calidad', 10);
 
 --detalle_compra
 insert into public.detalle_compra (detcomp_cantidad, fk_compra, fk_material) values (300, 1, 1);
@@ -4439,6 +4480,52 @@ insert into public.est_pie (fk_estatus, fk_pie) values (6,11);
 insert into public.est_pie (fk_estatus, fk_pie) values (6,12);
 insert into public.est_pie (fk_estatus, fk_pie) values (6,13);
 insert into public.est_pie (fk_estatus, fk_pie) values (6,14);
+insert into public.est_pie (fk_estatus, fk_pie) values (7,15);
+insert into public.est_pie (fk_estatus, fk_pie) values (7,16);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 17);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 18);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 19);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 20);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 21);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 22);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 23);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 24);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 25);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 26);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 27);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 28);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 29);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 30);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 31);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 32);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 33);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 34);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 35);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 36);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 37);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 38);
+insert into public.est_pie (fk_estatus, fk_pie) values (8, 39);
+insert into public.est_pie (fk_estatus, fk_pie) values (9, 40);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 41);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 42);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 43);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 44);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 45);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 46);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 47);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 48);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 49);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 50);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 51);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 52);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 53);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 54);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 55);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 56);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 57);
+insert into public.est_pie (fk_estatus, fk_pie) values (7, 58);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 59);
+insert into public.est_pie (fk_estatus, fk_pie) values (1, 60);
 
 --est_pru
 insert into public.est_pru (fk_est, fk_pru) values (3,1);
