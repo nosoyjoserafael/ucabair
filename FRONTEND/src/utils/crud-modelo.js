@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
     
     const entityName = 'modelos'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/modelo'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'http://localhost:3000/modelo'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     async function dowloadReports(){
-        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/reporte/18')
+        fetch('http://localhost:3000/reporte/18')
         .then(response => response.blob())
         .then(blob => {
             const url = URL.createObjectURL(blob);

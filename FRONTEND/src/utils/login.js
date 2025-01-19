@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        const url = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/usuario';
+        const url = 'http://localhost:3000/usuario';
 
         const data = {
             username: username,

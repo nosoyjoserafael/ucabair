@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const entityName = 'proveedor'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/proveedor'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'http://localhost:3000/proveedor'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         overlayForm.insertBefore(inp1, submitButton);
 
-        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/tipomaterial')
+        fetch('http://localhost:3000/tipomaterial')
             .then(response => response.json())
             .then(materiales => {
                 materiales.forEach(material => {

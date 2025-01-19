@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const entityName = 'tipo de prueba'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/tipoprueba'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'http://localhost:3000/tipoprueba'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;

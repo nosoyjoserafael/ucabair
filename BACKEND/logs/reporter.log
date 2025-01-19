@@ -14876,3 +14876,61 @@ Error: Unable to find specified template (ubicacionEstatusPiezas)
 2025-01-17T07:00:20.476Z - info: 2 worker threads initialized in 737ms
 2025-01-17T07:00:20.477Z - info: Starting temp files cleanup with 180000ms threshold
 2025-01-17T07:00:20.477Z - info: reporter initialized
+2025-01-19T16:07:33.219Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 20.12.2)
+2025-01-19T16:07:33.226Z - info: Searching for available extensions in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T16:07:33.232Z - info: Extensions location cache C:\Users\jrmat\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2025-01-19T16:07:35.706Z - info: Found 35 extension(s)
+2025-01-19T16:07:35.815Z - info: Using extension base@4.0.0
+2025-01-19T16:07:35.821Z - info: Using extension child-templates@4.1.0
+2025-01-19T16:07:35.825Z - info: Using extension cli@4.0.5
+2025-01-19T16:07:35.830Z - info: Using extension components@4.0.2
+2025-01-19T16:07:35.833Z - info: Using extension data@4.1.0
+2025-01-19T16:07:35.836Z - info: Using extension express@4.1.3
+2025-01-19T16:07:36.278Z - info: Using extension freeze@4.0.0
+2025-01-19T16:07:36.281Z - info: Using extension fs-store@4.0.5
+2025-01-19T16:07:36.513Z - info: Using extension handlebars@4.0.1
+2025-01-19T16:07:36.515Z - info: Using extension import-export@4.0.5
+2025-01-19T16:07:36.534Z - info: Using extension jsrender@4.0.0
+2025-01-19T16:07:36.536Z - info: Using extension licensing@4.0.3
+2025-01-19T16:07:36.582Z - info: Using extension localization@4.0.1
+2025-01-19T16:07:36.584Z - info: Using extension npm@4.0.0
+2025-01-19T16:07:36.588Z - info: Using extension pdf-utils@4.2.2
+2025-01-19T16:07:36.591Z - info: Using extension reports@4.1.2
+2025-01-19T16:07:36.598Z - info: Using extension tags@4.0.1
+2025-01-19T16:07:36.601Z - info: Using extension text@4.0.2
+2025-01-19T16:07:36.602Z - info: Using extension version-control@4.0.0
+2025-01-19T16:07:36.626Z - info: Using extension assets@4.2.0
+2025-01-19T16:07:36.644Z - info: Using extension authorization@4.0.1
+2025-01-19T16:07:36.654Z - info: Using extension browser-client@4.1.0
+2025-01-19T16:07:36.659Z - info: Using extension chrome-pdf@4.1.0
+2025-01-19T16:07:36.666Z - info: Using extension docx@4.6.0
+2025-01-19T16:07:36.671Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-19T16:07:37.081Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-19T16:07:37.082Z - info: Using extension pptx@4.3.2
+2025-01-19T16:07:37.085Z - info: Using extension scheduling@4.0.0
+2025-01-19T16:07:37.137Z - info: Using extension scripts@4.1.0
+2025-01-19T16:07:37.139Z - info: Using extension static-pdf@4.1.0
+2025-01-19T16:07:37.140Z - info: Using extension studio@4.2.0
+2025-01-19T16:07:37.284Z - info: Using extension xlsx@4.3.0
+2025-01-19T16:07:37.289Z - info: Using extension public-templates@4.0.0
+2025-01-19T16:07:37.292Z - info: Using extension sample-template@4.0.0
+2025-01-19T16:07:37.298Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-19T16:07:37.301Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-19T16:07:37.301Z - info: Using fs provider for template store.
+2025-01-19T16:07:37.308Z - info: fs store is persisting using fs for C:\Users\jrmat\Desktop\ucabair\BACKEND\data
+2025-01-19T16:07:37.318Z - info: fs store is loading data
+2025-01-19T16:07:37.350Z - info: fs store is initialized successfully
+2025-01-19T16:07:37.366Z - info: Creating default express app.
+2025-01-19T16:07:37.400Z - info: jsreport server successfully started on http port: 5488
+2025-01-19T16:07:37.405Z - info: Verifying license key free
+2025-01-19T16:07:38.232Z - info: Using enterprise trial license
+2025-01-19T16:07:38.241Z - info: Initializing worker threads
+2025-01-19T16:07:38.975Z - info: 2 worker threads initialized in 734ms
+2025-01-19T16:07:38.976Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-19T16:07:38.977Z - info: reporter initialized
+2025-01-19T16:08:37.362Z - warn: Cleaning fs journal failed, will reload Unexpected end of JSON input stack=SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at module.exports.parse (C:\Users\jrmat\Desktop\ucabair\BACKEND\node_modules\@jsreport\serializator\index.js:58:15)
+    at parse (C:\Users\jrmat\Desktop\ucabair\BACKEND\node_modules\@jsreport\jsreport-fs-store\lib\customUtils.js:63:10)
+    at Object.clean (C:\Users\jrmat\Desktop\ucabair\BACKEND\node_modules\@jsreport\jsreport-fs-store\lib\journal.js:199:24)
+    at async lock (C:\Users\jrmat\Desktop\ucabair\BACKEND\node_modules\@jsreport\jsreport-fs-store\lib\customUtils.js:153:12)

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
 
-        fetch('https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/adduser', {
+        fetch('http://localhost:3000/adduser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

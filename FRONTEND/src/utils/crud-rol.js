@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const entityName = 'roles'; // Reemplaza con el nombre de la entidad
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/rol'; // Reemplazar con la URL del endpoint de la entidad
+    const entityEndpoint = 'http://localhost:3000/rol'; // Reemplazar con la URL del endpoint de la entidad
 
     document.getElementById('entity-name').textContent = entityName;
     document.getElementById('entity-name-list').textContent = entityName;
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayForm.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            fetch(`https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/usuario`, {
+            fetch(`http://localhost:3000/usuario`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const entityEndpoint = 'https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/perfil';
+    const entityEndpoint = 'http://localhost:3000/perfil';
 
     const storedTokenRole = localStorage.getItem('token');
     const storedTokenId = localStorage.getItem('id');

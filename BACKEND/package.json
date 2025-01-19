@@ -6,8 +6,9 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "call-bind": "^1.0.8",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "jsreport": "^4.7.0",
     "pg": "^8.6.0"

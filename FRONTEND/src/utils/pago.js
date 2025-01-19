@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function() {
 
-    const entityEndpoint = "https://curly-couscous-9rv5rqjwpx62gxg-3000.app.github.dev/compra";
+    const entityEndpoint = "http://localhost:3000/compra";
 
     //definir valores
     const clienteId = localStorage.getItem('idCliente');
