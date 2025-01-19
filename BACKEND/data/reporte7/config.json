@@ -1,0 +1,18 @@
+{
+    "name": "reporte7",
+    "recipe": "chrome-pdf",
+    "shortid": "QathTUTev",
+    "engine": "handlebars",
+    "data": null,
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1736957595251
+    },
+    "modificationDate": {
+        "$$date": 1736957639453
+    },
+    "_id": "in4Yg5qBhmpKat2C",
+    "$entitySet": "templates"
+}
