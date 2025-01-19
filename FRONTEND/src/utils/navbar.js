@@ -1,13 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //const token = localStorage.getItem('token');
+    
     const token = 'empleado'; //solo para pruebas
 
     localStorage.setItem('token', token); //solo para pruebas
+    localStorage.setItem('id', 120); //solo para pruebas
+    localStorage.setItem('idPersona', 93); //solo para pruebas
+    localStorage.setItem('idCliente', 1); //solo para pruebas
 
     const storedToken = localStorage.getItem('token'); //solo para pruebas
 
     const overlay = document.getElementById('generic-overlay');
     const overlayMatrix = document.querySelector('.overlay-matrix');
+    const profile = document.getElementById('perfil');
+    const singoutBtn = document.getElementById("singout");
+    const compraElement = document.getElementById('comprar');  
+    const homeElement = document.getElementById('home');  
+
+    profile.addEventListener('click', () => {
+        window.top.location.href = '../pages/perfil-usuario.html';
+    });
 
     overlay.addEventListener('click', function(event) {
         if (event.target === overlay) {
@@ -16,14 +27,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    singoutBtn.addEventListener('click', () => {
+        singout();
+    });
+
+    compraElement.addEventListener('click', () => {
+        window.top.location.href = '../pages/crud-modelo.html';
+    });
+
+    homeElement.addEventListener('click', () => {
+        window.top.location.href = '../pages/home.html';
+    });
+
     function addURLsEmployee() {        
         //Aqui se agregan los urls al 
         // overLay segun sea necesario        
         overlayMatrix.innerHTML = '';
         const cruds = {
             Proveedores: '../pages/crud-proveedor.html', 
-            Empleados: '../pages/crud-empleado.html', 
-            Modelo: '../pages/crud-modelo.html'
+            Empleados: '../pages/crud-personal.html', 
+            Modelo: '../pages/crud-modelo.html',
+            Materiales: '../pages/crud-material.html',
+            Roles: '../pages/crud-rol.html',
+            Pruebas: '../pages/crud-tipo-prueba.html',
+            Asistencia: '../pages/crud-asistencia.html',
+            Equipos: '../pages/crud-equipo.html',
+            Reportes: '../pages/reportes.html'                        
         };
         
         const urlsKeys = Object.keys(cruds);
@@ -64,11 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function singout(){
+        localStorage.clear();
+        alert('Sesión cerrada');
+        window.top.location.href = '../pages/login.html';
+    }
+
     // Decodificar el token para obtener la información del usuario (aun no está integrado)
     //const payload = JSON.parse(atob(storedToken.split('.')[1]));
 
     // Verificar si el usuario tiene el rol necesario
-    if(storedToken.includes("empleado")){
+    if(storedToken.includes("empleado") || storedToken.includes("admin")) {
         document.getElementById('gestion-a').addEventListener('click', () => {
             overlay.classList.add('visible');
             adjustIframeSize(true);
@@ -76,6 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });        
     }
     else{
-        document.getElementById('overlay').remove();
+        document.getElementById('gestion-a').remove();
     }
 });

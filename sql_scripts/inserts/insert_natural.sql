@@ -1,3 +1,4 @@
+--Se inserta de primero (respecto a los subtipos de persona)
 insert into "Natural" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Nat_apellido", "Per_Nat_estado_civil") values ('Sofía', '2022-05-23', 30744123, 1, 'Calle Miranda', 'Rodríguez', 'Casado');
 insert into "Natural" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Nat_apellido", "Per_Nat_estado_civil") values ('Juan', '2020-04-13', 30983847, 1, 'Calle Miranda', 'Rodriguez', 'Viudo');
 insert into "Natural" ("Per_nombre", "Per_fecha_ini", "Per_ci", fk_lugar, "Per_dir", "Per_Nat_apellido", "Per_Nat_estado_civil") values ('Juan', '2023-12-21', 23724723, 2, 'Avenida Bolivar', 'Martinez', 'Soltero');

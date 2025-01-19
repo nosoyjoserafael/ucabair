@@ -1,0 +1,54 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4c74ca;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: -50px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+}
+
+section#user-profile {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#user-profile h2 {
+    margin-top: 0;
+}
+
+.user-info {
+    margin-bottom: 15px;
+}
+
+.user-info label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-info span {
+    display: block;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}

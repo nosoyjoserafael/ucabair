@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/carousel.css">
 
@@ -12,32 +11,36 @@
 <body data-roles="*">
   <iframe src="../components/navbar.html" frameborder="0" style="width: 100%; height: auto;"></iframe> 
 
-    <h1>¿Listo para volar?</h1>
+    <div class="container">
+        <h1>¿Listo para volar?</h1>
 
-    <h2>Los mejores aviones del mercado a un click de distancia</h2>
-    <div class="carousel">
-        <button id="prevSlide" onclick="moveSlide(-1)">&#10094;</button>
-        <div class="img-carousel">
-            <a href="#">
-                <img src="../img/service-4.jpg" alt="avion1">
-            </a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quibusdam.</p>
+        <h2>Surca los cielos con nosotros</h2>
+        <div class="carousel">
+            <button id="prevSlide" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-container">
+                <div class="img-carousel">
+                    <a href="#">
+                        <img src="../../public/assets/imgs/service-4.jpg" alt="avion1">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quibusdam.</p>
+                </div>
+                <div class="img-carousel">
+                    <a href="#">
+                        <img src="../../public/assets/imgs/service-2.jpg" alt="avion2">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quibusdam.</p>
+                </div>
+                <div class="img-carousel">
+                    <a href="#">
+                        <img src="../../public/assets/imgs/service-5.jpg" alt="avion3">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quibusdam.</p>
+                </div>
+            </div>
+            <button id="nextSlide" onclick="moveSlide(1)">&#10095;</button>
         </div>
-        <div class="img-carousel">
-            <a href="#">
-                <img src="../img/service-2.jpg" alt="avion2">
-            </a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quibusdam.</p>
-        </div>
-        <div class="img-carousel">
-            <a href="#">
-                <img src="../img/service-5.jpg" alt="avion3">
-            </a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quibusdam.</p>
-        </div>
-        <button id="nextSlide" onclick="moveSlide(1)">&#10095;</button>
     </div>
-
-    <script src="../js/carousel.js"></script>
+    <script src="../utils/verificarToken.js"></script>
+    <script src="../utils/carousel.js"></script>
 </body>
 </html>
