@@ -1,0 +1,37 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e29eff;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: -50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(239, 239, 239);
+}
