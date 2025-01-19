@@ -1,0 +1,18 @@
+{
+    "name": "alaMasUsada",
+    "recipe": "chrome-pdf",
+    "shortid": "TVjlDHZyE",
+    "engine": "handlebars",
+    "data": null,
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1737074307062
+    },
+    "modificationDate": {
+        "$$date": 1737074392271
+    },
+    "_id": "OweBPuECuSIXbyGu",
+    "$entitySet": "templates"
+}
