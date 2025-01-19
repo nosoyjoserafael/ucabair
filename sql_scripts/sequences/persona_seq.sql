@@ -1,0 +1,2 @@
+CREATE SEQUENCE persona_seq START WITH 1 INCREMENT BY 1;
+ALTER TABLE "Persona" ALTER COLUMN "Per_cod" SET DEFAULT nextval('persona_seq');
