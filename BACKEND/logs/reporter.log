@@ -15142,3 +15142,259 @@ Error: Unable to find specified template (ubicacionEstatusPiezas)
 2025-01-19T16:41:09.561Z - info: 2 worker threads initialized in 521ms
 2025-01-19T16:41:09.561Z - info: Starting temp files cleanup with 180000ms threshold
 2025-01-19T16:41:09.562Z - info: reporter initialized
+2025-01-19T16:42:34.131Z - info: Render request 1 queued for execution and waiting for available worker rootId=kcth00x7abcvi5s, id=kcth00x7abcvi5s
+2025-01-19T16:42:34.167Z - info: Starting rendering request 1 rootId=kcth00x7abcvi5s, id=kcth00x7abcvi5s
+2025-01-19T16:42:34.168Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=kcth00x7abcvi5s, id=kcth00x7abcvi5s
+2025-01-19T16:42:37.739Z - info: Rendering request 1 finished in 3613 ms rootId=kcth00x7abcvi5s, id=kcth00x7abcvi5s
+2025-01-19T16:45:44.536Z - info: Render request 2 queued for execution and waiting for available worker rootId=h3rt3lqo48mopt1, id=h3rt3lqo48mopt1
+2025-01-19T16:45:44.543Z - info: Starting rendering request 2 rootId=h3rt3lqo48mopt1, id=h3rt3lqo48mopt1
+2025-01-19T16:45:44.545Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=h3rt3lqo48mopt1, id=h3rt3lqo48mopt1
+2025-01-19T16:45:46.913Z - info: Rendering request 2 finished in 2379 ms rootId=h3rt3lqo48mopt1, id=h3rt3lqo48mopt1
+2025-01-19T16:47:14.054Z - info: Render request 3 queued for execution and waiting for available worker rootId=5dvc4w7tgm25c1c, id=5dvc4w7tgm25c1c
+2025-01-19T16:47:14.065Z - info: Starting rendering request 3 rootId=5dvc4w7tgm25c1c, id=5dvc4w7tgm25c1c
+2025-01-19T16:47:14.065Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=5dvc4w7tgm25c1c, id=5dvc4w7tgm25c1c
+2025-01-19T16:47:15.297Z - info: Rendering request 3 finished in 1247 ms rootId=5dvc4w7tgm25c1c, id=5dvc4w7tgm25c1c
+2025-01-19T16:47:19.968Z - info: Render request 4 queued for execution and waiting for available worker rootId=om0wy6nzo8xbnt2, id=om0wy6nzo8xbnt2
+2025-01-19T16:47:19.974Z - info: Starting rendering request 4 rootId=om0wy6nzo8xbnt2, id=om0wy6nzo8xbnt2
+2025-01-19T16:47:19.974Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=om0wy6nzo8xbnt2, id=om0wy6nzo8xbnt2
+2025-01-19T16:47:21.585Z - info: Rendering request 4 finished in 1620 ms rootId=om0wy6nzo8xbnt2, id=om0wy6nzo8xbnt2
+2025-01-19T16:47:22.227Z - info: Render request 5 queued for execution and waiting for available worker rootId=du5n2tni1jhmks2, id=du5n2tni1jhmks2
+2025-01-19T16:47:22.238Z - info: Starting rendering request 5 rootId=du5n2tni1jhmks2, id=du5n2tni1jhmks2
+2025-01-19T16:47:22.238Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=du5n2tni1jhmks2, id=du5n2tni1jhmks2
+2025-01-19T16:47:23.672Z - info: Rendering request 5 finished in 1448 ms rootId=du5n2tni1jhmks2, id=du5n2tni1jhmks2
+2025-01-19T16:49:32.024Z - info: Render request 6 queued for execution and waiting for available worker rootId=pwaqoz20af7l7uj, id=pwaqoz20af7l7uj
+2025-01-19T16:49:32.033Z - info: Starting rendering request 6 rootId=pwaqoz20af7l7uj, id=pwaqoz20af7l7uj
+2025-01-19T16:49:32.034Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=pwaqoz20af7l7uj, id=pwaqoz20af7l7uj
+2025-01-19T16:49:33.254Z - info: Rendering request 6 finished in 1245 ms rootId=pwaqoz20af7l7uj, id=pwaqoz20af7l7uj
+2025-01-19T16:50:19.412Z - info: Render request 7 queued for execution and waiting for available worker rootId=59p6etc01z8lce7, id=59p6etc01z8lce7
+2025-01-19T16:50:19.420Z - info: Starting rendering request 7 rootId=59p6etc01z8lce7, id=59p6etc01z8lce7
+2025-01-19T16:50:19.420Z - info: Rendering template { name: reporte16, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=59p6etc01z8lce7, id=59p6etc01z8lce7
+2025-01-19T16:50:21.155Z - info: Rendering request 7 finished in 1757 ms rootId=59p6etc01z8lce7, id=59p6etc01z8lce7
+2025-01-19T16:52:02.259Z - info: Render request 8 queued for execution and waiting for available worker rootId=1suto31izz1hwfm, id=1suto31izz1hwfm
+2025-01-19T16:52:02.270Z - info: Starting rendering request 8 rootId=1suto31izz1hwfm, id=1suto31izz1hwfm
+2025-01-19T16:52:02.270Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=1suto31izz1hwfm, id=1suto31izz1hwfm
+2025-01-19T16:52:03.394Z - info: Rendering request 8 finished in 1138 ms rootId=1suto31izz1hwfm, id=1suto31izz1hwfm
+2025-01-19T16:52:07.735Z - info: Render request 9 queued for execution and waiting for available worker rootId=60t6qustmksg55b, id=60t6qustmksg55b
+2025-01-19T16:52:07.755Z - info: Starting rendering request 9 rootId=60t6qustmksg55b, id=60t6qustmksg55b
+2025-01-19T16:52:07.755Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=60t6qustmksg55b, id=60t6qustmksg55b
+2025-01-19T16:52:09.224Z - info: Rendering request 9 finished in 1493 ms rootId=60t6qustmksg55b, id=60t6qustmksg55b
+2025-01-19T16:54:29.772Z - info: Render request 10 queued for execution and waiting for available worker rootId=qp6ngqtez6w2iy1, id=qp6ngqtez6w2iy1
+2025-01-19T16:54:29.791Z - info: Starting rendering request 10 rootId=qp6ngqtez6w2iy1, id=qp6ngqtez6w2iy1
+2025-01-19T16:54:29.792Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=qp6ngqtez6w2iy1, id=qp6ngqtez6w2iy1
+2025-01-19T16:54:31.121Z - info: Rendering request 10 finished in 1353 ms rootId=qp6ngqtez6w2iy1, id=qp6ngqtez6w2iy1
+2025-01-19T16:55:04.568Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 20.12.2)
+2025-01-19T16:55:04.571Z - info: Searching for available extensions in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T16:55:04.580Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T16:55:04.653Z - info: Found 35 extension(s)
+2025-01-19T16:55:04.756Z - info: Using extension base@4.0.0
+2025-01-19T16:55:04.761Z - info: Using extension child-templates@4.1.0
+2025-01-19T16:55:04.768Z - info: Using extension cli@4.0.5
+2025-01-19T16:55:04.774Z - info: Using extension components@4.0.2
+2025-01-19T16:55:04.777Z - info: Using extension data@4.1.0
+2025-01-19T16:55:04.779Z - info: Using extension express@4.1.3
+2025-01-19T16:55:05.132Z - info: Using extension freeze@4.0.0
+2025-01-19T16:55:05.134Z - info: Using extension fs-store@4.0.5
+2025-01-19T16:55:05.311Z - info: Using extension handlebars@4.0.1
+2025-01-19T16:55:05.313Z - info: Using extension import-export@4.0.5
+2025-01-19T16:55:05.325Z - info: Using extension jsrender@4.0.0
+2025-01-19T16:55:05.327Z - info: Using extension licensing@4.0.3
+2025-01-19T16:55:05.374Z - info: Using extension localization@4.0.1
+2025-01-19T16:55:05.377Z - info: Using extension npm@4.0.0
+2025-01-19T16:55:05.380Z - info: Using extension pdf-utils@4.2.2
+2025-01-19T16:55:05.383Z - info: Using extension reports@4.1.2
+2025-01-19T16:55:05.389Z - info: Using extension tags@4.0.1
+2025-01-19T16:55:05.392Z - info: Using extension text@4.0.2
+2025-01-19T16:55:05.394Z - info: Using extension version-control@4.0.0
+2025-01-19T16:55:05.414Z - info: Using extension assets@4.2.0
+2025-01-19T16:55:05.432Z - info: Using extension authorization@4.0.1
+2025-01-19T16:55:05.440Z - info: Using extension browser-client@4.1.0
+2025-01-19T16:55:05.445Z - info: Using extension chrome-pdf@4.1.0
+2025-01-19T16:55:05.452Z - info: Using extension docx@4.6.0
+2025-01-19T16:55:05.455Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-19T16:55:05.859Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-19T16:55:05.859Z - info: Using extension pptx@4.3.2
+2025-01-19T16:55:05.862Z - info: Using extension scheduling@4.0.0
+2025-01-19T16:55:05.911Z - info: Using extension scripts@4.1.0
+2025-01-19T16:55:05.913Z - info: Using extension static-pdf@4.1.0
+2025-01-19T16:55:05.913Z - info: Using extension studio@4.2.0
+2025-01-19T16:55:06.046Z - info: Using extension xlsx@4.3.0
+2025-01-19T16:55:06.049Z - info: Using extension public-templates@4.0.0
+2025-01-19T16:55:06.051Z - info: Using extension sample-template@4.0.0
+2025-01-19T16:55:06.054Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-19T16:55:06.055Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-19T16:55:06.055Z - info: Using fs provider for template store.
+2025-01-19T16:55:06.059Z - info: fs store is persisting using fs for C:\Users\jrmat\Desktop\ucabair\BACKEND\data
+2025-01-19T16:55:06.066Z - info: fs store is loading data
+2025-01-19T16:55:06.092Z - info: fs store is initialized successfully
+2025-01-19T16:55:06.110Z - info: Creating default express app.
+2025-01-19T16:55:06.139Z - info: jsreport server successfully started on http port: 5488
+2025-01-19T16:55:06.145Z - info: Verifying license key free
+2025-01-19T16:55:06.908Z - info: Using enterprise trial license
+2025-01-19T16:55:06.912Z - info: Initializing worker threads
+2025-01-19T16:55:07.603Z - info: 2 worker threads initialized in 691ms
+2025-01-19T16:55:07.603Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-19T16:55:07.604Z - info: reporter initialized
+2025-01-19T16:55:10.317Z - info: Render request 1 queued for execution and waiting for available worker rootId=pewa59hh348e8ty, id=pewa59hh348e8ty
+2025-01-19T16:55:10.339Z - info: Starting rendering request 1 rootId=pewa59hh348e8ty, id=pewa59hh348e8ty
+2025-01-19T16:55:10.341Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=pewa59hh348e8ty, id=pewa59hh348e8ty
+2025-01-19T16:55:12.550Z - info: Rendering request 1 finished in 2237 ms rootId=pewa59hh348e8ty, id=pewa59hh348e8ty
+2025-01-19T16:56:57.143Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 20.12.2)
+2025-01-19T16:56:57.146Z - info: Searching for available extensions in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T16:56:57.152Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T16:56:57.170Z - info: Found 35 extension(s)
+2025-01-19T16:56:57.233Z - info: Using extension base@4.0.0
+2025-01-19T16:56:57.237Z - info: Using extension child-templates@4.1.0
+2025-01-19T16:56:57.242Z - info: Using extension cli@4.0.5
+2025-01-19T16:56:57.246Z - info: Using extension components@4.0.2
+2025-01-19T16:56:57.248Z - info: Using extension data@4.1.0
+2025-01-19T16:56:57.249Z - info: Using extension express@4.1.3
+2025-01-19T16:56:57.500Z - info: Using extension freeze@4.0.0
+2025-01-19T16:56:57.501Z - info: Using extension fs-store@4.0.5
+2025-01-19T16:56:57.659Z - info: Using extension handlebars@4.0.1
+2025-01-19T16:56:57.661Z - info: Using extension import-export@4.0.5
+2025-01-19T16:56:57.668Z - info: Using extension jsrender@4.0.0
+2025-01-19T16:56:57.669Z - info: Using extension licensing@4.0.3
+2025-01-19T16:56:57.694Z - info: Using extension localization@4.0.1
+2025-01-19T16:56:57.696Z - info: Using extension npm@4.0.0
+2025-01-19T16:56:57.699Z - info: Using extension pdf-utils@4.2.2
+2025-01-19T16:56:57.701Z - info: Using extension reports@4.1.2
+2025-01-19T16:56:57.704Z - info: Using extension tags@4.0.1
+2025-01-19T16:56:57.707Z - info: Using extension text@4.0.2
+2025-01-19T16:56:57.708Z - info: Using extension version-control@4.0.0
+2025-01-19T16:56:57.718Z - info: Using extension assets@4.2.0
+2025-01-19T16:56:57.727Z - info: Using extension authorization@4.0.1
+2025-01-19T16:56:57.732Z - info: Using extension browser-client@4.1.0
+2025-01-19T16:56:57.736Z - info: Using extension chrome-pdf@4.1.0
+2025-01-19T16:56:57.741Z - info: Using extension docx@4.6.0
+2025-01-19T16:56:57.744Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-19T16:56:57.916Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-19T16:56:57.917Z - info: Using extension pptx@4.3.2
+2025-01-19T16:56:57.920Z - info: Using extension scheduling@4.0.0
+2025-01-19T16:56:57.951Z - info: Using extension scripts@4.1.0
+2025-01-19T16:56:57.953Z - info: Using extension static-pdf@4.1.0
+2025-01-19T16:56:57.954Z - info: Using extension studio@4.2.0
+2025-01-19T16:56:58.030Z - info: Using extension xlsx@4.3.0
+2025-01-19T16:56:58.033Z - info: Using extension public-templates@4.0.0
+2025-01-19T16:56:58.035Z - info: Using extension sample-template@4.0.0
+2025-01-19T16:56:58.037Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-19T16:56:58.038Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-19T16:56:58.039Z - info: Using fs provider for template store.
+2025-01-19T16:56:58.043Z - info: fs store is persisting using fs for C:\Users\jrmat\Desktop\ucabair\BACKEND\data
+2025-01-19T16:56:58.050Z - info: fs store is loading data
+2025-01-19T16:56:58.075Z - info: fs store is initialized successfully
+2025-01-19T16:56:58.085Z - info: Creating default express app.
+2025-01-19T16:56:58.114Z - info: jsreport server successfully started on http port: 5488
+2025-01-19T16:56:58.116Z - info: Verifying license key free
+2025-01-19T16:56:58.917Z - info: Using enterprise trial license
+2025-01-19T16:56:58.921Z - info: Initializing worker threads
+2025-01-19T16:56:59.429Z - info: 2 worker threads initialized in 508ms
+2025-01-19T16:56:59.430Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-19T16:56:59.430Z - info: reporter initialized
+2025-01-19T16:57:05.659Z - info: Render request 1 queued for execution and waiting for available worker rootId=8s0gwqd6ia7ek04, id=8s0gwqd6ia7ek04
+2025-01-19T16:57:05.674Z - info: Starting rendering request 1 rootId=8s0gwqd6ia7ek04, id=8s0gwqd6ia7ek04
+2025-01-19T16:57:05.675Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=8s0gwqd6ia7ek04, id=8s0gwqd6ia7ek04
+2025-01-19T16:57:07.246Z - info: Rendering request 1 finished in 1590 ms rootId=8s0gwqd6ia7ek04, id=8s0gwqd6ia7ek04
+2025-01-19T16:57:38.292Z - info: Render request 2 queued for execution and waiting for available worker rootId=9lgvtumiaxzq14j, id=9lgvtumiaxzq14j
+2025-01-19T16:57:38.300Z - info: Starting rendering request 2 rootId=9lgvtumiaxzq14j, id=9lgvtumiaxzq14j
+2025-01-19T16:57:38.301Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=9lgvtumiaxzq14j, id=9lgvtumiaxzq14j
+2025-01-19T16:57:40.127Z - info: Rendering request 2 finished in 1838 ms rootId=9lgvtumiaxzq14j, id=9lgvtumiaxzq14j
+2025-01-19T16:59:58.290Z - info: Render request 3 queued for execution and waiting for available worker rootId=c5v6ni9abm8pyy5, id=c5v6ni9abm8pyy5
+2025-01-19T16:59:58.304Z - info: Starting rendering request 3 rootId=c5v6ni9abm8pyy5, id=c5v6ni9abm8pyy5
+2025-01-19T16:59:58.305Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=c5v6ni9abm8pyy5, id=c5v6ni9abm8pyy5
+2025-01-19T16:59:59.789Z - info: Rendering request 3 finished in 1500 ms rootId=c5v6ni9abm8pyy5, id=c5v6ni9abm8pyy5
+2025-01-19T17:00:18.680Z - info: Render request 4 queued for execution and waiting for available worker rootId=tghwcnw7nmnpfx5, id=tghwcnw7nmnpfx5
+2025-01-19T17:00:18.689Z - info: Starting rendering request 4 rootId=tghwcnw7nmnpfx5, id=tghwcnw7nmnpfx5
+2025-01-19T17:00:18.689Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=tghwcnw7nmnpfx5, id=tghwcnw7nmnpfx5
+2025-01-19T17:00:20.499Z - info: Rendering request 4 finished in 1822 ms rootId=tghwcnw7nmnpfx5, id=tghwcnw7nmnpfx5
+2025-01-19T17:00:39.006Z - info: Render request 5 queued for execution and waiting for available worker rootId=vatymnrmh279v2t, id=vatymnrmh279v2t
+2025-01-19T17:00:39.011Z - info: Starting rendering request 5 rootId=vatymnrmh279v2t, id=vatymnrmh279v2t
+2025-01-19T17:00:39.011Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=vatymnrmh279v2t, id=vatymnrmh279v2t
+2025-01-19T17:00:40.429Z - info: Rendering request 5 finished in 1424 ms rootId=vatymnrmh279v2t, id=vatymnrmh279v2t
+2025-01-19T17:00:43.984Z - info: Render request 6 queued for execution and waiting for available worker rootId=cuir6chhtylntn1, id=cuir6chhtylntn1
+2025-01-19T17:00:43.991Z - info: Starting rendering request 6 rootId=cuir6chhtylntn1, id=cuir6chhtylntn1
+2025-01-19T17:00:43.991Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=cuir6chhtylntn1, id=cuir6chhtylntn1
+2025-01-19T17:00:45.259Z - info: Rendering request 6 finished in 1278 ms rootId=cuir6chhtylntn1, id=cuir6chhtylntn1
+2025-01-19T17:02:17.752Z - info: Render request 7 queued for execution and waiting for available worker rootId=qhc4du88q7yp5bx, id=qhc4du88q7yp5bx
+2025-01-19T17:02:17.758Z - info: Starting rendering request 7 rootId=qhc4du88q7yp5bx, id=qhc4du88q7yp5bx
+2025-01-19T17:02:17.759Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=qhc4du88q7yp5bx, id=qhc4du88q7yp5bx
+2025-01-19T17:02:19.374Z - info: Rendering request 7 finished in 1626 ms rootId=qhc4du88q7yp5bx, id=qhc4du88q7yp5bx
+2025-01-19T17:02:28.698Z - info: Render request 8 queued for execution and waiting for available worker rootId=15zjdsj8weszy9p, id=15zjdsj8weszy9p
+2025-01-19T17:02:28.706Z - info: Starting rendering request 8 rootId=15zjdsj8weszy9p, id=15zjdsj8weszy9p
+2025-01-19T17:02:28.706Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=15zjdsj8weszy9p, id=15zjdsj8weszy9p
+2025-01-19T17:02:29.871Z - info: Rendering request 8 finished in 1177 ms rootId=15zjdsj8weszy9p, id=15zjdsj8weszy9p
+2025-01-19T17:02:29.884Z - info: Render request 9 queued for execution and waiting for available worker rootId=2ssgkbsje9sjhja, id=2ssgkbsje9sjhja
+2025-01-19T17:02:29.888Z - info: Starting rendering request 9 rootId=2ssgkbsje9sjhja, id=2ssgkbsje9sjhja
+2025-01-19T17:02:29.888Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=2ssgkbsje9sjhja, id=2ssgkbsje9sjhja
+2025-01-19T17:02:30.511Z - info: Render request 10 queued for execution and waiting for available worker rootId=owegbu0zbu1zmem, id=owegbu0zbu1zmem
+2025-01-19T17:02:30.514Z - info: Starting rendering request 10 rootId=owegbu0zbu1zmem, id=owegbu0zbu1zmem
+2025-01-19T17:02:30.514Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=owegbu0zbu1zmem, id=owegbu0zbu1zmem
+2025-01-19T17:02:31.589Z - info: Rendering request 9 finished in 1707 ms rootId=2ssgkbsje9sjhja, id=2ssgkbsje9sjhja
+2025-01-19T17:02:32.281Z - info: Rendering request 10 finished in 1772 ms rootId=owegbu0zbu1zmem, id=owegbu0zbu1zmem
+2025-01-19T17:03:00.150Z - info: Render request 11 queued for execution and waiting for available worker rootId=ctq58s0gecedfbg, id=ctq58s0gecedfbg
+2025-01-19T17:03:00.165Z - info: Starting rendering request 11 rootId=ctq58s0gecedfbg, id=ctq58s0gecedfbg
+2025-01-19T17:03:00.166Z - info: Rendering template { name: reporte16, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=ctq58s0gecedfbg, id=ctq58s0gecedfbg
+2025-01-19T17:03:02.480Z - info: Rendering request 11 finished in 2332 ms rootId=ctq58s0gecedfbg, id=ctq58s0gecedfbg
+2025-01-19T17:03:02.985Z - info: Render request 12 queued for execution and waiting for available worker rootId=diqgixwxd3hntdj, id=diqgixwxd3hntdj
+2025-01-19T17:03:02.995Z - info: Starting rendering request 12 rootId=diqgixwxd3hntdj, id=diqgixwxd3hntdj
+2025-01-19T17:03:02.995Z - info: Rendering template { name: reporte16, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=diqgixwxd3hntdj, id=diqgixwxd3hntdj
+2025-01-19T17:03:07.261Z - info: Rendering request 12 finished in 4279 ms rootId=diqgixwxd3hntdj, id=diqgixwxd3hntdj
+2025-01-19T17:04:25.710Z - info: Render request 13 queued for execution and waiting for available worker rootId=7p8breucxl4b9d1, id=7p8breucxl4b9d1
+2025-01-19T17:04:25.717Z - info: Starting rendering request 13 rootId=7p8breucxl4b9d1, id=7p8breucxl4b9d1
+2025-01-19T17:04:25.717Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=7p8breucxl4b9d1, id=7p8breucxl4b9d1
+2025-01-19T17:04:26.934Z - info: Rendering request 13 finished in 1225 ms rootId=7p8breucxl4b9d1, id=7p8breucxl4b9d1
+2025-01-19T17:04:33.952Z - info: Initializing jsreport (version: 4.7.0, configuration file: jsreport.config.json, nodejs: 20.12.2)
+2025-01-19T17:04:33.955Z - info: Searching for available extensions in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T17:04:33.961Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\jrmat\Desktop\ucabair\BACKEND\
+2025-01-19T17:04:33.986Z - info: Found 35 extension(s)
+2025-01-19T17:04:34.063Z - info: Using extension base@4.0.0
+2025-01-19T17:04:34.069Z - info: Using extension child-templates@4.1.0
+2025-01-19T17:04:34.072Z - info: Using extension cli@4.0.5
+2025-01-19T17:04:34.075Z - info: Using extension components@4.0.2
+2025-01-19T17:04:34.077Z - info: Using extension data@4.1.0
+2025-01-19T17:04:34.078Z - info: Using extension express@4.1.3
+2025-01-19T17:04:34.424Z - info: Using extension freeze@4.0.0
+2025-01-19T17:04:34.427Z - info: Using extension fs-store@4.0.5
+2025-01-19T17:04:34.607Z - info: Using extension handlebars@4.0.1
+2025-01-19T17:04:34.609Z - info: Using extension import-export@4.0.5
+2025-01-19T17:04:34.621Z - info: Using extension jsrender@4.0.0
+2025-01-19T17:04:34.622Z - info: Using extension licensing@4.0.3
+2025-01-19T17:04:34.653Z - info: Using extension localization@4.0.1
+2025-01-19T17:04:34.654Z - info: Using extension npm@4.0.0
+2025-01-19T17:04:34.657Z - info: Using extension pdf-utils@4.2.2
+2025-01-19T17:04:34.659Z - info: Using extension reports@4.1.2
+2025-01-19T17:04:34.662Z - info: Using extension tags@4.0.1
+2025-01-19T17:04:34.665Z - info: Using extension text@4.0.2
+2025-01-19T17:04:34.666Z - info: Using extension version-control@4.0.0
+2025-01-19T17:04:34.681Z - info: Using extension assets@4.2.0
+2025-01-19T17:04:34.693Z - info: Using extension authorization@4.0.1
+2025-01-19T17:04:34.700Z - info: Using extension browser-client@4.1.0
+2025-01-19T17:04:34.703Z - info: Using extension chrome-pdf@4.1.0
+2025-01-19T17:04:34.707Z - info: Using extension docx@4.6.0
+2025-01-19T17:04:34.709Z - info: Using extension html-to-xlsx@4.1.4
+2025-01-19T17:04:35.003Z - info: html-to-xlsx detected chrome as available html engine
+2025-01-19T17:04:35.004Z - info: Using extension pptx@4.3.2
+2025-01-19T17:04:35.007Z - info: Using extension scheduling@4.0.0
+2025-01-19T17:04:35.056Z - info: Using extension scripts@4.1.0
+2025-01-19T17:04:35.058Z - info: Using extension static-pdf@4.1.0
+2025-01-19T17:04:35.059Z - info: Using extension studio@4.2.0
+2025-01-19T17:04:35.197Z - info: Using extension xlsx@4.3.0
+2025-01-19T17:04:35.200Z - info: Using extension public-templates@4.0.0
+2025-01-19T17:04:35.203Z - info: Using extension sample-template@4.0.0
+2025-01-19T17:04:35.206Z - info: Using extension studio-theme-dark@4.0.0
+2025-01-19T17:04:35.209Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-01-19T17:04:35.210Z - info: Using fs provider for template store.
+2025-01-19T17:04:35.213Z - info: fs store is persisting using fs for C:\Users\jrmat\Desktop\ucabair\BACKEND\data
+2025-01-19T17:04:35.223Z - info: fs store is loading data
+2025-01-19T17:04:35.267Z - info: fs store is initialized successfully
+2025-01-19T17:04:35.280Z - info: Creating default express app.
+2025-01-19T17:04:35.318Z - info: jsreport server successfully started on http port: 5488
+2025-01-19T17:04:35.320Z - info: Verifying license key free
+2025-01-19T17:04:36.086Z - info: Using enterprise trial license
+2025-01-19T17:04:36.089Z - info: Initializing worker threads
+2025-01-19T17:04:36.781Z - info: 2 worker threads initialized in 692ms
+2025-01-19T17:04:36.782Z - info: Starting temp files cleanup with 180000ms threshold
+2025-01-19T17:04:36.783Z - info: reporter initialized
+2025-01-19T17:04:41.526Z - info: Render request 1 queued for execution and waiting for available worker rootId=6se1wmp3jn07pjd, id=6se1wmp3jn07pjd
+2025-01-19T17:04:41.552Z - info: Starting rendering request 1 rootId=6se1wmp3jn07pjd, id=6se1wmp3jn07pjd
+2025-01-19T17:04:41.553Z - info: Rendering template { name: alaMasUsada, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=6se1wmp3jn07pjd, id=6se1wmp3jn07pjd
+2025-01-19T17:04:43.545Z - info: Rendering request 1 finished in 2022 ms rootId=6se1wmp3jn07pjd, id=6se1wmp3jn07pjd

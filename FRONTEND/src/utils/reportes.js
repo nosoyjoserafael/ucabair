@@ -58,19 +58,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function dowloadReport(nombre,id){
-        fetch(`${entityEndpoint}/${id}`)
-        .then(response => response.blob())
-        .then(blob => {
-            const url = URL.createObjectURL(blob);
+        try {
+            const response = await fetch(`${entityEndpoint}/${id}`);
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
+            a.style.display = 'none';
             a.href = url;
             a.download = `${nombre}.pdf`;
+            document.body.appendChild(a);
             a.click();
-            URL.revokeObjectURL(url);        
-        })
-        .catch((error) => {
+            window.URL.revokeObjectURL(url);
+            alert('Reporte descargado con éxito');
+          } catch (error) {
             console.error('Error:', error);
-        });
+          }
     }
 
 });
