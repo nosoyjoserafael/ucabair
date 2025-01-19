@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte18</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      width: 150px;
+    }
+    .date {
+      text-align: right;
+    }
+    .report-title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.5em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
+    <div class="date">Fecha: {{formatDate}}</div>
+  </header>
+  <div class="report-title">Modelos de avion con sus piezas</div>
+  <table id="reporte">
+    <thead>
+      <tr>
+        <th>Nombre del Modelo</th>
+        <th>Tipo de Pieza</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each fila}}
+      <tr>
+        <td>{{modelo}}</td>
+        <td>{{pieza}}</td>
+        <td>{{cantidad}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <script> 
+    function mergeTableCells(tableId) { 
+      const table = document.getElementById(tableId); 
+      const rows = table.rows; 
+      for (let i = 1; i < rows.length; i++){
+
+        let currentCell = null; 
+        let colspan = 1; 
+        for (let j = 0; j < 3; j++){
+
+          const cell = rows[i].cells[j];
+          if (j == 0) { 
+            currentCell = cell; 
+          } else if (cell.innerHTML === "" && currentCell.innerHTML === "") { 
+            colspan++; 
+            cell.style.display = 'none'; 
+            currentCell.colSpan = colspan; 
+          } else if (cell.innerHTML != "" && currentCell.innerHTML === "") { 
+            colspan++; 
+            currentCell.innerHTML = cell.innerHTML;
+            cell.style.display = 'none'; 
+            currentCell.colSpan = colspan;
+          }
+        }
+      }
+      for (let i = 0; i < 3; i++) { 
+        let currentCell = null; 
+        let rowspan = 1; 
+        for (let j = 1; j < rows.length; j++) { 
+          const cell = rows[j].cells[i]; 
+          if (currentCell === null) { 
+            currentCell = cell; 
+          } else if (currentCell.innerHTML === cell.innerHTML && currentCell.colSpan == cell.colSpan) { 
+            rowspan++; 
+            cell.style.display = 'none'; 
+            currentCell.rowSpan = rowspan; 
+          } else { 
+            currentCell = cell; 
+            rowspan = 1; 
+          } 
+        } 
+      } 
+    } 
+    window.onload = () => { 
+      mergeTableCells('reporte'); 
+    };
+  </script>
+</body>
+</html>
