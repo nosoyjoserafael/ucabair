@@ -1,0 +1,21 @@
+-- se debe insertar primero sede y tipo_material para evitar conflictos
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (1, 300, '2020-01-01', 1);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (2, 300, '2023-02-01', 2);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (3, 300, '2023-03-01', 3);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (4, 300, '2023-04-01', 4);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (5, 300, '2023-05-01', 5);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (6, 300, '2023-06-01', 1);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (7, 300, '2023-07-01', 2);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (8, 300, '2023-08-01', 3);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (9, 300, '2023-09-01', 4);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (10, 300, '2023-10-01', 5);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (1, 300, '2023-11-01', 1);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (2, 300, '2023-12-01', 2);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (3, 300, '2024-01-01', 3);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (4, 300, '2024-02-01', 4);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (5, 300, '2024-03-01', 5);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (6, 300, '2024-04-01', 1);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (7, 300, '2024-05-01', 2);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (8, 300, '2024-06-01', 3);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (9, 300, '2024-07-01', 4);
+insert into material ("fk_TMaterial", mat_cantidad, mat_fecha_in, fk_sede) values (10, 300, '2024-08-01', 5);

@@ -1,0 +1,10 @@
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Aluminio', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Titanio', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Fibra de carbono', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Acero inoxidable', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Compuestos de cerámica', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Plástico reforzado con fibra de vidrio', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Cobre', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Níquel', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Magnesio', 'Kg');
+insert into tipo_material (tipo_mat_nombre, tipo_mat_unidad_medida) values ('Kevlar', 'Kg');
