@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte15</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      width: 150px;
+    }
+    .date {
+      text-align: right;
+    }
+    .report-title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.5em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{{logoUrl}}" alt="Logo de la Empresa" class="logo">
+    <div class="date">Fecha: {{formatDate}}</div>
+  </header>
+  <div class="report-title">Inventario detallado por mes</div>
+  <table id="reporte">
+    <thead>
+      <tr>
+        <th>Sede</th>
+        <th>Mes</th>
+        <th>Material</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each fila}}
+      <tr>
+        <td>{{sede_inventario}}</td>
+        <td>{{mes_inventario}}</td>
+        <td>{{material_nombre}}</td>
+        <td>{{material_cantidad_inventario}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <script> 
+    function mergeTableCells(tableId) { 
+      const table = document.getElementById(tableId); 
+      const rows = table.rows; 
+      for (let i = 0; i < 1; i++) { 
+        let currentCell = null; 
+        let rowspan = 1; 
+        for (let j = 1; j < rows.length; j++) { 
+          const cell = rows[j].cells[i]; 
+          if (currentCell === null) { 
+            currentCell = cell; 
+          } else if (currentCell.innerHTML === cell.innerHTML) { 
+            rowspan++; 
+            cell.style.display = 'none'; 
+            currentCell.rowSpan = rowspan; 
+          } else { 
+            currentCell = cell; 
+            rowspan = 1; 
+          } 
+        } 
+      } 
+    } 
+    window.onload = () => { 
+      mergeTableCells('reporte'); 
+    };
+  </script>
+</body>
+</html>

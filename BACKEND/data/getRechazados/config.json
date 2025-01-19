@@ -1,0 +1,18 @@
+{
+    "name": "getRechazados",
+    "recipe": "chrome-pdf",
+    "shortid": "u0jy0YvHY",
+    "engine": "handlebars",
+    "data": null,
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1737086371628
+    },
+    "modificationDate": {
+        "$$date": 1737086371628
+    },
+    "_id": "7TSAoACKJwyoH6fz",
+    "$entitySet": "templates"
+}
